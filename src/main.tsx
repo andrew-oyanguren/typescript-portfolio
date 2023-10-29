@@ -7,6 +7,8 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
+import { PATH_NAMES } from './constants';
+
 import Root from './routes/root';
 import {
   AboutPage,
@@ -20,11 +22,15 @@ import './index.css';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Root />} errorElement={<ErrorPage />}>
+    <Route
+      path={PATH_NAMES.ROOT}
+      element={<Root />}
+      errorElement={<ErrorPage />}
+    >
       <Route index element={<HomePage />} />
-      <Route path='about' element={<AboutPage />} />
-      <Route path='experience' element={<ExperiencePage />} />
-      <Route path='contact' element={<ContactPage />} />
+      <Route path={PATH_NAMES.ABOUT} element={<AboutPage />} />
+      <Route path={PATH_NAMES.EXPERIENCE} element={<ExperiencePage />} />
+      <Route path={PATH_NAMES.CONTACT} element={<ContactPage />} />
     </Route>
   )
 );
