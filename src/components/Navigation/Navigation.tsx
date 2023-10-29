@@ -7,7 +7,9 @@ export default function Navigation() {
     <div className='Navigation'>
       <nav>
         {ROUTES_CONFIG.map((obj) => (
-          <NavLink to={obj.path}>{obj.asset}</NavLink>
+          <NavLink key={obj.path} to={obj.path}>
+            {obj.asset}
+          </NavLink>
         ))}
       </nav>
     </div>
