@@ -1,7 +1,7 @@
 import { useRouteError } from 'react-router-dom';
 
-import { renderErrorMessage } from '../../utils/utils';
-import { PageWrapper } from '../../components';
+import { renderErrorMessage } from 'src/utils/utils';
+import { PageWrapper } from 'src/components';
 import styles from './ErrorPage.module.css';
 
 export default function ErrorPage() {

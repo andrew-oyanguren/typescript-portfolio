@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import { ROUTES_CONFIG } from '../../constants';
+import { ROUTES_CONFIG } from 'src/constants';
 
 import styles from './Navigation.module.css';
 
