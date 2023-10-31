@@ -1,0 +1,25 @@
+.ResponsiveWrapper {
+  width: 98%;
+  max-width: var(--device-xl-maxWidth);
+  margin: 0 auto;
+  background-color: rgba(255, 192, 203, 0.75);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* mobile < 481 */
+@media (min-width: 481px) {
+  .ResponsiveWrapper {
+    background-color: rgba(0, 255, 255, 0.75);
+  }
+}
+
+/* tablet < 1201 */
+@media (min-width: 1201px) {
+  .ResponsiveWrapper {
+    background-color: rgba(255, 166, 0, 0.75);
+  }
+}
