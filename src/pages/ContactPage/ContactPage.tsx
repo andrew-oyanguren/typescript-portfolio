@@ -1,4 +1,4 @@
-import { PageWrapper } from '../../components';
+import { PageWrapper } from 'src/components';
 
 export default function ContactPage() {
   return (
