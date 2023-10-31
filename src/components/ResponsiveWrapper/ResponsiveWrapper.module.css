@@ -1,7 +1,8 @@
 .ResponsiveWrapper {
-  width: 98%;
+  width: var(--mobile-width-percent);
   max-width: var(--device-xl-maxWidth);
   margin: 0 auto;
+  padding-top: 80px;
 
   display: flex;
   flex-direction: column;

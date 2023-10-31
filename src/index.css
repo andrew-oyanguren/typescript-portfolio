@@ -16,6 +16,11 @@
   --color-dark-gray: #bdcace;
   --color-error: #ad3319;
 
+  /* common box properties */
+  --mobile-width-percent: 98%;
+  --border-radius: 20px;
+  --border-radius-circle: 50%;
+
   /* responsive breakpoints */
   --device-small-minWidth: 320px;
   --device-medium-minWidth: 481px;
