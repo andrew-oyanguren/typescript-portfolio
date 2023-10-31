@@ -1,28 +1,36 @@
+import AboutIcon from 'src/assets/svgs/about.svg';
+import ContactIcon from 'src/assets/svgs/contact.svg';
+import ExperienceIcon from 'src/assets/svgs/experience.svg';
+import HomeIcon from 'src/assets/svgs/home.svg';
+
 const PATH_NAMES = Object.freeze({
-  ROOT: '/',
   ABOUT: 'about',
-  EXPERIENCE: 'experience',
   CONTACT: 'contact',
+  EXPERIENCE: 'experience',
+  ROOT: '/',
 });
 
-// TODO: add assets after icon library is installed
-const ROUTES_CONFIG = [
+const NAV_CONFIG = [
   {
     path: PATH_NAMES.ROOT,
-    asset: 'Home',
+    asset: HomeIcon,
+    altText: 'Home Icon',
   },
   {
     path: PATH_NAMES.ABOUT,
-    asset: 'About',
+    asset: AboutIcon,
+    altText: 'About Icon',
   },
   {
     path: PATH_NAMES.EXPERIENCE,
-    asset: 'Experience',
+    asset: ExperienceIcon,
+    altText: 'Experience Icon',
   },
   {
     path: PATH_NAMES.CONTACT,
-    asset: 'Contact',
+    asset: ContactIcon,
+    altText: 'Contact Icon',
   },
 ];
 
-export { PATH_NAMES, ROUTES_CONFIG };
+export { PATH_NAMES, NAV_CONFIG };
