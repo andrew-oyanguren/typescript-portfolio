@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(255, 192, 203, 0.75);
+  background-color: var(--color-light);
 }
 
 /* tablet > 481 */
