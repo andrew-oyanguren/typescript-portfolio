@@ -12,6 +12,10 @@
   background-color: var(--color-gray);
 }
 
+.ImageWrapper .title {
+  font-size: 22px;
+}
+
 .ImageWrapper:nth-of-type(odd) .title {
   color: var(--color-primary);
 }
