@@ -22,9 +22,7 @@
 }
 
 .active {
-  /* var(--color-light) converted to svg filter: https://change-svg-color.vercel.app/ */
-  filter: invert(93%) sepia(6%) saturate(904%) hue-rotate(43deg)
-    brightness(115%) contrast(113%);
+  filter: var(--svg-filter-light);
 }
 
 .selected {
