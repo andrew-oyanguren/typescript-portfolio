@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import { Navigation } from '../components';
+import { Navigation, Footer } from '../components';
 
 export default function Root() {
   return (
@@ -10,6 +10,7 @@ export default function Root() {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }

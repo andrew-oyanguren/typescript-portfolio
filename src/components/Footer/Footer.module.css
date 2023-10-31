@@ -1,0 +1,26 @@
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+  justify-content: center;
+}
+
+.socialsList {
+  padding: 0;
+  display: flex;
+}
+
+.socialsList li {
+  list-style-type: none;
+}
+
+.socialsList li + li {
+  margin-left: 20px;
+}
+
+.socialsList li img {
+  filter: var(--svg-filter-light);
+}

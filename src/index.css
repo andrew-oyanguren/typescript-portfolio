@@ -15,6 +15,10 @@
   --color-dark-gray: #bdcace;
   --color-error: #ad3319;
 
+  /* var(--color-light) converted to svg filter: https://change-svg-color.vercel.app/ */
+  --svg-filter-light: invert(93%) sepia(6%) saturate(904%) hue-rotate(43deg)
+    brightness(115%) contrast(113%);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
