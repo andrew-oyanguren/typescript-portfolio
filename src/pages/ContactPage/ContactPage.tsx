@@ -1,9 +1,9 @@
-import { PageWrapper } from 'src/components';
+import { ResponsiveWrapper } from 'src/components';
 
 export default function ContactPage() {
   return (
-    <PageWrapper>
+    <ResponsiveWrapper>
       <h1>Contact Page</h1>
-    </PageWrapper>
+    </ResponsiveWrapper>
   );
 }

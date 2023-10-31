@@ -1,9 +1,9 @@
-import { PageWrapper } from 'src/components';
+import { ResponsiveWrapper } from 'src/components';
 
 export default function ExperiencePage() {
   return (
-    <PageWrapper>
+    <ResponsiveWrapper>
       <h1>Experience Page</h1>
-    </PageWrapper>
+    </ResponsiveWrapper>
   );
 }

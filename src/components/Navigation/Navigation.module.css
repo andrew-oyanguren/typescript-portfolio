@@ -1,9 +1,14 @@
 .Navigation {
-  background-color: var(--color-gray);
+  width: 98%;
+  max-width: var(--device-medium-minWidth);
+  margin: 0 auto;
   border-radius: 20px;
+  padding: 2px 0px;
+
   display: flex;
   place-content: center;
-  padding: 2px 0px;
+
+  background-color: var(--color-gray);
 }
 
 .icon {
@@ -40,5 +45,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   background-color: var(--color-primary);
 }
