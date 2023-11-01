@@ -29,14 +29,14 @@ const IMAGE_CONFIG = [
     title: 'Plays two games',
   },
   {
-    asset: MessiWorldcup,
-    altText: 'Lionel Messi World Cup image',
-    title: 'Calls soccer football',
-  },
-  {
     asset: JimCarreyMontage,
     altText: 'Jim Carrey montage image',
     title: "Relates everything to 90's movies",
+  },
+  {
+    asset: MessiWorldcup,
+    altText: 'Lionel Messi World Cup image',
+    title: 'Calls soccer football',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function ImageView() {
   return (
     <div className={styles.ImageView}>
       {IMAGE_CONFIG.map((obj) => (
-        <div key={obj.asset} className={styles.ImageWrapper}>
+        <div key={obj.asset} className={styles.ImageContainer}>
           <p className={styles.title}>{obj.title}</p>
           <img src={obj.asset} alt={obj.altText} />
         </div>
