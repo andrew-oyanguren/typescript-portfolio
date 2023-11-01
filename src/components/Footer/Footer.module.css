@@ -1,6 +1,4 @@
 .Footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
 
   display: flex;
@@ -22,5 +20,5 @@
 }
 
 .socialsList li img {
-  filter: var(--svg-filter-light);
+  filter: var(--svg-filter-dark);
 }

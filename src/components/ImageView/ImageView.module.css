@@ -1,0 +1,44 @@
+.ImageView {
+  text-align: center;
+}
+
+.ImageContainer {
+  position: relative;
+}
+
+.ImageContainer:nth-of-type(even) {
+  background: var(--color-dark-grey);
+  background: radial-gradient(
+    circle,
+    rgba(189, 202, 206, 1) 0%,
+    rgba(220, 230, 234, 1) 80%
+  );
+}
+
+.ImageContainer .title {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 10px 0;
+  padding: 5px 0;
+}
+
+.ImageContainer:nth-of-type(odd) .title {
+  color: var(--color-primary);
+}
+
+.ImageContainer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-image);
+}
+
+.ImageContainer:first-of-type img {
+  border-radius: var(--border-radius-circle);
+}
+
+.ImageContainer + .ImageContainer {
+  margin-top: 20px;
+  padding: 40px 0 60px 0;
+}

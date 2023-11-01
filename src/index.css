@@ -1,12 +1,25 @@
 :root {
+  /* typography */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-small);
+
+  --font-size-smallr: 16px;
+  --font-size-medium: 24px;
+  --font-size-large: 36px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 
   /* color theme */
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   --color-light: #fffcfa;
   --color-dark: #444753;
   --color-primary: #6eadc0;
@@ -15,6 +28,17 @@
   --color-light-gray: #f5f5f5;
   --color-dark-gray: #bdcace;
   --color-error: #ad3319;
+
+  /* common box properties */
+  --mobile-width-percent: 98%;
+  --border-radius: 20px;
+  --border-radius-circle: 50%;
+
+  --box-shadow-icon: 0px 2px 10px 4px rgb(68, 71, 83, 0.1),
+    0px 0px 6px 2px rgb(110, 173, 192, 0.15);
+
+  --box-shadow-image: 0px 2px 15px 10px rgb(68, 71, 83, 0.15),
+    0px 0px 6px 2px rgb(110, 173, 192, 0.1);
 
   /* responsive breakpoints */
   --device-small-minWidth: 320px;
@@ -27,15 +51,18 @@
   --svg-filter-light: invert(93%) sepia(6%) saturate(904%) hue-rotate(43deg)
     brightness(115%) contrast(113%);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  /* var(--color-dark) converted to svg filter: https://change-svg-color.vercel.app/ */
+  --svg-filter-dark: invert(26%) sepia(8%) saturate(992%) hue-rotate(191deg)
+    brightness(92%) contrast(85%);
 }
 
 body {
   margin: 0;
   min-width: var(--device-small-minWidth);
   min-height: 100vh;
+  position: relative;
+}
+
+p {
+  color: var(--color-dark);
 }
