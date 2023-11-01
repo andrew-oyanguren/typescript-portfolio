@@ -20,5 +20,5 @@
 }
 
 .socialsList li img {
-  filter: var(--svg-filter-light);
+  filter: var(--svg-filter-dark);
 }
