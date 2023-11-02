@@ -5,12 +5,6 @@
   padding: 2px 0px;
   border-radius: var(--border-radius);
 
-  position: sticky;
-  left: 0;
-  right: 0;
-  top: 40px;
-  z-index: 100;
-
   display: flex;
   place-content: center;
 
