@@ -1,0 +1,20 @@
+.PageTitle {
+  /* background-color: tan; */
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.PageTitle h1 {
+  color: var(--color-dark);
+}
+
+/* tablet > 481 */
+@media (min-width: 481px) {
+  .PageTitle {
+    font-size: 36px;
+    width: 600px;
+    text-align: left;
+    padding: 5px 0;
+  }
+}
