@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
 
+  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
   background-color: tan;
 }
 
