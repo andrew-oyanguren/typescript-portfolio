@@ -1,15 +1,35 @@
 import { Outlet } from 'react-router-dom';
 
-import { Navigation, Footer } from '../components';
+import { Footer, Navigation, ResponsiveWrapper } from '../components';
 
 export default function Root() {
   return (
-    <>
-      <Navigation />
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <header
+        style={{
+          backgroundColor: '#fffcfae2',
+          paddingTop: 40,
+          position: 'sticky',
+          top: 0,
+          zIndex: 1000,
+          borderBottomRightRadius: 40,
+          borderBottomLeftRadius: 40,
+        }}
+      >
+        <Navigation />
+      </header>
+
       <main>
-        <Outlet />
+        <ResponsiveWrapper>
+          <Outlet />
+        </ResponsiveWrapper>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
