@@ -16,7 +16,6 @@
 @media (min-width: 481px) {
   .ResponsiveWrapper {
     background-color: rgba(0, 255, 255, 0.75);
-    height: calc(100vh - 150px);
   }
 }
 

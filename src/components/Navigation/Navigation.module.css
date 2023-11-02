@@ -51,11 +51,3 @@
 
   background-color: var(--color-primary);
 }
-
-/* tablet > 481 */
-@media (min-width: 481px) {
-  .Navigation {
-    position: absolute;
-    top: 100px;
-  }
-}

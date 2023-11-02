@@ -22,15 +22,3 @@
 .socialsList li img {
   filter: var(--svg-filter-dark);
 }
-
-/* tablet > 481 */
-@media (min-width: 481px) {
-  .Footer {
-    position: absolute;
-    justify-content: end;
-  }
-
-  .socialsList {
-    margin-right: 40px;
-  }
-}
