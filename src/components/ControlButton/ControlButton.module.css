@@ -1,0 +1,37 @@
+.ControlButton {
+  width: 66px;
+  height: 66px;
+
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-circle);
+  box-shadow: var(--box-shadow-icon);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-dark);
+  background-color: var(--color-dark-gray);
+}
+
+.ControlButton:active {
+  transform: scale(0.99);
+  box-shadow: 0px 2px 10px 6px rgb(68, 71, 83, 0.1),
+    0px 0px 6px 2px rgb(110, 173, 192, 0.15);
+}
+
+.ControlButton:disabled {
+  box-shadow: none;
+  border: none;
+  transform: scale(0.98);
+  color: var(--color-gray);
+}
+
+.ControlButton img {
+  filter: var(--svg-filter-dark);
+}
+
+.ControlButton:disabled img {
+  filter: var(--svg-filter-light);
+}
