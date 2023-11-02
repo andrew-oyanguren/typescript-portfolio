@@ -24,7 +24,7 @@ const IMAGE_CONFIG = [
   {
     asset: DiabloGameplay,
     altText: 'Diablo gameplay image',
-    title: 'Plays two games',
+    title: 'Plays two video games',
   },
   {
     asset: JimCarreyMontage,

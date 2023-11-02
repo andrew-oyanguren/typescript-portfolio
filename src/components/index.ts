@@ -1,4 +1,6 @@
-export { default as ResponsiveWrapper } from './ResponsiveWrapper/ResponsiveWrapper';
-export { default as Navigation } from './Navigation/Navigation';
+export { default as ControlButton } from './ControlButton/ControlButton';
 export { default as Footer } from './Footer/Footer';
+export { default as ImageCarousel } from './ImageCarousel/ImageCarousel';
 export { default as ImageView } from './ImageView/ImageView';
+export { default as Navigation } from './Navigation/Navigation';
+export { default as ResponsiveWrapper } from './ResponsiveWrapper/ResponsiveWrapper';
