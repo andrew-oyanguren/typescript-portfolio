@@ -1,18 +1,16 @@
 import { useRouteError } from 'react-router-dom';
 
 import { renderErrorMessage } from 'src/utils/utils';
-import styles from './ErrorPage.module.css';
+import { PageTitle, ResponsiveWrapper } from 'src/components';
 
 export default function ErrorPage() {
   const error = useRouteError();
 
   return (
-    <>
-      <div className={styles.ErrorTitle}>
-        <h1>Oops!</h1>
-      </div>
+    <ResponsiveWrapper>
+      <PageTitle text='Oops, something went wrong!' />
 
       <p>{renderErrorMessage(error)}</p>
-    </>
+    </ResponsiveWrapper>
   );
 }
