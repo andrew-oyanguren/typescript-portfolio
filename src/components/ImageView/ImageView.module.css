@@ -27,9 +27,6 @@
 }
 
 .ImageContainer img {
-  display: block;
-  width: 100%;
-  height: auto;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-image);
 }

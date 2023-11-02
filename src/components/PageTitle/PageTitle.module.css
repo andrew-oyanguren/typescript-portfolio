@@ -1,0 +1,9 @@
+.PageTitle {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.PageTitle h1 {
+  color: var(--color-dark);
+  font-size: var(--font-size-large);
+}

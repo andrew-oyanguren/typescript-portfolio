@@ -1,6 +1,7 @@
-import { ResponsiveWrapper, ImageView, ImageCarousel } from 'src/components';
+import { ImageView, ImageCarousel } from 'src/components';
 
 import useWindowDim from 'src/hooks/useWindowDim';
+import { PageTitle } from 'src/components';
 
 export default function HomePage() {
   const { windowDim } = useWindowDim();
@@ -8,9 +9,9 @@ export default function HomePage() {
   const isScreenMobile = windowDim.width < 540;
 
   return (
-    <ResponsiveWrapper>
-      <h1>Hi, I'm Andy.</h1>
+    <>
+      <PageTitle text="Hi, I'm Andy" />
       {isScreenMobile ? <ImageView /> : <ImageCarousel />}
-    </ResponsiveWrapper>
+    </>
   );
 }
