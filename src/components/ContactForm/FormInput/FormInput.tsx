@@ -1,5 +1,9 @@
-import { renderInputElement, InputConfig } from '../helpers/helpers';
+import { renderInputElement, InputConfigTypes } from '../helpers/helpers';
 
-export default function FormInput({ inputConfig }: InputConfig) {
-  return <div>{renderInputElement({ inputConfig })}</div>;
+export default function FormInput({
+  inputConfig,
+}: {
+  inputConfig: InputConfigTypes;
+}) {
+  return <div>{renderInputElement(inputConfig)}</div>;
 }

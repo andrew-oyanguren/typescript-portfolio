@@ -1,6 +1,6 @@
 // email input validation:
 // https://regex101.com/r/4FMpVT/1
-const EMAIL_REGEX =
+const EMAIL_VALID_REGEX =
   /^([_[a-zA-Z0-9]+[._a-zA-Z0-9]*)(\+[a-zA-Z0-9]+)?@(([a-z0-9-]+\.)*[a-z]{2,4})$/;
 
 const INPUT_ELEMENTS = Object.freeze({
@@ -27,7 +27,7 @@ const INPUTS_CONFIG = [
     props: { type: 'text', placeholder: 'enter email' },
     validation: (value: string) => {
       console.log(`[Email] value: ${value}, validation fired...`);
-      return EMAIL_REGEX.test(value);
+      return EMAIL_VALID_REGEX.test(value);
     },
   },
   {
@@ -49,4 +49,4 @@ const INPUTS_CONFIG = [
   },
 ];
 
-export { EMAIL_REGEX, INPUTS_CONFIG, INPUT_ELEMENTS, INPUT_NAMES };
+export { EMAIL_VALID_REGEX, INPUTS_CONFIG, INPUT_ELEMENTS, INPUT_NAMES };
