@@ -19,7 +19,7 @@ const useInput = (initialValue: string = '') => {
 
   const onBlur = (validation?: (value: string) => boolean) => {
     console.log('[onBlur] useInput fired...');
-    if (!!value.length && validation) {
+    if (validation) {
       console.log('[validation] useInput fired...');
       setHasError(!validation(value));
     }
