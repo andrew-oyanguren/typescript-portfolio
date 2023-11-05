@@ -76,30 +76,42 @@ export default function ContactForm() {
       }}
       className={styles.ContactForm}
     >
-      <div className={styles.control}>
-        {emailIsTouched && email.length > 0 && emailHasError ? (
-          <p>ERROR</p>
-        ) : null}
+      <>
         {INPUTS_CONFIG.map(
-          ({ inputName, element, props, children, validation }) => {
+          ({
+            inputName,
+            element,
+            props,
+            children,
+            validation,
+            errorMessage,
+          }) => {
             return (
-              <FormInput
-                key={inputName}
-                inputConfig={{
-                  inputName,
-                  element,
-                  props: { ...formatInputProps(inputName, props, validation) },
-                  children,
-                }}
-              />
+              <div key={inputName} className={styles.formControl}>
+                {validation && emailHasError ? (
+                  <p className={styles.errorMessage}>{errorMessage}</p>
+                ) : null}
+                <FormInput
+                  inputConfig={{
+                    inputName,
+                    element,
+                    props: {
+                      ...formatInputProps(inputName, props, validation),
+                      className:
+                        validation && emailHasError ? styles.error : '',
+                    },
+                    children,
+                  }}
+                />
+              </div>
             );
           }
         )}
-      </div>
+      </>
 
       <div className={styles.actions}>
         <button type='submit' disabled={!formIsValid}>
-          submit button
+          Send
         </button>
       </div>
     </form>
