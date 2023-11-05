@@ -29,7 +29,7 @@ const INPUTS_CONFIG = [
       console.log(`[Email] value: ${value}, validation fired...`);
       return EMAIL_VALID_REGEX.test(value);
     },
-    errorMessage: 'Please proved a contact email',
+    errorMessage: 'Please provide a contact email',
   },
   {
     inputName: INPUT_NAMES.INQUERY,
