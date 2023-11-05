@@ -1,9 +1,9 @@
-import { ContactForm } from 'src/components';
+import { ContactForm, PageTitle } from 'src/components';
 
 export default function ContactPage() {
   return (
     <>
-      <h1>Contact Page</h1>
+      <PageTitle text='Send me a message' />
       <ContactForm />
     </>
   );
