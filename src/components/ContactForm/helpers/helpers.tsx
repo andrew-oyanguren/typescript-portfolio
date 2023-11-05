@@ -8,9 +8,11 @@ import {
 
 export type InputPropsTypes = {
   id?: string;
+  className?: string;
   name?: string;
-  type?: string;
   placeholder?: string;
+  selected?: boolean;
+  type?: string;
   value?: string;
   onBlur?: () => void;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
