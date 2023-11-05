@@ -24,11 +24,12 @@ const INPUTS_CONFIG = [
   {
     inputName: INPUT_NAMES.EMAIL,
     element: INPUT_ELEMENTS.TEXT,
-    props: { type: 'text', placeholder: 'enter email' },
+    props: { type: 'text', placeholder: 'your email' },
     validation: (value: string) => {
       console.log(`[Email] value: ${value}, validation fired...`);
       return EMAIL_VALID_REGEX.test(value);
     },
+    errorMessage: 'Please proved a contact email',
   },
   {
     inputName: INPUT_NAMES.INQUERY,
@@ -36,16 +37,16 @@ const INPUTS_CONFIG = [
     props: { name: 'inquiry', id: 'inquiry' },
     children: {
       options: [
-        { value: 'hello', title: 'Just saying hello', selected: true },
-        { value: 'work', title: "Let's work together" },
-        { value: 'other', title: 'Other...' },
+        { value: 'hello', title: 'Just saying hello 👋', selected: true },
+        { value: 'work', title: "Let's work together!" },
+        { value: 'other', title: 'Other' },
       ],
     },
   },
   {
     inputName: INPUT_NAMES.MESSAGE,
     element: INPUT_ELEMENTS.TEXT_AREA,
-    props: { placeholder: 'enter a message' },
+    props: { placeholder: 'type a message...' },
   },
 ];
 
