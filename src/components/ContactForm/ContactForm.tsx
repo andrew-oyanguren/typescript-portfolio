@@ -6,6 +6,8 @@ import { onSubmitHandler, InputPropsTypes } from './helpers/helpers';
 import FormInput from './FormInput/FormInput';
 import useInput from 'src/hooks/useInput';
 
+import styles from './ContactForm.module.css';
+
 export default function ContactForm() {
   const {
     value: email,
@@ -72,8 +74,9 @@ export default function ContactForm() {
           onSubmitHandler(email, inquery, message);
         }
       }}
+      className={styles.ContactForm}
     >
-      <>
+      <div className={styles.control}>
         {emailIsTouched && email.length > 0 && emailHasError ? (
           <p>ERROR</p>
         ) : null}
@@ -92,13 +95,13 @@ export default function ContactForm() {
             );
           }
         )}
-      </>
+      </div>
 
-      <>
+      <div className={styles.actions}>
         <button type='submit' disabled={!formIsValid}>
           submit button
         </button>
-      </>
+      </div>
     </form>
   );
 }

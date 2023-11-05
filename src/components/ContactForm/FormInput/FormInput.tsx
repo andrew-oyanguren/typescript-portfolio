@@ -5,5 +5,5 @@ export default function FormInput({
 }: {
   inputConfig: InputConfigTypes;
 }) {
-  return <div>{renderInputElement(inputConfig)}</div>;
+  return <>{renderInputElement(inputConfig)}</>;
 }
