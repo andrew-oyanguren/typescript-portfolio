@@ -1,0 +1,12 @@
+.Card {
+  background-color: var(--color-primary);
+
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-image);
+}
+
+.Card > * {
+  color: var(--color-light);
+  font-size: 20px;
+}
