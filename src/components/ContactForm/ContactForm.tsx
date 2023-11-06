@@ -2,6 +2,7 @@ import { FormEvent } from 'react';
 
 import { INPUTS_CONFIG, INPUT_NAMES, InputNameValues } from './constants';
 import { onSubmitHandler, InputPropsTypes } from './helpers/helpers';
+import SendIcon from 'src/assets/svgs/send.svg';
 
 import FormInput from './FormInput/FormInput';
 import useInput from 'src/hooks/useInput';
@@ -63,7 +64,7 @@ export default function ContactForm() {
     }
   };
 
-  const formIsValid = emailIsTouched && !emailHasError;
+  const formIsValid = emailIsTouched && !emailHasError && !!email.length;
 
   return (
     <form
@@ -111,6 +112,7 @@ export default function ContactForm() {
 
       <div className={styles.actions}>
         <button type='submit' disabled={!formIsValid}>
+          <img src={SendIcon} alt='Send message button' />
           Send
         </button>
       </div>
