@@ -9,7 +9,7 @@ import useInput from 'src/hooks/useInput';
 
 import styles from './ContactForm.module.css';
 
-export default function ContactForm() {
+export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
   const {
     value: email,
     isTouched: emailIsTouched,
@@ -73,6 +73,7 @@ export default function ContactForm() {
 
         if (formIsValid) {
           onSubmitHandler(email, inquery, message);
+          onSuccess();
         }
       }}
       className={styles.ContactForm}
