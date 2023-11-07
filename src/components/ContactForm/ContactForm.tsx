@@ -1,12 +1,12 @@
 import { FormEvent } from 'react';
 
 import { INPUTS_CONFIG, INPUT_NAMES, InputNameValues } from './constants';
-import { onSubmitHandler, InputPropsTypes } from './helpers/helpers';
-import SendIcon from 'src/assets/svgs/send.svg';
+import { InputPropsTypes } from './helpers/helpers';
+import { useInput, useSendEmail } from 'src/hooks';
 
 import FormInput from './FormInput/FormInput';
-import useInput from 'src/hooks/useInput';
 
+import SendIcon from 'src/assets/svgs/send.svg';
 import styles from './ContactForm.module.css';
 
 export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
@@ -30,6 +30,8 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
     onChange: onChangeMessage,
     onFocus: onFocusMessage,
   } = useInput();
+
+  const { sendEmail, isLoading } = useSendEmail();
 
   const formatInputProps = (
     inputName: InputNameValues,
@@ -66,13 +68,15 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 
   const formIsValid = emailIsTouched && !emailHasError && !!email.length;
 
-  return (
+  return isLoading ? (
+    <p>Loading Component Placeholder</p>
+  ) : (
     <form
-      onSubmit={(event: FormEvent<HTMLFormElement>) => {
+      onSubmit={async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         if (formIsValid) {
-          onSubmitHandler(email, inquery, message);
+          await sendEmail(email, inquery, message);
           onSuccess();
         }
       }}
