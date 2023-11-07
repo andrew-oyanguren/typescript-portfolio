@@ -1,0 +1,66 @@
+.Loader {
+  width: 240px;
+  height: 240px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--color-light);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball + .ball {
+  margin-left: 2px;
+}
+
+.pulse {
+  animation: pulse;
+  animation-timing-function: ease-in;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.bounce {
+  animation: bounce;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  background-color: var(--color-primary);
+  box-shadow: var(--box-shadow-icon);
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes pulse {
+  from {
+    background-color: rgb(110, 173, 192, 0.1);
+    transform: scale(0.98);
+  }
+  to {
+    background-color: rgba(110, 173, 192, 0.3);
+    transform: scale(0.9);
+  }
+}
