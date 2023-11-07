@@ -49,15 +49,4 @@ const renderInputElement = ({ element, props, children }: InputConfigTypes) => {
   }
 };
 
-const onSubmitHandler = (email: string, inquery: string, message: string) => {
-  console.log('onSubmit fired...');
-  const object = {
-    email,
-    inquery,
-    message,
-  };
-
-  console.log('[SUBMIT] input states: ', object);
-};
-
-export { renderInputElement, onSubmitHandler };
+export { renderInputElement };

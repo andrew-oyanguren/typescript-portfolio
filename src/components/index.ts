@@ -1,3 +1,4 @@
+export { default as Card } from './Card/Card';
 export { default as ContactForm } from './ContactForm/ContactForm';
 export { default as ControlButton } from './ControlButton/ControlButton';
 export { default as Footer } from './Footer/Footer';
