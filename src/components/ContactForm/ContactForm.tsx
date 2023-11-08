@@ -5,6 +5,7 @@ import { InputPropsTypes } from './helpers/helpers';
 import { useInput, useSendEmail } from 'src/hooks';
 
 import FormInput from './FormInput/FormInput';
+import { Loader } from 'src/components';
 
 import SendIcon from 'src/assets/svgs/send.svg';
 import styles from './ContactForm.module.css';
@@ -69,7 +70,7 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
   const formIsValid = emailIsTouched && !emailHasError && !!email.length;
 
   return isLoading ? (
-    <p>Loading Component Placeholder</p>
+    <Loader />
   ) : (
     <form
       onSubmit={async (event: FormEvent<HTMLFormElement>) => {

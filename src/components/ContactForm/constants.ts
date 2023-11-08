@@ -25,10 +25,7 @@ const INPUTS_CONFIG = [
     inputName: INPUT_NAMES.EMAIL,
     element: INPUT_ELEMENTS.TEXT,
     props: { type: 'text', placeholder: 'your email' },
-    validation: (value: string) => {
-      console.log(`[Email] value: ${value}, validation fired...`);
-      return EMAIL_VALID_REGEX.test(value);
-    },
+    validation: (value: string) => EMAIL_VALID_REGEX.test(value),
     errorMessage: 'Please provide a contact email',
   },
   {
