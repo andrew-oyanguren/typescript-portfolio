@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Hamburger from './Hamburger/Hamburger';
+import SkillsList from './SkillsList/SkillsList';
 
 import styles from './Drawer.module.css';
 
@@ -25,9 +26,7 @@ export default function Drawer() {
         <p style={{ fontSize: 36 }}>Toolbox</p>
         <Hamburger onToggleDrawer={onToggleDrawer} isActive={isOpen} />
       </div>
-      <ul>
-        <li></li>
-      </ul>
+      <SkillsList />
     </div>
   );
 }

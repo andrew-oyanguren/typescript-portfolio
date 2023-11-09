@@ -1,6 +1,7 @@
 export { default as Card } from './Card/Card';
 export { default as ContactForm } from './ContactForm/ContactForm';
 export { default as ControlButton } from './ControlButton/ControlButton';
+export { default as Drawer } from './Drawer/Drawer';
 export { default as Footer } from './Footer/Footer';
 export { default as ImageCarousel } from './ImageCarousel/ImageCarousel';
 export { default as ImageView } from './ImageView/ImageView';

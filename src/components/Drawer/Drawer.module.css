@@ -1,6 +1,7 @@
 .Drawer {
   width: 60%;
-  z-index: 100;
+  max-width: 500px;
+  z-index: 1000;
 
   position: absolute;
   top: 0;
@@ -10,10 +11,13 @@
   transform: translateX(100%);
   transition: transform ease-in 300ms;
 
-  background-color: lime;
+  display: flex;
+  justify-content: flex-start;
+
+  background-color: var(--color-dark);
 }
 
 .open {
   transform: translateX(0);
-  transition: transform ease-in 300ms;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }

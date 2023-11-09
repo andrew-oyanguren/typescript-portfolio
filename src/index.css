@@ -61,6 +61,7 @@ body {
   min-width: var(--device-small-minWidth);
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 p {

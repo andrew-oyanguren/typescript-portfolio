@@ -1,0 +1,15 @@
+.SkillsList {
+  /* background-color: lime; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+.listItem {
+  font-size: 36px;
+  color: var(--color-light);
+  list-style-type: none;
+}
