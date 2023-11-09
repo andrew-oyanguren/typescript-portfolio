@@ -1,15 +1,42 @@
 .SkillsList {
-  /* background-color: lime; */
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
 
-  width: 100%;
+.listItemContainer {
+  width: 90%;
 }
 
 .listItem {
+  margin: 6px 0;
   font-size: 36px;
   color: var(--color-light);
-  list-style-type: none;
+}
+
+.listBreak {
+  width: 0;
+  height: 4px;
+  border-radius: 10px;
+
+  animation-name: expand;
+  animation-duration: 0.3s;
+  animation-delay: 0.7s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  background-color: var(--color-secondary);
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

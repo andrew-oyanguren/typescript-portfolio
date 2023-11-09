@@ -9,16 +9,18 @@ const SKILLS_LIST = [
 ];
 
 const renderListItems: (listConfig: string[][]) => ReactNode = (listConfig) => {
-  const listItem = listConfig.map((arr: string[]) => {
-    // TODO create line break
-    return arr.map((string) => (
-      <li key={string} className={styles.listItem}>
-        {string}
-      </li>
-    ));
+  return listConfig.map((arr: string[]) => {
+    return (
+      <div key={arr[0]} className={styles.listItemContainer}>
+        {arr.map((string) => (
+          <li key={string} className={styles.listItem}>
+            {string}
+          </li>
+        ))}
+        <div className={styles.listBreak} />
+      </div>
+    );
   });
-  console.log('listItem: ', listItem);
-  return listItem;
 };
 
 export default function SkillsList() {
