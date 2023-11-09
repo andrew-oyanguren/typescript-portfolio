@@ -11,7 +11,10 @@ const SKILLS_LIST = [
 const renderListItems: (listConfig: string[][]) => ReactNode = (listConfig) => {
   return listConfig.map((arr: string[]) => {
     return (
-      <div key={arr[0]} className={styles.listItemContainer}>
+      <div
+        key={Math.random() * arr.length}
+        className={styles.listItemContainer}
+      >
         {arr.map((string) => (
           <li key={string} className={styles.listItem}>
             {string}
