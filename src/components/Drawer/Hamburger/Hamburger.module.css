@@ -5,18 +5,21 @@
 
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
+  transition: border-radius 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   cursor: pointer;
+
   background-color: var(--color-gray);
 }
 
 .Hamburger:hover {
   box-shadow: -4px 2px 6px rgb(68, 71, 83, 0.25);
   border: 1px solid var(--color-light-gray);
+  transition: border-top-left-radius border-bottom-left-radius1s linear;
 }
 
 .lineWrapper {
@@ -58,6 +61,10 @@
 
 .Hamburger.active {
   justify-content: center;
+
+  border-top-left-radius: var(--border-radius-circle);
+  border-bottom-left-radius: var(--border-radius-circle);
+  transition: border-radius 0.1s linear 0.7s;
 }
 
 .Hamburger.active .lineWrapper {
