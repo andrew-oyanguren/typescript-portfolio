@@ -1,0 +1,141 @@
+.Hamburger {
+  width: 90px;
+  height: 90px;
+  margin-left: 20px;
+
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  transition: border-radius 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: var(--color-gray);
+}
+
+.Hamburger:hover {
+  box-shadow: -4px 2px 6px rgb(68, 71, 83, 0.25);
+  border: 1px solid var(--color-light-gray);
+}
+
+.lineWrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  pointer-events: none;
+}
+
+.line {
+  display: block;
+  height: 6px;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  background-color: var(--color-dark);
+}
+
+.line + .line {
+  margin-top: 10px;
+}
+
+.line:first-of-type {
+  width: 55px;
+}
+
+.line:nth-of-type(2) {
+  width: 75px;
+}
+
+.line:last-of-type {
+  width: 40px;
+}
+
+.Hamburger.active {
+  justify-content: center;
+
+  border-top-left-radius: var(--border-radius-circle);
+  border-bottom-left-radius: var(--border-radius-circle);
+  transition: border-radius 0.1s linear 0.7s;
+}
+
+.Hamburger.active .lineWrapper {
+  width: 65px;
+  height: 65px;
+  border-radius: 70%;
+
+  transform: rotate(-45deg);
+
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-direction: alternate-reverse;
+
+  background-color: var(--color-light-gray);
+}
+
+.Hamburger.active:hover .lineWrapper {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-direction: normal;
+}
+
+.Hamburger.active .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.Hamburger.active .line + .line {
+  margin: 0;
+}
+
+.Hamburger.active .line:first-of-type {
+  width: 60px;
+  transform: rotate(90deg) translate(-3px, 30px);
+  border-radius: 10px;
+}
+
+.Hamburger.active .line:nth-of-type(2) {
+  width: 65px;
+  height: 65px;
+  z-index: -1;
+
+  border: 2px solid var(--color-light-gray);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow-icon);
+
+  background-color: var(--color-gray);
+}
+
+.Hamburger.active .line:last-of-type {
+  width: 60px;
+  border-radius: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(45deg);
+  }
+  50% {
+    width: 75px;
+    height: 70px;
+
+    border-radius: 40%;
+    box-shadow: var(--box-shadow-icon);
+  }
+  to {
+    transform: rotate(225deg);
+  }
+}
