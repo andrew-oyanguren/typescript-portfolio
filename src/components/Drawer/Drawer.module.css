@@ -21,3 +21,33 @@
   transform: translateX(0);
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
+
+.icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  filter: none;
+  opacity: 0;
+}
+
+.Drawer.open .icon {
+  filter: invert(70%) sepia(17%) saturate(7013%) hue-rotate(1deg)
+    brightness(104%) contrast(104%);
+  opacity: 1;
+
+  transition: opacity 2s ease-in 0.7s;
+}
+
+.HamburgerContainer {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  right: 100%;
+  align-items: center;
+}
+
+.HamburgerContainer p {
+  font-size: 36px;
+}

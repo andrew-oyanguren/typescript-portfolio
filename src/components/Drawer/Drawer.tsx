@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Hamburger from './Hamburger/Hamburger';
 import SkillsList from './SkillsList/SkillsList';
 
+import ToolIcon from 'src/assets/svgs/tool.svg';
 import styles from './Drawer.module.css';
 
 export default function Drawer() {
@@ -12,20 +13,17 @@ export default function Drawer() {
     setIsOpen((prevState) => !prevState);
   };
 
+  const DrawerStyles = `${styles.Drawer} ${isOpen ? styles.open : ''}`;
+
   return (
-    <div className={`${styles.Drawer} ${isOpen ? styles.open : ''}`}>
-      <div
-        style={{
-          display: 'flex',
-          position: 'absolute',
-          top: '30%',
-          right: '100%',
-          alignItems: 'center',
-        }}
-      >
-        <p style={{ fontSize: 36 }}>Toolbox</p>
+    <div className={DrawerStyles}>
+      <img src={ToolIcon} className={styles.icon} />
+
+      <div className={styles.HamburgerContainer}>
+        <p>Toolbox</p>
         <Hamburger onToggleDrawer={onToggleDrawer} isActive={isOpen} />
       </div>
+
       <SkillsList />
     </div>
   );
