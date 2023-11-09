@@ -1,10 +1,15 @@
 import { Drawer } from 'src/components';
 
+import { PageTitle } from 'src/components';
+import { useWindowDim } from 'src/hooks';
+
 export default function AboutPage() {
+  const { windowDim } = useWindowDim();
+
   return (
     <>
-      <h1>About Page</h1>
-      <Drawer />
+      <PageTitle text='My Journey' />
+      {windowDim.width > 500 ? <Drawer /> : null}
     </>
   );
 }
