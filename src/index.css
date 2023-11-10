@@ -7,7 +7,7 @@
   font-size: var(--font-size-small);
 
   --font-size-small: 16px;
-  --font-size-medium: 24px;
+  --font-size-medium: 20px;
   --font-size-large: 36px;
 
   --font-weight-regular: 400;
@@ -33,6 +33,10 @@
   --mobile-width-percent: 98%;
   --border-radius: 20px;
   --border-radius-circle: 50%;
+
+  --margin-top-small: 10px;
+  --margin-top-medium: 20px;
+  --margin-top-large: 60px;
 
   --box-shadow-icon: 0px 2px 10px 4px rgb(68, 71, 83, 0.1),
     0px 0px 6px 2px rgb(110, 173, 192, 0.15);
@@ -61,7 +65,7 @@ body {
   min-width: var(--device-small-minWidth);
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 p {
