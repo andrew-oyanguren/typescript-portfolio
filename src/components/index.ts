@@ -1,3 +1,4 @@
+export { default as AboutCard } from './AboutCard/AboutCard';
 export { default as Card } from './Card/Card';
 export { default as ContactForm } from './ContactForm/ContactForm';
 export { default as ControlButton } from './ControlButton/ControlButton';
