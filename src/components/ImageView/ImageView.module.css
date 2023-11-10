@@ -36,6 +36,6 @@
 }
 
 .ImageContainer + .ImageContainer {
-  margin-top: 20px;
+  margin-top: var(--margin-top-medium);
   padding: 40px 0 60px 0;
 }

@@ -3,7 +3,7 @@
 }
 
 .ContactForm > * + * {
-  margin-top: 20px;
+  margin-top: var(--margin-top-medium);
 }
 
 .formControl > input,

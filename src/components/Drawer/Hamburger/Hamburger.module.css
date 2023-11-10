@@ -42,7 +42,7 @@
 }
 
 .line + .line {
-  margin-top: 10px;
+  margin-top: var(--margin-top-small);
 }
 
 .line:first-of-type {
