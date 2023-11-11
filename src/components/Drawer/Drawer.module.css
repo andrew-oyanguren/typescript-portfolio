@@ -33,8 +33,6 @@
 }
 
 .Drawer.open .icon {
-  filter: invert(70%) sepia(17%) saturate(7013%) hue-rotate(1deg)
-    brightness(104%) contrast(104%);
   opacity: 1;
 
   transition: opacity 0.5s ease-in 1s;

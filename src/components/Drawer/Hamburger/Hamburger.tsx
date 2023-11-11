@@ -7,7 +7,6 @@ export default function Hamburger({
   onToggleDrawer: () => void;
   isActive: boolean;
 }) {
-  console.log('[Hamburegr] (isActive): ', isActive);
   return (
     <div
       className={`${styles.Hamburger} ${isActive ? styles.active : ''}`}

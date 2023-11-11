@@ -10,3 +10,4 @@ export { default as Loader } from './Loader/Loader';
 export { default as Navigation } from './Navigation/Navigation';
 export { default as PageTitle } from './PageTitle/PageTitle';
 export { default as ResponsiveWrapper } from './ResponsiveWrapper/ResponsiveWrapper';
+export { default as SkillsCard } from './SkillsCard/SkillsCard';

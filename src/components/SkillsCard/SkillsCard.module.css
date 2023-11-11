@@ -1,0 +1,76 @@
+.SkillsContainer {
+  margin: 0;
+  padding: 0;
+}
+
+.itemWrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.itemWrapper + .itemWrapper {
+  margin-top: 5px;
+
+  display: flex;
+}
+
+.itemWrapper:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.itemWrapper li {
+  padding: 15px;
+  text-align: center;
+
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.itemWrapper:nth-of-type(odd) li {
+  border: 2px solid var(--color-dark-gray);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: 500;
+  transform: translateX(-150%);
+
+  animation-name: slideRight;
+
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.itemWrapper:nth-of-type(even) li {
+  border: 2px solid var(--color-light);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transform: translateX(150%);
+
+  animation-name: slideLeft;
+
+  background-color: var(--color-dark-gray);
+  color: var(--color-light);
+}
+
+.itemWrapper:last-child li {
+  border-bottom-left-radius: 10px;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
