@@ -36,9 +36,8 @@ export default function AboutPage() {
           key={iconProps.src}
           cardStyles={cardStyles}
           iconProps={iconProps}
-        >
-          {body}
-        </AboutCard>
+          body={body}
+        />
       ))}
     </>
   );
