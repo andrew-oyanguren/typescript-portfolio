@@ -31,8 +31,4 @@
 
 .body {
   flex: 1;
-
-  padding: 20px;
-  line-height: 2;
-  font-size: var(--font-size-medium);
 }
