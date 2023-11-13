@@ -1,0 +1,8 @@
+.Container {
+  background-color: var(--color-gray);
+  padding: 40px 0;
+}
+
+.description {
+  padding: 40px 10px;
+}
