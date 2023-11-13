@@ -1,52 +1,24 @@
 import { PageTitle } from 'src/components';
 
-import PortfolioMobile from 'src/assets/images/portfolio-mobile.png';
-import PortfolioDesktop from 'src/assets/images/portfolio-desktop.png';
+import { getExperienceUIVariant } from 'src/components/ExperienceUI/helpers';
+import { EXPERIENCE_UI_VARIANTS } from 'src/components/ExperienceUI/constants';
 
 const EXP_SECTIONS_CONFIG = [
   {
     title: 'Web Developer',
     description:
       'While I was studying, and improving my skills, I started offering my services to family and friends designing and building websites',
-    body: (
-      <>
-        <img src={PortfolioDesktop} alt='Portfolio Desktop View' />
-        <p>
-          During this period, I created three portfolio websites, a card game
-          for my toddler, a single page application for an English tutor, and a
-          website for a fire prevention company as well as multiple other
-          personal projects.
-        </p>
-        <img src={PortfolioMobile} alt='Portfolio Mobile View' />
-      </>
-    ),
+    body: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.WEB_DEVELOPER),
   },
   {
     title: 'Jr. Software Engineer',
     description: "Worked on Reperio's two internal apps: Novo and Pulse.",
-    body: (
-      <>
-        <p>card placeholder</p>
-        <p>image placeholder</p>
-        <p>card placeholder</p>
-        <p>
-          Led refactor updating Pulse from its primitive state into an updated
-          React Native application
-        </p>
-        <p>card placeholder</p>
-      </>
-    ),
+    body: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.JR_ENGINEER),
   },
   {
     title: 'Software Engineer',
     description: "Held ownership of Reperio's admin site.",
-    body: (
-      <>
-        <p>Description Section</p>
-        <p>Responsibility Card</p>
-        <p>Achievements Section</p>
-      </>
-    ),
+    body: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.SOFTWARE_ENGINEER),
   },
 ];
 
@@ -54,10 +26,11 @@ const PageSection = () => {
   return (
     <>
       {EXP_SECTIONS_CONFIG.map(({ title, description, body }) => (
-        <section key={title}>
+        <section style={{ marginTop: 40 }} key={title}>
           <PageTitle text={title} />
-          <p>{description}</p>
-          <div className='body'>{body}</div>
+          <p style={{ backgroundColor: 'tan', padding: 10 }}>{description}</p>
+
+          <div style={{ marginTop: 40, backgroundColor: 'pink' }}>{body}</div>
         </section>
       ))}
     </>
