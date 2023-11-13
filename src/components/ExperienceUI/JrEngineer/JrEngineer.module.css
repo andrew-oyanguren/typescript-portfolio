@@ -1,0 +1,15 @@
+.Container {
+  background-color: lime;
+}
+
+.textContainer {
+  color: var(--color-primary);
+
+  padding: 20px 10px;
+  font-size: var(--font-size-medium);
+}
+
+.textContainer span {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
