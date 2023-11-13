@@ -1,3 +1,5 @@
+import { PageTitle } from 'src/components';
+
 export default function ExperiencePage() {
-  return <h1>Experience Page</h1>;
+  return <PageTitle text='Web Developer,' />;
 }
