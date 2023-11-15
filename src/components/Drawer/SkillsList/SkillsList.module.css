@@ -12,7 +12,7 @@
 
 .listItem {
   margin: 6px 0;
-  font-size: 36px;
+  font-size: var(--font-size-large);
   color: var(--color-light);
 }
 

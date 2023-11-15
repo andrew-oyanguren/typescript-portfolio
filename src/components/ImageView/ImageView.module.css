@@ -16,7 +16,6 @@
 }
 
 .ImageContainer .title {
-  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-bold);
   margin: 0 0 10px 0;
   padding: 5px 0;
