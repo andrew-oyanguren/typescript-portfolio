@@ -31,12 +31,12 @@
 
   /* common box properties */
   --mobile-width-percent: 98%;
-  --border-radius: 20px;
+  --border-radius-common: 20px;
   --border-radius-circle: 50%;
 
-  --margin-top-small: 10px;
-  --margin-top-medium: 20px;
-  --margin-top-large: 60px;
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
 
   --box-shadow-icon: 0px 2px 10px 4px rgb(68, 71, 83, 0.1),
     0px 0px 6px 2px rgb(110, 173, 192, 0.15);
@@ -68,7 +68,15 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  margin: var(--spacing-medium);
+}
+
 p {
+  margin: 0;
+  font-size: var(--font-size-medium);
+  line-height: 1.75;
+
   color: var(--color-dark);
 }
 

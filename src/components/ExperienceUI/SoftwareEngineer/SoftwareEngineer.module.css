@@ -1,0 +1,74 @@
+.Container > * + * {
+  margin-top: 60px;
+}
+
+.textContainer {
+  padding: var(--spacing-large) var(--spacing-medium);
+  background-color: var(--color-primary);
+}
+
+.textContainer p {
+  color: var(--color-light);
+}
+
+/* Achievement Component */
+
+.AchievementsContainer {
+  padding-bottom: 20px;
+  background-color: var(--color-dark);
+}
+
+.AchievementsHeader {
+  padding: var(--spacing-medium);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AchievementsHeader img {
+  width: 45px;
+  height: 45px;
+  transform: rotate(-15deg);
+}
+
+.AchievementsHeader p {
+  color: var(--color-secondary);
+}
+
+.AchievementsList {
+  margin: 0;
+  padding: 0 20px 0 46px;
+}
+
+.AchievementsList li {
+  position: relative;
+}
+
+.AchievementsList li p {
+  margin: 0;
+  color: var(--color-light);
+}
+
+.AchievementsList li span {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.AchievementsList li:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: calc(var(--font-size-medium) / 2);
+  left: -24px;
+
+  background-color: var(--color-secondary);
+}
+
+.AchievementsList li + li {
+  margin-top: 20px;
+}

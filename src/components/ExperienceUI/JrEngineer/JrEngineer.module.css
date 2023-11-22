@@ -1,0 +1,21 @@
+.Container > * + * {
+  margin-top: var(--spacing-large);
+}
+
+.textContainer {
+  padding: var(--spacing-medium);
+  color: var(--color-primary);
+}
+
+.textContainer span {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.textSpacing {
+  padding: var(--spacing-medium);
+}
+
+span {
+  font-weight: bold;
+}

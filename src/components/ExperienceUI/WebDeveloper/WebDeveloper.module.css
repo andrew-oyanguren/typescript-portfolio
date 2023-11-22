@@ -1,0 +1,13 @@
+.Container {
+  padding: var(--spacing-large) 0;
+  background-color: var(--color-gray);
+}
+
+.Container img {
+  box-shadow: var(--box-shadow-image);
+  border-radius: var(--border-radius-common);
+}
+
+.description {
+  padding: var(--spacing-medium);
+}

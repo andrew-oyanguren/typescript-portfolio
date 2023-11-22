@@ -2,7 +2,6 @@
   width: var(--mobile-width-percent);
   max-width: var(--device-xl-maxWidth);
   margin: 0 auto;
-  padding-top: 80px;
 
   display: flex;
   flex-direction: column;
@@ -16,6 +15,7 @@
 /* tablet > 481 */
 @media (min-width: 481px) {
   .ResponsiveWrapper {
+    /* TODO: REMOVE FOR DEVELOPMENT ONLY */
     background-color: rgba(0, 255, 255, 0.75);
   }
 }
@@ -23,6 +23,7 @@
 /* desktop > 1201 */
 @media (min-width: 1201px) {
   .ResponsiveWrapper {
+    /* TODO: REMOVE FOR DEVELOPMENT ONLY */
     background-color: rgba(255, 166, 0, 0.75);
   }
 }

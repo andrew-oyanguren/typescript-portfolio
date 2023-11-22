@@ -3,8 +3,8 @@
   height: 90px;
   margin-left: 20px;
 
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius-common);
+  border-bottom-left-radius: var(--border-radius-common);
   transition: border-radius 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
 
   display: flex;
@@ -42,7 +42,7 @@
 }
 
 .line + .line {
-  margin-top: var(--margin-top-small);
+  margin-top: var(--spacing-small);
 }
 
 .line:first-of-type {

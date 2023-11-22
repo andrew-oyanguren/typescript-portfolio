@@ -1,0 +1,11 @@
+.ExperiencePageSection + .ExperiencePageSection {
+  margin-top: calc(var(--spacing-large) * 2);
+}
+
+.subTitle {
+  padding: var(--spacing-medium);
+}
+
+.content {
+  margin-top: var(--spacing-medium);
+}
