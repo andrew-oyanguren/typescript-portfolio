@@ -1,0 +1,14 @@
+.ExperiencePageSection + .ExperiencePageSection {
+  margin-top: calc(var(--spacing-large) * 2);
+  background-color: rgb(88, 27, 88);
+}
+
+.subTitle {
+  padding: var(--spacing-medium);
+  background-color: tan;
+}
+
+.content {
+  margin-top: var(--spacing-medium);
+  background-color: pink;
+}

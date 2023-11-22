@@ -1,0 +1,63 @@
+.Container > * + * {
+  margin-top: 60px;
+}
+
+.textContainer {
+  background-color: var(--color-primary);
+  padding: 40px 20px;
+}
+
+.textContainer p {
+  color: var(--color-light);
+}
+
+.AchievementsContainer {
+  background-color: var(--color-dark);
+  padding-bottom: 20px;
+}
+
+.AchievementsHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AchievementsHeader img {
+  transform: rotate(-15deg);
+  width: 40px;
+  height: 40px;
+}
+
+.AchievementsHeader p {
+  color: var(--color-secondary);
+}
+
+.AchievementsList {
+  margin: 0;
+  padding: 0 20px 0 40px;
+}
+
+.AchievementsList li {
+  position: relative;
+}
+
+.AchievementsList li p {
+  color: var(--color-light);
+  margin: 0;
+}
+
+.AchievementsList li:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  top: calc(var(--font-size-small) / 2);
+  left: -16px;
+}
+
+.AchievementsList li + li {
+  margin-top: 20px;
+}

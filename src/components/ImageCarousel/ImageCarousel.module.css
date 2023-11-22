@@ -8,7 +8,7 @@
   height: 350px;
 
   margin: 0 auto;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-common);
   box-shadow: var(--box-shadow-image);
 
   position: relative;
@@ -17,11 +17,10 @@
 }
 
 .imageContainer img {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-common);
 }
 
 .title p {
-  font-size: var(--font-size-medium);
   padding: 10px;
   margin: 0;
   color: var(--color-primary);

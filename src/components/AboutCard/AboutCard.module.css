@@ -5,16 +5,16 @@
   display: flex;
   flex-direction: column;
 
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-common);
 }
 
 .AboutCard + .AboutCard {
-  margin-top: var(--margin-top-large);
+  margin-top: calc(var(--spacing-medium) * 3);
 }
 
 .header {
-  border-top-right-radius: var(--border-radius);
-  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius-common);
+  border-top-left-radius: var(--border-radius-common);
 
   display: flex;
   justify-content: center;

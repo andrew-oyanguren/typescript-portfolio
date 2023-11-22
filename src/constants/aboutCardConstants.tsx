@@ -11,7 +11,6 @@ const commonBoxShadow = 'var(--box-shadow-image)';
 const paragraphStyles = {
   padding: 20,
   lineHeight: 2,
-  fontSize: 'var(--font-size-medium)',
 };
 
 type AboutCardConfigTypes = {
