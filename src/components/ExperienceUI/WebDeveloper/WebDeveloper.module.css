@@ -1,6 +1,6 @@
 .Container {
-  background-color: var(--color-gray);
   padding: var(--spacing-large) 0;
+  background-color: var(--color-gray);
 }
 
 .Container img {

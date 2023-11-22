@@ -1,7 +1,3 @@
-.Container {
-  background-color: lime;
-}
-
 .Container > * + * {
   margin-top: var(--spacing-large);
 }
