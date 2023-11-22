@@ -2,12 +2,24 @@
   background-color: lime;
 }
 
+.Container > * + * {
+  margin-top: var(--spacing-large);
+}
+
 .textContainer {
-  padding: 20px 10px;
+  padding: var(--spacing-medium);
   color: var(--color-primary);
 }
 
 .textContainer span {
   font-weight: bold;
   color: var(--color-secondary);
+}
+
+.textSpacing {
+  padding: var(--spacing-medium);
+}
+
+span {
+  font-weight: bold;
 }
