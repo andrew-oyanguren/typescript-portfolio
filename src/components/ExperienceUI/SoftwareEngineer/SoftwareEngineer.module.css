@@ -4,12 +4,14 @@
 
 .textContainer {
   background-color: var(--color-primary);
-  padding: 40px 20px;
+  padding: var(--spacing-large) var(--spacing-medium);
 }
 
 .textContainer p {
   color: var(--color-light);
 }
+
+/* Achievement Component */
 
 .AchievementsContainer {
   background-color: var(--color-dark);
@@ -20,12 +22,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: var(--spacing-medium);
 }
 
 .AchievementsHeader img {
   transform: rotate(-15deg);
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 .AchievementsHeader p {
@@ -34,7 +37,7 @@
 
 .AchievementsList {
   margin: 0;
-  padding: 0 20px 0 40px;
+  padding: 0 20px 0 46px;
 }
 
 .AchievementsList li {
@@ -46,16 +49,21 @@
   margin: 0;
 }
 
+.AchievementsList li span {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
 .AchievementsList li:before {
   content: '';
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--color-secondary);
   position: absolute;
-  top: calc(var(--font-size-small) / 2);
-  left: -16px;
+  top: calc(var(--font-size-medium) / 2);
+  left: -24px;
 }
 
 .AchievementsList li + li {

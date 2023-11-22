@@ -6,35 +6,18 @@ import styles from './SoftwareEngineer.module.css';
 
 const ACHIEVEMENTS_LIST_ITEMS = [
   <p>
-    I surfaced critical{' '}
-    <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>
-      business metrics
-    </span>{' '}
-    through custom stats cards
+    I surfaced critical <span>business metrics</span> through custom stats cards
   </p>,
   <p>
-    I helped improve overall{' '}
-    <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>
-      testing
-    </span>{' '}
-    and stability
+    I helped improve overall <span>testing</span> and stability
   </p>,
   <p>
-    Developed{' '}
-    <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>
-      reusable-scalable components
-    </span>{' '}
-    in accordance with{' '}
-    <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>
-      design system
-    </span>
+    Developed <span>reusable-scalable components</span> in accordance with{' '}
+    <span>design system</span>
   </p>,
   <p>
-    Introduced{' '}
-    <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>
-      auto-generated API
-    </span>{' '}
-    hooks helping to standardize fetching across Reperio's three applications
+    Introduced <span>auto-generated API</span> hooks helping to standardize
+    fetching across Reperio's three applications
   </p>,
 ];
 
@@ -55,10 +38,7 @@ const AchievementsList = () => {
   );
 };
 
-const searchCardStyles = {
-  padding: 20,
-  backgroundColor: 'var(--color-gray)',
-};
+const cardIcon = { width: 45, height: 45, padding: 'var(--spacing-small)' };
 
 export default function SoftwareEngineer() {
   return (
@@ -72,13 +52,18 @@ export default function SoftwareEngineer() {
         </p>
       </div>
 
-      <Card style={searchCardStyles}>
-        <img
-          style={{ width: 45, height: 45 }}
-          src={SearchIcon}
-          alt='Search Icon'
-        />
-        <p style={{ color: 'var(--color-dark)' }}>
+      <Card
+        style={{
+          padding: 'var(--spacing-medium)',
+
+          backgroundColor: 'var(--color-gray)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
+        }}
+      >
+        <img style={cardIcon} src={SearchIcon} alt='Search Icon' />
+        <p style={{ color: 'var(--color-dark)', padding: 20 }}>
           Handling strategic deployments, responding to sentry alerts, and
           researching for upcoming implementations.
         </p>
