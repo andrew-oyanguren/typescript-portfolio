@@ -59,7 +59,7 @@ export default function SoftwareEngineer() {
           backgroundColor: 'var(--color-gray)',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'flex-end',
+          alignItems: 'center',
         }}
       >
         <img style={cardIcon} src={SearchIcon} alt='Search Icon' />

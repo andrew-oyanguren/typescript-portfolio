@@ -27,10 +27,10 @@ export default function JrEngineer() {
 
       <Card
         style={{
-          borderTopLeftRadius: 50,
-          borderTopRightRadius: 0,
-          borderBottomRightRadius: 50,
-          borderBottomLeftRadius: 0,
+          borderTopLeftRadius: 60,
+          borderTopRightRadius: 'var(--border-radius-common)',
+          borderBottomRightRadius: 60,
+          borderBottomLeftRadius: 'var(--border-radius-common)',
 
           display: 'flex',
           flexDirection: 'column',
