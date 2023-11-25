@@ -24,10 +24,10 @@ const ACHIEVEMENTS_LIST_ITEMS = [
 const AchievementsList = () => {
   return (
     <div className={styles.AchievementsContainer}>
-      <div className={styles.AchievementsHeader}>
+      <header className={styles.AchievementsHeader}>
         <img src={AwardIcon} alt='Award Icon' />
-        <p>Achievements</p>
-      </div>
+        <h3>Achievements</h3>
+      </header>
 
       <ul className={styles.AchievementsList}>
         {ACHIEVEMENTS_LIST_ITEMS.map((st, idx) => (
@@ -42,7 +42,7 @@ const cardIcon = { width: 45, height: 45, padding: 'var(--spacing-small)' };
 
 export default function SoftwareEngineer() {
   return (
-    <div className={styles.Container}>
+    <>
       <div className={styles.textContainer}>
         <p>
           Collaborated with Product, Design, and CS/CX to build data-driven
@@ -63,13 +63,14 @@ export default function SoftwareEngineer() {
         }}
       >
         <img style={cardIcon} src={SearchIcon} alt='Search Icon' />
-        <p style={{ color: 'var(--color-dark)', padding: 20 }}>
+
+        <p className={styles.cardText}>
           Handling strategic deployments, responding to sentry alerts, and
           researching for upcoming implementations.
         </p>
       </Card>
 
       <AchievementsList />
-    </div>
+    </>
   );
 }

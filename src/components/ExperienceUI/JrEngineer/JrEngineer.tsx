@@ -9,14 +9,11 @@ const cardIcon = { width: 45, height: 45, padding: 'var(--spacing-small)' };
 
 export default function JrEngineer() {
   return (
-    <div className={styles.Container}>
+    <>
       <Card style={{ backgroundColor: 'var(--color-gray)' }}>
         <img style={cardIcon} src={CodeIcon} alt='Code Icon' />
 
-        <p
-          className={styles.textSpacing}
-          style={{ color: 'var(--color-dark)' }}
-        >
+        <p style={{ color: 'var(--color-dark)' }}>
           Responsible for Pulse{' '}
           <span style={{ color: 'var(--color-secondary)' }}>
             releases and debugging
@@ -37,7 +34,7 @@ export default function JrEngineer() {
           alignItems: 'center',
         }}
       >
-        <p className={styles.textSpacing}>
+        <p>
           Developed a{' '}
           <span
             style={{
@@ -51,7 +48,7 @@ export default function JrEngineer() {
 
         <img style={cardIcon} src={MapIcon} alt='Map Icon' />
 
-        <p className={styles.textSpacing}>
+        <p>
           I was Instrumental in FE decisions when building{' '}
           <span style={{ color: 'var(--color-dark)' }}>new features</span>.
         </p>
@@ -74,7 +71,7 @@ export default function JrEngineer() {
       >
         <img style={cardIcon} src={BookIcon} alt='Book Icon' />
 
-        <p className={styles.textSpacing}>
+        <p className={styles.cardText}>
           Researched and successfully integrated React libraries into Novo.
           Developed data grids, and forms using{' '}
           <span style={{ color: 'var(--color-primary)' }}>React-Hook-Form</span>{' '}
@@ -82,6 +79,6 @@ export default function JrEngineer() {
           <span style={{ color: 'var(--color-primary)' }}>React-DataGrid</span>
         </p>
       </Card>
-    </div>
+    </>
   );
 }
