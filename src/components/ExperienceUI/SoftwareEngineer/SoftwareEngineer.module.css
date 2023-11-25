@@ -1,5 +1,6 @@
 .textContainer {
   background-color: var(--color-primary);
+  padding: var(--spacing-large) 0;
 }
 
 .textContainer p {
