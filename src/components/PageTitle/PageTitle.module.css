@@ -4,7 +4,16 @@
 
 .PageTitle h1,
 h2 {
-  color: var(--color-dark);
   font-size: var(--font-size-large);
-  background-color: coral;
+}
+
+.PageTitle h1 {
+  color: var(--color-dark);
+  margin-top: calc(var(--spacing-large) * 2);
+}
+
+.PageTitle h2 {
+  color: var(--color-dark);
+  background-color: var(--color-dark-gray);
+  padding: var(--spacing-medium) 0;
 }

@@ -17,8 +17,9 @@
 
 .ImageContainer .title {
   font-weight: var(--font-weight-bold);
+  font-size: 24px;
   margin: 0 0 10px 0;
-  padding: 5px 0;
+  padding: var(--spacing-small) 0;
 }
 
 .ImageContainer:nth-of-type(odd) .title {
@@ -35,6 +36,6 @@
 }
 
 .ImageContainer + .ImageContainer {
-  margin-top: var(--spacing-medium);
-  padding: 40px 0 60px 0;
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-large) 0 60px 0;
 }
