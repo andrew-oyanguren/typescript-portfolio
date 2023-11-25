@@ -29,7 +29,7 @@ const PageSection = () => {
     <>
       {EXP_SECTIONS_CONFIG.map(({ title, subTitle, content }) => (
         <section className={styles.ExperiencePageSection} key={title}>
-          <PageTitle text={title} />
+          <PageTitle secondaryTitle={true} text={title} />
 
           <p className={styles.subTitle}>{subTitle}</p>
 
