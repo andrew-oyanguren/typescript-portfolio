@@ -30,15 +30,16 @@ export default function AboutPage() {
       <PageTitle text='My Journey' />
 
       {windowDim.width > 900 ? <Drawer /> : null}
-
-      {ABOUT_CARDS_CONFIG.map(({ cardStyles, iconProps, body }) => (
-        <AboutCard
-          key={iconProps.src}
-          cardStyles={cardStyles}
-          iconProps={iconProps}
-          body={body}
-        />
-      ))}
+      <div style={{ marginTop: 'var(--spacing-large)' }}>
+        {ABOUT_CARDS_CONFIG.map(({ cardStyles, iconProps, body }) => (
+          <AboutCard
+            key={iconProps.src}
+            cardStyles={cardStyles}
+            iconProps={iconProps}
+            body={body}
+          />
+        ))}
+      </div>
     </>
   );
 }
