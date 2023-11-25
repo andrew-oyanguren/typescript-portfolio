@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.PageTitle h1 {
+.PageTitle h1,
+h2 {
   color: var(--color-dark);
   font-size: var(--font-size-large);
   background-color: coral;
