@@ -5,13 +5,11 @@ import { Card } from 'src/components';
 
 import styles from './JrEngineer.module.css';
 
-const cardIcon = { width: 45, height: 45, padding: 'var(--spacing-small)' };
-
 export default function JrEngineer() {
   return (
     <>
       <Card style={{ backgroundColor: 'var(--color-gray)' }}>
-        <img style={cardIcon} src={CodeIcon} alt='Code Icon' />
+        <img className={styles.cardIcon} src={CodeIcon} alt='Code Icon' />
 
         <p style={{ color: 'var(--color-dark)' }}>
           Responsible for Pulse{' '}
@@ -34,24 +32,26 @@ export default function JrEngineer() {
           alignItems: 'center',
         }}
       >
-        <p>
-          Developed a{' '}
-          <span
-            style={{
-              color: 'var(--color-dark)',
-            }}
-          >
-            Q&A
-          </span>{' '}
-          and release process for Pulse to the Play Store.
-        </p>
+        <div className={styles.cardContentContainer}>
+          <p>
+            Developed a{' '}
+            <span
+              style={{
+                color: 'var(--color-dark)',
+              }}
+            >
+              Q&A
+            </span>{' '}
+            and release process for Pulse to the Play Store.
+          </p>
 
-        <img style={cardIcon} src={MapIcon} alt='Map Icon' />
+          <img className={styles.mapIcon} src={MapIcon} alt='Map Icon' />
 
-        <p>
-          I was Instrumental in FE decisions when building{' '}
-          <span style={{ color: 'var(--color-dark)' }}>new features</span>.
-        </p>
+          <p>
+            I was Instrumental in FE decisions when building{' '}
+            <span style={{ color: 'var(--color-dark)' }}>new features</span>.
+          </p>
+        </div>
       </Card>
 
       <div className={styles.textContainer}>
@@ -69,7 +69,7 @@ export default function JrEngineer() {
           alignItems: 'flex-end',
         }}
       >
-        <img style={cardIcon} src={BookIcon} alt='Book Icon' />
+        <img className={styles.cardIcon} src={BookIcon} alt='Book Icon' />
 
         <p className={styles.cardText}>
           Researched and successfully integrated React libraries into Novo.
