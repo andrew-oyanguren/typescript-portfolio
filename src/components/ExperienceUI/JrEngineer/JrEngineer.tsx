@@ -5,18 +5,13 @@ import { Card } from 'src/components';
 
 import styles from './JrEngineer.module.css';
 
-const cardIcon = { width: 45, height: 45, padding: 'var(--spacing-small)' };
-
 export default function JrEngineer() {
   return (
-    <div className={styles.Container}>
+    <>
       <Card style={{ backgroundColor: 'var(--color-gray)' }}>
-        <img style={cardIcon} src={CodeIcon} alt='Code Icon' />
+        <img className={styles.cardIcon} src={CodeIcon} alt='Code Icon' />
 
-        <p
-          className={styles.textSpacing}
-          style={{ color: 'var(--color-dark)' }}
-        >
+        <p style={{ color: 'var(--color-dark)' }}>
           Responsible for Pulse{' '}
           <span style={{ color: 'var(--color-secondary)' }}>
             releases and debugging
@@ -27,34 +22,36 @@ export default function JrEngineer() {
 
       <Card
         style={{
-          borderTopLeftRadius: 50,
-          borderTopRightRadius: 0,
-          borderBottomRightRadius: 50,
-          borderBottomLeftRadius: 0,
+          borderTopLeftRadius: 60,
+          borderTopRightRadius: 'var(--border-radius-common)',
+          borderBottomRightRadius: 60,
+          borderBottomLeftRadius: 'var(--border-radius-common)',
 
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
         }}
       >
-        <p className={styles.textSpacing}>
-          Developed a{' '}
-          <span
-            style={{
-              color: 'var(--color-dark)',
-            }}
-          >
-            Q&A
-          </span>{' '}
-          and release process for Pulse to the Play Store.
-        </p>
+        <div className={styles.cardContentContainer}>
+          <p>
+            Developed a{' '}
+            <span
+              style={{
+                color: 'var(--color-dark)',
+              }}
+            >
+              Q&A
+            </span>{' '}
+            and release process for Pulse to the Play Store.
+          </p>
 
-        <img style={cardIcon} src={MapIcon} alt='Map Icon' />
+          <img className={styles.mapIcon} src={MapIcon} alt='Map Icon' />
 
-        <p className={styles.textSpacing}>
-          I was Instrumental in FE decisions when building{' '}
-          <span style={{ color: 'var(--color-dark)' }}>new features</span>.
-        </p>
+          <p>
+            I was Instrumental in FE decisions when building{' '}
+            <span style={{ color: 'var(--color-dark)' }}>new features</span>.
+          </p>
+        </div>
       </Card>
 
       <div className={styles.textContainer}>
@@ -72,9 +69,9 @@ export default function JrEngineer() {
           alignItems: 'flex-end',
         }}
       >
-        <img style={cardIcon} src={BookIcon} alt='Book Icon' />
+        <img className={styles.cardIcon} src={BookIcon} alt='Book Icon' />
 
-        <p className={styles.textSpacing}>
+        <p className={styles.cardText}>
           Researched and successfully integrated React libraries into Novo.
           Developed data grids, and forms using{' '}
           <span style={{ color: 'var(--color-primary)' }}>React-Hook-Form</span>{' '}
@@ -82,6 +79,6 @@ export default function JrEngineer() {
           <span style={{ color: 'var(--color-primary)' }}>React-DataGrid</span>
         </p>
       </Card>
-    </div>
+    </>
   );
 }

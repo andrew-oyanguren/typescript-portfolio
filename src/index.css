@@ -30,7 +30,8 @@
   --color-error: #ad3319;
 
   /* common box properties */
-  --mobile-width-percent: 98%;
+  --mobile-width-percent: 95%;
+
   --border-radius-common: 20px;
   --border-radius-circle: 50%;
 
