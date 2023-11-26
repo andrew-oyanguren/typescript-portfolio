@@ -14,18 +14,19 @@
   display: flex;
   align-items: flex-end;
 
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .EmailContainer img {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   padding: 0 var(--spacing-small);
 }
 
 /* Success Screen Component */
 .SuccessScreenContainer {
   text-align: center;
+  height: inherit;
 }
 
 .SuccessIconWrapper {

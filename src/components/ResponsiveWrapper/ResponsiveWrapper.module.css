@@ -2,10 +2,11 @@
   width: var(--mobile-width-percent);
   max-width: var(--device-xl-maxWidth);
   margin: 0 auto;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 
   /* TODO: REMOVE FOR DEVELOPMENT ONLY */
