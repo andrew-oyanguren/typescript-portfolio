@@ -1,0 +1,42 @@
+.TitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TitleContainer img {
+  width: 75px;
+  height: 75px;
+}
+
+.EmailContainer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  /* background-color: pink; */
+}
+
+.EmailContainer img {
+  width: 35px;
+  height: 35px;
+  padding: 0 var(--spacing-small);
+}
+
+/* Success Screen Component */
+.SuccessScreenContainer {
+  text-align: center;
+  height: inherit;
+}
+
+.SuccessIconWrapper {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  padding: 60px 0;
+}
+
+.SuccessIconWrapper img {
+  width: 90px;
+  height: 90px;
+}

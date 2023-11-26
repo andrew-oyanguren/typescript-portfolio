@@ -1,31 +1,21 @@
 import { useState } from 'react';
 import { Card, ContactForm, PageTitle } from 'src/components';
 import CheckCircle from 'src/assets/svgs/check-circle.svg';
+import MessageIcon from 'src/assets/images/thought-bubble.png';
+import EmailIcon from 'src/assets/svgs/email.svg';
+
+import styles from './ContactPage.module.css';
 
 const SuccessScreen = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1 style={{ color: '#6eadc0', fontSize: 36, margin: 0 }}>
-        Message was successfully sent!
-      </h1>
+    <div className={styles.SuccessScreenContainer}>
+      <PageTitle
+        text='Message was successfully sent!'
+        style={{ fontSize: 36, color: 'var(--color-primary)' }}
+      />
 
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          placeContent: 'center',
-          padding: '60px 0',
-        }}
-      >
-        <img
-          style={{
-            width: 90,
-            height: 90,
-            filter:
-              'invert(67%) sepia(80%) saturate(3692%) hue-rotate(358deg) brightness(102%) contrast(106%)',
-          }}
-          src={CheckCircle}
-        />
+      <div className={styles.SuccessIconWrapper}>
+        <img src={CheckCircle} />
       </div>
 
       <Card>
@@ -48,7 +38,25 @@ export default function ContactPage() {
     <SuccessScreen />
   ) : (
     <>
-      <PageTitle text='Send me a message' />
+      <div className={styles.TitleContainer}>
+        <PageTitle
+          text="Okay, let's chat!"
+          style={{
+            maxWidth: '65%',
+            marginLeft: 0,
+            marginRight: 0,
+          }}
+        />
+
+        <img src={MessageIcon} alt='Message Icon' />
+      </div>
+
+      <div className={styles.EmailContainer}>
+        <img src={EmailIcon} alt='Email Icon' />
+
+        <p>aaoyanguren@outlook.com</p>
+      </div>
+
       <ContactForm onSuccess={onSuccess} />
     </>
   );

@@ -9,7 +9,7 @@
 }
 
 .AboutCard + .AboutCard {
-  margin-top: calc(var(--spacing-medium) * 3);
+  margin-top: calc(var(--spacing-large) * 2);
 }
 
 .header {
