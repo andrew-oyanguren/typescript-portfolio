@@ -5,14 +5,19 @@
 }
 
 /* Inherited styles allow to parent to pass styles. */
-
 .PageTitle h1,
 h2 {
-  font-size: var(--font-size-large);
   color: inherit;
 }
 
 .PageTitle h2 {
-  background-color: var(--color-dark-gray);
   padding: var(--spacing-medium) 0;
+  background-color: var(--color-dark-gray);
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .PageTitle {
+    margin-top: calc(var(--spacing-large) * 5);
+  }
 }
