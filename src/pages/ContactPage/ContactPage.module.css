@@ -1,42 +1,73 @@
 .TitleContainer {
+  width: 100%;
+
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
+  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
+  background-color: rgba(77, 99, 61, 0.75);
 }
 
 .TitleContainer img {
   width: 75px;
-  height: 75px;
+  margin-right: var(--spacing-large);
 }
 
 .EmailContainer {
   width: 100%;
+  margin-top: var(--spacing-medium);
+
   display: flex;
   align-items: flex-end;
 
-  /* background-color: pink; */
+  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
+  background-color: pink;
 }
 
 .EmailContainer img {
   width: 35px;
-  height: 35px;
-  padding: 0 var(--spacing-small);
 }
 
 /* Success Screen Component */
 .SuccessScreenContainer {
   text-align: center;
   height: inherit;
+  max-width: 570px;
 }
 
 .SuccessIconWrapper {
   width: 100%;
+  padding: 60px 0;
+
   display: flex;
   place-content: center;
-  padding: 60px 0;
 }
 
 .SuccessIconWrapper img {
   width: 90px;
-  height: 90px;
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .TitleContainer {
+    /* TODO: REMOVE FOR DEVELOPMENT ONLY */
+    background-color: rgba(106, 255, 0, 0.75);
+
+    justify-content: flex-start;
+  }
+
+  .TitleContainer img {
+    width: 85px;
+    margin-right: 0;
+  }
+
+  .EmailContainer img {
+    width: 45px;
+  }
+
+  /* Success Screen Component */
+  .SuccessIconWrapper {
+    padding: 80px 0;
+  }
 }
