@@ -71,7 +71,8 @@ body {
 }
 
 h1 {
-  margin: var(--spacing-medium);
+  margin: 0;
+  font-size: var(--font-size-large);
 }
 
 p {
@@ -90,4 +91,15 @@ img {
 
 li {
   list-style: none;
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  h1 {
+    font-size: calc(var(--font-size-large) * 1.5);
+  }
+
+  p {
+    font-size: calc(var(--font-size-medium) * 1.25);
+  }
 }
