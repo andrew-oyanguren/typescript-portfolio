@@ -83,7 +83,7 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
       }}
       className={styles.ContactForm}
     >
-      <>
+      <div className={styles.FormControlContainer}>
         {INPUTS_CONFIG.map(
           ({
             inputName,
@@ -94,9 +94,9 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
             errorMessage,
           }) => {
             return (
-              <div key={inputName} className={styles.formControl}>
+              <div key={inputName} className={styles.FormControl}>
                 {validation && emailHasError ? (
-                  <p className={styles.errorMessage}>{errorMessage}</p>
+                  <p className={styles.ErrorMessage}>{errorMessage}</p>
                 ) : null}
                 <FormInput
                   inputConfig={{
@@ -105,7 +105,7 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
                     props: {
                       ...formatInputProps(inputName, props, validation),
                       className:
-                        validation && emailHasError ? styles.error : '',
+                        validation && emailHasError ? styles.Error : '',
                     },
                     children,
                   }}
@@ -114,9 +114,9 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
             );
           }
         )}
-      </>
+      </div>
 
-      <div className={styles.actions}>
+      <div className={styles.Actions}>
         <button type='submit' disabled={!formIsValid}>
           <img src={SendIcon} alt='Send message button' />
           Send
