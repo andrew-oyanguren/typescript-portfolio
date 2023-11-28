@@ -23,9 +23,9 @@
 
 .ControlButton:disabled {
   box-shadow: none;
-  border: none;
+  border-color: var(--color-dark-gray);
   transform: scale(0.98);
-  color: var(--color-gray);
+  background-color: var(--color-gray);
 }
 
 .ControlButton img {
