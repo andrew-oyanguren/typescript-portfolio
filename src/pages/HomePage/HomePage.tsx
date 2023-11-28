@@ -6,12 +6,12 @@ import { PageTitle } from 'src/components';
 export default function HomePage() {
   const { windowDim } = useWindowDim();
 
-  const isScreenMobile = windowDim.width < 540;
+  const isDeviceSmall = windowDim.width < 768;
 
   return (
     <>
       <PageTitle text="Hi, I'm Andy" />
-      {isScreenMobile ? <ImageView /> : <ImageCarousel />}
+      {isDeviceSmall ? <ImageView /> : <ImageCarousel />}
     </>
   );
 }
