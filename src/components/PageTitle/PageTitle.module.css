@@ -18,6 +18,6 @@ h2 {
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
   .PageTitle {
-    margin-top: calc(var(--spacing-large) * 5);
+    margin-top: calc(var(--spacing-large) * 3);
   }
 }
