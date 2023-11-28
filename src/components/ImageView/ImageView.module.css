@@ -1,9 +1,16 @@
 .ImageView {
-  text-align: center;
+  width: 100%;
+  background-color: aquamarine;
+  margin-top: var(--spacing-large);
 }
 
 .ImageContainer {
   position: relative;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ImageContainer:nth-of-type(even) {
@@ -17,7 +24,7 @@
 
 .ImageContainer .title {
   font-weight: var(--font-weight-bold);
-  font-size: 24px;
+
   margin: 0 0 10px 0;
   padding: var(--spacing-small) 0;
 }
@@ -29,6 +36,8 @@
 .ImageContainer img {
   border-radius: var(--border-radius-common);
   box-shadow: var(--box-shadow-image);
+
+  max-width: 500px;
 }
 
 .ImageContainer:first-of-type img {
@@ -37,5 +46,12 @@
 
 .ImageContainer + .ImageContainer {
   margin-top: var(--spacing-large);
-  padding: var(--spacing-large) 0 60px 0;
+  padding: var(--spacing-medium) 0 60px 0;
+}
+
+/* SMALL_MEDIUM_DEVICES: > 640 */
+@media (min-width: 640px) {
+  .ImageView {
+    margin-top: calc(var(--spacing-large) * 1.5);
+  }
 }

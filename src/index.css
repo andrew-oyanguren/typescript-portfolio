@@ -6,9 +6,9 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-small);
 
-  --font-size-small: 16px;
-  --font-size-medium: 20px;
-  --font-size-large: 36px;
+  --font-size-small: 18px;
+  --font-size-medium: 26px;
+  --font-size-large: 42px;
 
   --font-weight-regular: 400;
   --font-weight-bold: 600;
@@ -77,7 +77,7 @@ h1 {
 
 p {
   margin: 0;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   line-height: 1.75;
 
   color: var(--color-dark);
@@ -91,6 +91,13 @@ img {
 
 li {
   list-style: none;
+}
+
+/* SMALL_MEDIUM_DEVICES: > 640 */
+@media (min-width: 640px) {
+  h1 {
+    font-size: calc(var(--font-size-large) * 1.25);
+  }
 }
 
 /* MEDIUM_DEVICES: > 768 */

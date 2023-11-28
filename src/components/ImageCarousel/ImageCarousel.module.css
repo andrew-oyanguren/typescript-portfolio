@@ -1,11 +1,19 @@
 .ImageCarousel {
+  width: 100%;
+  margin-top: var(--spacing-medium);
+  padding: var(--spacing-large) 0;
   text-align: center;
-  max-width: 600px;
+
+  background-color: var(--color-gray);
 }
 
-.imageContainer {
-  width: 450px;
-  height: 350px;
+.ImageCarouselContainer {
+  padding-top: var(--spacing-medium);
+}
+
+.ImageWrapper {
+  width: 540px;
+  height: 380px;
 
   margin: 0 auto;
   border-radius: var(--border-radius-common);
@@ -16,23 +24,23 @@
   place-content: center;
 }
 
-.imageContainer img {
+.ImageWrapper img {
   border-radius: var(--border-radius-common);
 }
 
-.title p {
-  padding: 10px;
+.Title p {
   margin: 0;
   color: var(--color-primary);
 }
 
-.controls {
+.Controls {
+  padding: 0;
+  margin-top: var(--spacing-medium);
+
   display: flex;
   justify-content: center;
-
-  padding: 0;
 }
 
-.controls button:last-of-type {
-  margin-left: 60px;
+.Controls button:last-of-type {
+  margin-left: 80px;
 }
