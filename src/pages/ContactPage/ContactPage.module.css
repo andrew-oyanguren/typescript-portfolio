@@ -29,6 +29,10 @@
   width: 35px;
 }
 
+.EmailContainer p {
+  padding-left: var(--spacing-small);
+}
+
 /* Success Screen Component */
 .SuccessScreenContainer {
   text-align: center;
