@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { IMAGE_CONFIG } from 'src/constants/imageConstants';
+import useWindow from 'src/hooks/useWindowDim';
 
 import { ControlButton } from 'src/components';
 
@@ -10,6 +11,8 @@ export default function ImageCarousel() {
   const [currentImage, setCurrentImage] = useState(
     IMAGE_CONFIG[currentImageIdx]
   );
+
+  const { windowDim } = useWindow();
 
   const isFirstImage = currentImageIdx === 0;
   const isLastImage = currentImageIdx === IMAGE_CONFIG.length - 1;
@@ -32,27 +35,37 @@ export default function ImageCarousel() {
 
   return (
     <div className={styles.ImageCarousel}>
-      <div className={styles.imageContainer}>
-        {<img src={currentImage.asset} alt={currentImage.altText} />}
+      <div className={styles.Title}>
+        {windowDim.width < 1200 ? (
+          <p>{currentImage.title}</p>
+        ) : (
+          <div>
+            {IMAGE_CONFIG.map(({ title }) => (
+              <p key={title}>{title}</p>
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className={styles.title}>
-        <p>{currentImage.title}</p>
-      </div>
+      <div className={styles.ImageCarouselContainer}>
+        <div className={styles.ImageWrapper}>
+          <img src={currentImage.asset} alt={currentImage.altText} />
+        </div>
 
-      <div className={styles.controls}>
-        <ControlButton
-          onClick={onBack}
-          controlType={'Back'}
-          altText='Back button'
-          isDisabled={isFirstImage}
-        />
-        <ControlButton
-          onClick={onNext}
-          controlType={'Next'}
-          altText='Next button'
-          isDisabled={isLastImage}
-        />
+        <div className={styles.Controls}>
+          <ControlButton
+            onClick={onBack}
+            controlType={'Back'}
+            altText='Back button'
+            isDisabled={isFirstImage}
+          />
+          <ControlButton
+            onClick={onNext}
+            controlType={'Next'}
+            altText='Next button'
+            isDisabled={isLastImage}
+          />
+        </div>
       </div>
     </div>
   );
