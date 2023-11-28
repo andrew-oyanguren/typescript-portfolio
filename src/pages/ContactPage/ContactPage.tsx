@@ -39,14 +39,7 @@ export default function ContactPage() {
   ) : (
     <>
       <div className={styles.TitleContainer}>
-        <PageTitle
-          text="Okay, let's chat!"
-          style={{
-            maxWidth: '65%',
-            marginLeft: 0,
-            marginRight: 0,
-          }}
-        />
+        <PageTitle text="Okay, let's chat!" />
 
         <img src={MessageIcon} alt='Message Icon' />
       </div>

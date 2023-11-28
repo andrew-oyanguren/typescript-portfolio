@@ -1,18 +1,17 @@
 .ContactForm {
   width: 100%;
-  margin-top: var(--spacing-large);
-}
-
-.ContactForm > * + * {
   margin-top: var(--spacing-medium);
 }
 
-.formControl > input,
+.FormControlContainer > * + * {
+  margin-top: var(--spacing-medium);
+}
+
+.FormControl > input,
 textarea,
 select {
   width: 100%;
-  height: 60px;
-  padding: 16px;
+  padding: 1em;
 
   box-sizing: border-box;
   box-shadow: var(--box-shadow-icon);
@@ -21,27 +20,33 @@ select {
 
   font-size: 18px;
   color: var(--color-dark);
-  background-color: var(--color-light);
+
+  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
+  background-color: pink;
 }
 
-.formControl textarea {
+.FormControl textarea {
   display: block;
   height: 200px;
   resize: none;
 }
 
-.formControl > *:focus {
+.FormControl > *:focus {
   outline: 2px solid var(--color-primary);
 }
 
-.actions img {
+.Actions {
+  margin-top: var(--spacing-medium);
+}
+
+.Actions img {
   width: 36px;
-  height: 36px;
+
   margin-right: 5px;
   filter: var(--svg-filter-light);
 }
 
-.actions button {
+.Actions button {
   width: 100%;
   height: 120px;
 
@@ -54,24 +59,65 @@ select {
   align-items: center;
 
   font-weight: bold;
-  font-size: 24px;
+  font-size: 25px;
   color: var(--color-light);
   background-color: var(--color-primary);
 }
 
-.actions button:disabled {
+.Actions button:disabled {
   box-shadow: none;
   color: var(--color-dark-gray);
   background-color: var(--color-gray);
 }
 
-.error {
+.Error {
   outline: 2px solid var(--color-error);
 }
 
-.errorMessage {
+.ErrorMessage {
   margin: 0;
   padding: 5px 0;
   font-size: 14px;
   color: var(--color-error);
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .ContactForm {
+    display: flex;
+
+    /* TODO: REMOVE FOR DEVELOPMENT ONLY */
+    background-color: burlywood;
+  }
+
+  .FormControlContainer {
+    flex: 2;
+  }
+
+  .FormControl > input,
+  textarea,
+  select {
+    font-size: 25px;
+  }
+
+  .FormControl textarea {
+    height: 280px;
+  }
+
+  .Actions {
+    flex: 1;
+    margin-top: 0;
+    padding-left: var(--spacing-small);
+  }
+
+  .Actions img {
+    width: 55px;
+    margin-right: 10px;
+    filter: var(--svg-filter-light);
+  }
+
+  .Actions button {
+    height: 100%;
+    font-size: 40px;
+  }
 }
