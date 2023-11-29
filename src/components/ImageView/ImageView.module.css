@@ -5,12 +5,26 @@
 }
 
 .ImageContainer {
-  position: relative;
   text-align: center;
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.ImageWrapper {
+  width: 345px;
+  height: 230px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  border-radius: var(--border-radius-common);
+  box-shadow: var(--box-shadow-image);
+
+  position: relative;
+}
+
+.ImageWrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 .ImageContainer:nth-of-type(even) {
@@ -40,8 +54,9 @@
   max-width: 500px;
 }
 
-.ImageContainer:first-of-type img {
+.ImageContainer:first-of-type .ImageWrapper {
   border-radius: var(--border-radius-circle);
+  height: 345px;
 }
 
 .ImageContainer + .ImageContainer {

@@ -14,9 +14,11 @@ export default function AboutCard({
 }: AboutCardTypes) {
   return (
     <div className={styles.AboutCard} style={cardStyles}>
-      <header className={styles.header}>{<img {...iconProps} />}</header>
+      <header className={styles.AboutCardHeader}>
+        {<img {...iconProps} />}
+      </header>
 
-      <div className={styles.body}>{body}</div>
+      <div className={styles.Body}>{body}</div>
     </div>
   );
 }

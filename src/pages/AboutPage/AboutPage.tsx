@@ -24,12 +24,14 @@ const BackgroundDesign = () => {
 export default function AboutPage() {
   const { windowDim } = useWindowDim();
 
+  const isLargeDevice = windowDim.width > 1200;
+
   return (
     <>
       <BackgroundDesign />
-      <PageTitle text='My Journey' />
+      <PageTitle text='My Journey,' />
 
-      {windowDim.width > 900 ? <Drawer /> : null}
+      {isLargeDevice ? <Drawer /> : null}
       <div style={{ marginTop: 'var(--spacing-large)' }}>
         {ABOUT_CARDS_CONFIG.map(({ cardStyles, iconProps, body }) => (
           <AboutCard
