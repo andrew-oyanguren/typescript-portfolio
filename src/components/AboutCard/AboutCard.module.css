@@ -1,6 +1,7 @@
 .AboutCard {
   width: 100%;
-  max-width: 490px;
+  max-width: 700px;
+  margin-top: var(--spacing-large);
 
   display: flex;
   flex-direction: column;
@@ -12,7 +13,7 @@
   margin-top: calc(var(--spacing-large) * 2);
 }
 
-.header {
+.AboutCardHeader {
   border-top-right-radius: var(--border-radius-common);
   border-top-left-radius: var(--border-radius-common);
 
@@ -23,12 +24,18 @@
   background-color: var(--color-dark);
 }
 
-.header img {
+.AboutCardHeader img {
   width: 65px;
-  height: 65px;
   padding: 24px;
 }
 
-.body {
+.AboutCard .Body {
   flex: 1;
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .AboutCardHeader img {
+    padding: 36px;
+  }
 }
