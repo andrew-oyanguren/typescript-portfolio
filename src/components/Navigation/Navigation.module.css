@@ -3,7 +3,7 @@
   max-width: var(--device-medium-minWidth);
   margin: 0 auto;
   padding: 2px 0px;
-  border-radius: var(--border-radius-common);
+  border-radius: var(--border-radius-medium);
 
   display: flex;
   place-content: center;

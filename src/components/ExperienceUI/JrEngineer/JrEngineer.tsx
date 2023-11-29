@@ -23,9 +23,9 @@ export default function JrEngineer() {
       <Card
         style={{
           borderTopLeftRadius: 60,
-          borderTopRightRadius: 'var(--border-radius-common)',
+          borderTopRightRadius: 'var(--border-radius-medium)',
           borderBottomRightRadius: 60,
-          borderBottomLeftRadius: 'var(--border-radius-common)',
+          borderBottomLeftRadius: 'var(--border-radius-medium)',
 
           display: 'flex',
           flexDirection: 'column',

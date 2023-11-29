@@ -13,6 +13,7 @@ h2 {
 .PageTitle h2 {
   padding: var(--spacing-medium) 0;
   background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-small);
 }
 
 /* MEDIUM_DEVICES: > 768 */
