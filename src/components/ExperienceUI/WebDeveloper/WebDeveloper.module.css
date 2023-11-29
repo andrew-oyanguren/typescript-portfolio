@@ -1,4 +1,35 @@
+.WebDevContainer {
+  background-color: var(--color-dark-gray);
+
+  padding: calc(var(--spacing-large) * 2) 0;
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+}
+
+.WebDevImgWrapper {
+  max-width: 360px;
+}
+
+.WebDevTextContainer {
+  padding: var(--spacing-medium) 0;
+}
+
 .WebDevImg {
   box-shadow: var(--box-shadow-image);
-  border-radius: var(--border-radius-common);
+  border-radius: var(--border-radius-medium);
+  width: 100%;
+  height: 100%;
+}
+
+/* tablet > 768 */
+@media (min-width: 768px) {
+  .WebDevImgWrapper {
+    max-width: 80%;
+  }
+
+  .WebDevTextContainer {
+    width: 80%;
+  }
 }
