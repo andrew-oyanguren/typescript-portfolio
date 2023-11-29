@@ -7,32 +7,16 @@ import styles from './JrEngineer.module.css';
 
 export default function JrEngineer() {
   return (
-    <>
-      <Card style={{ backgroundColor: 'var(--color-gray)' }}>
-        <img className={styles.cardIcon} src={CodeIcon} alt='Code Icon' />
-
-        <p style={{ color: 'var(--color-dark)' }}>
-          Responsible for Pulse{' '}
-          <span style={{ color: 'var(--color-secondary)' }}>
-            releases and debugging
-          </span>
-          .
-        </p>
-      </Card>
-
+    <div className={styles.JrEngContainer}>
       <Card
         style={{
-          borderTopLeftRadius: 60,
-          borderTopRightRadius: 'var(--border-radius-medium)',
-          borderBottomRightRadius: 60,
-          borderBottomLeftRadius: 'var(--border-radius-medium)',
-
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          borderTopLeftRadius: 'var(--border-radius-medium)',
+          borderTopRightRadius: 60,
+          borderBottomRightRadius: 'var(--border-radius-medium)',
+          borderBottomLeftRadius: 60,
         }}
       >
-        <div className={styles.cardContentContainer}>
+        <div className={styles.CustomCardContainer}>
           <p>
             Developed a{' '}
             <span
@@ -79,6 +63,22 @@ export default function JrEngineer() {
           <span style={{ color: 'var(--color-primary)' }}>React-DataGrid</span>
         </p>
       </Card>
-    </>
+
+      <Card
+        style={{
+          backgroundColor: 'var(--color-light-gray)',
+        }}
+      >
+        <img className={styles.cardIcon} src={CodeIcon} alt='Code Icon' />
+
+        <p style={{ color: 'var(--color-dark)' }}>
+          Responsible for handling{' '}
+          <span style={{ color: 'var(--color-secondary)' }}>
+            Sentry alerts and debugging
+          </span>
+          .
+        </p>
+      </Card>
+    </div>
   );
 }

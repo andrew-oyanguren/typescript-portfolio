@@ -1,4 +1,19 @@
-.cardContentContainer {
+.JrEngContainer {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.JrEngContainer > * {
+  max-width: 360px;
+}
+
+.JrEngContainer > * + * {
+  margin-top: var(--spacing-large);
+}
+
+.CustomCardContainer {
   margin: var(--spacing-medium) 0;
 
   display: flex;
@@ -6,7 +21,7 @@
   align-items: center;
 }
 
-.cardContentContainer img {
+.CustomCardContainer img {
   padding: var(--spacing-small);
 }
 
@@ -26,4 +41,16 @@
 
 .textContainer span {
   color: var(--color-secondary);
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .JrEngContainer {
+    max-width: 100%;
+  }
+
+  .JrEngContainer > * {
+    margin-top: calc(var(--spacing-large) * 2);
+    max-width: 80%;
+  }
 }
