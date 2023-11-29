@@ -23,7 +23,7 @@
   height: 100%;
 }
 
-/* tablet > 768 */
+/* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
   .WebDevImgWrapper {
     max-width: 80%;
