@@ -8,7 +8,9 @@ export default function ImageView() {
       {IMAGE_CONFIG.map((obj) => (
         <div key={obj.asset} className={styles.ImageContainer}>
           <p className={styles.title}>{obj.title}</p>
-          <img src={obj.asset} alt={obj.altText} />
+          <div className={styles.ImageWrapper}>
+            <img src={obj.asset} alt={obj.altText} />
+          </div>
         </div>
       ))}
     </div>
