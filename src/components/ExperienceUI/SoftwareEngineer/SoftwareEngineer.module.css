@@ -1,15 +1,29 @@
-.textContainer {
-  background-color: var(--color-primary);
-  padding: var(--spacing-large) 0;
+.EngContainer {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
 }
 
-.textContainer p {
+.EngContainer > * + * {
+  margin-top: var(--spacing-large);
+}
+
+.EngContainer > p {
+  background-color: orange;
+  padding: 0 var(--spacing-medium);
+}
+
+.TextCard {
+  /* padding: var(--spacing-large) var(--spacing-medium); */
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--box-shadow-image);
+  background-color: var(--color-primary);
+}
+
+.TextCard p {
   padding: var(--spacing-large) var(--spacing-medium);
   color: var(--color-light);
-}
-
-.cardText {
-  color: var(--color-dark);
 }
 
 /* AchievementsList Component */
@@ -17,6 +31,7 @@
 .AchievementsContainer {
   padding: var(--spacing-medium);
   background-color: var(--color-dark);
+  border-radius: var(--border-radius-small);
 }
 
 .AchievementsHeader {
@@ -72,4 +87,16 @@
 
 .AchievementsList li + li {
   margin-top: var(--spacing-medium);
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .EngContainer {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .EngContainer > * + * {
+    margin-top: calc(var(--spacing-large) * 2);
+  }
 }

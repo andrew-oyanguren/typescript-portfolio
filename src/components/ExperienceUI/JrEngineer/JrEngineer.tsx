@@ -14,6 +14,7 @@ export default function JrEngineer() {
           borderTopRightRadius: 60,
           borderBottomRightRadius: 'var(--border-radius-medium)',
           borderBottomLeftRadius: 60,
+          marginTop: 0,
         }}
       >
         <div className={styles.CustomCardContainer}>
@@ -29,7 +30,9 @@ export default function JrEngineer() {
             and release process for Pulse to the Play Store.
           </p>
 
-          <img className={styles.mapIcon} src={MapIcon} alt='Map Icon' />
+          <div className={styles.MapIconContainer}>
+            <img className={styles.MapIcon} src={MapIcon} alt='Map Icon' />
+          </div>
 
           <p>
             I was Instrumental in FE decisions when building{' '}
@@ -38,7 +41,7 @@ export default function JrEngineer() {
         </div>
       </Card>
 
-      <div className={styles.textContainer}>
+      <div className={styles.TextContainer}>
         <p>
           Led refactor updating Pulse from its primitive state into an updated
           <span> React Native</span> application
@@ -53,15 +56,23 @@ export default function JrEngineer() {
           alignItems: 'flex-end',
         }}
       >
-        <img className={styles.cardIcon} src={BookIcon} alt='Book Icon' />
+        <div className={styles.CardIconContainer}>
+          <img className={styles.CardIcon} src={BookIcon} alt='Book Icon' />
+        </div>
 
-        <p className={styles.cardText}>
-          Researched and successfully integrated React libraries into Novo.
-          Developed data grids, and forms using{' '}
-          <span style={{ color: 'var(--color-primary)' }}>React-Hook-Form</span>{' '}
-          and{' '}
-          <span style={{ color: 'var(--color-primary)' }}>React-DataGrid</span>
-        </p>
+        <div className={styles.CardTextContainer}>
+          <p style={{ color: 'var(--color-light)' }}>
+            Researched and successfully integrated React libraries into Novo.
+            Developed data grids, and forms using{' '}
+            <span style={{ color: 'var(--color-primary)' }}>
+              React-Hook-Form
+            </span>{' '}
+            and{' '}
+            <span style={{ color: 'var(--color-primary)' }}>
+              React-DataGrid
+            </span>
+          </p>
+        </div>
       </Card>
 
       <Card
@@ -69,15 +80,19 @@ export default function JrEngineer() {
           backgroundColor: 'var(--color-light-gray)',
         }}
       >
-        <img className={styles.cardIcon} src={CodeIcon} alt='Code Icon' />
+        <div className={styles.CardIconContainer}>
+          <img className={styles.CardIcon} src={CodeIcon} alt='Code Icon' />
+        </div>
 
-        <p style={{ color: 'var(--color-dark)' }}>
-          Responsible for handling{' '}
-          <span style={{ color: 'var(--color-secondary)' }}>
-            Sentry alerts and debugging
-          </span>
-          .
-        </p>
+        <div className={styles.CardTextContainer}>
+          <p style={{ color: 'var(--color-dark)' }}>
+            Responsible for handling{' '}
+            <span style={{ color: 'var(--color-secondary)' }}>
+              Sentry alerts and debugging
+            </span>
+            .
+          </p>
+        </div>
       </Card>
     </div>
   );

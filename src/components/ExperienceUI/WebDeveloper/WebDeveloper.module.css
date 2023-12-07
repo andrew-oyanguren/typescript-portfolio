@@ -8,12 +8,16 @@
   place-items: center;
 }
 
+.WebDevContainer > * + * {
+  margin-top: var(--spacing-large);
+}
+
 .WebDevImgWrapper {
   max-width: 360px;
 }
 
-.WebDevTextContainer {
-  padding: var(--spacing-medium) 0;
+.WebDevContainer > p {
+  padding: 0 var(--spacing-medium);
 }
 
 .WebDevImg {
@@ -29,7 +33,7 @@
     max-width: 80%;
   }
 
-  .WebDevTextContainer {
-    width: 80%;
+  .WebDevContainer > p {
+    max-width: 75%;
   }
 }
