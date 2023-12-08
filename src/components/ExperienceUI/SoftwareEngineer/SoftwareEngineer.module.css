@@ -10,12 +10,10 @@
 }
 
 .EngContainer > p {
-  background-color: orange;
   padding: 0 var(--spacing-medium);
 }
 
 .TextCard {
-  /* padding: var(--spacing-large) var(--spacing-medium); */
   border-radius: var(--border-radius-small);
   box-shadow: var(--box-shadow-image);
   background-color: var(--color-primary);
@@ -98,5 +96,9 @@
 
   .EngContainer > * + * {
     margin-top: calc(var(--spacing-large) * 2);
+  }
+
+  .TextCard {
+    padding: var(--spacing-large) var(--spacing-medium);
   }
 }
