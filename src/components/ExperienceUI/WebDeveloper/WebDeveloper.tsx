@@ -1,16 +1,17 @@
-import PortfolioMobile from 'src/assets/images/portfolio-mobile.png';
 import PortfolioDesktop from 'src/assets/images/portfolio-desktop.png';
 
 import styles from './WebDeveloper.module.css';
 
 export default function WebDevBody() {
   return (
-    <>
-      <img
-        className={styles.WebDevImg}
-        src={PortfolioDesktop}
-        alt='Portfolio Desktop View'
-      />
+    <div className={styles.WebDevContainer}>
+      <div className={styles.WebDevImgWrapper}>
+        <img
+          className={styles.WebDevImg}
+          src={PortfolioDesktop}
+          alt='Portfolio Desktop View'
+        />
+      </div>
 
       <p>
         During this period, I created three portfolio websites, a card game for
@@ -19,11 +20,13 @@ export default function WebDevBody() {
         projects.
       </p>
 
-      <img
-        className={styles.WebDevImg}
-        src={PortfolioMobile}
-        alt='Portfolio Mobile View'
-      />
-    </>
+      <div className={styles.WebDevImgWrapper}>
+        <img
+          className={styles.WebDevImg}
+          src={PortfolioDesktop}
+          alt='Portfolio Mobile View'
+        />
+      </div>
+    </div>
   );
 }

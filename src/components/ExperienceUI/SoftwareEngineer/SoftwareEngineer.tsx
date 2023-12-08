@@ -1,6 +1,4 @@
-import { Card } from 'src/components';
 import AwardIcon from 'src/assets/svgs/award.svg';
-import SearchIcon from 'src/assets/svgs/search.svg';
 
 import styles from './SoftwareEngineer.module.css';
 
@@ -38,12 +36,10 @@ const AchievementsList = () => {
   );
 };
 
-const cardIcon = { width: 45, height: 45, padding: 'var(--spacing-small)' };
-
 export default function SoftwareEngineer() {
   return (
-    <>
-      <div className={styles.textContainer}>
+    <div className={styles.EngContainer}>
+      <div className={styles.TextCard}>
         <p>
           Collaborated with Product, Design, and CS/CX to build data-driven
           features enabling our internal teams to better support our customers,
@@ -52,25 +48,12 @@ export default function SoftwareEngineer() {
         </p>
       </div>
 
-      <Card
-        style={{
-          padding: 'var(--spacing-medium)',
-
-          backgroundColor: 'var(--color-gray)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <img style={cardIcon} src={SearchIcon} alt='Search Icon' />
-
-        <p className={styles.cardText}>
-          Handling strategic deployments, responding to sentry alerts, and
-          researching for upcoming implementations.
-        </p>
-      </Card>
+      <p>
+        Handled <span>strategic-deployments</span>, and <span>research</span>{' '}
+        for upcoming implementations.
+      </p>
 
       <AchievementsList />
-    </>
+    </div>
   );
 }

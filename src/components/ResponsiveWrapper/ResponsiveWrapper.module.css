@@ -10,14 +10,14 @@
   align-items: center;
 
   /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: rgb(223, 207, 158);
+  /* background-color: rgb(223, 207, 158); */
 }
 
 /* tablet > 768 */
 @media (min-width: 768px) {
   .ResponsiveWrapper {
     /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-    background-color: rgba(0, 255, 255, 0.75);
+    /* background-color: rgba(0, 255, 255, 0.75); */
   }
 }
 
@@ -25,6 +25,6 @@
 @media (min-width: 1201px) {
   .ResponsiveWrapper {
     /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-    background-color: rgba(255, 166, 0, 0.75);
+    /* background-color: rgba(255, 166, 0, 0.75); */
   }
 }

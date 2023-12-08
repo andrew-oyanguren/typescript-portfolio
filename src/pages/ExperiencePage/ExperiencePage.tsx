@@ -27,14 +27,18 @@ const EXP_SECTIONS_CONFIG = [
 const PageSection = () => {
   return (
     <>
-      <PageTitle text='Experience' />
+      <PageTitle text='My Experience' />
       {EXP_SECTIONS_CONFIG.map(({ title, subTitle, content }) => (
         <section className={styles.ExperiencePageSection} key={title}>
-          <PageTitle secondaryTitle={true} text={title} />
+          <div className={styles.Title}>
+            <PageTitle secondaryTitle={true} text={title} />
+          </div>
 
-          <p className={styles.subTitle}>{subTitle}</p>
+          <div className={styles.Subtitle}>
+            <p>{subTitle}</p>
+          </div>
 
-          <div className={styles.content}>{content}</div>
+          <div className={styles.Content}>{content}</div>
         </section>
       ))}
     </>

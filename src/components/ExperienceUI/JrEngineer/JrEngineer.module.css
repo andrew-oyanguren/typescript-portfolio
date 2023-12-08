@@ -1,29 +1,94 @@
-.cardContentContainer {
-  margin: var(--spacing-medium) 0;
+.JrEngContainer {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.JrEngContainer > * {
+  max-width: 360px;
+}
+
+.JrEngContainer > * + * {
+  margin-top: var(--spacing-large);
+}
+
+.CustomCardContainer {
+  padding: var(--spacing-medium) 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.cardContentContainer img {
-  padding: var(--spacing-small);
+.MapIconContainer {
+  padding: var(--spacing-medium);
 }
 
-.cardIcon {
-  width: 45px;
-  height: 45px;
-}
-
-.mapIcon {
+.MapIcon {
   width: 65px;
   height: 65px;
 }
 
-.textContainer p {
+.TextContainer p {
   color: var(--color-primary);
+  padding: 0 var(--spacing-medium);
 }
 
-.textContainer span {
+.TextContainer span {
   color: var(--color-secondary);
+}
+
+/* CardFooBar CSS wrapped inside Card component */
+
+.CardIconContainer {
+  padding: var(--spacing-small) 0;
+}
+
+.CardIcon {
+  width: 45px;
+  height: 45px;
+}
+
+.CardTextContainer {
+  padding: var(--spacing-small);
+}
+
+/* MEDIUM_DEVICES: > 768 */
+@media (min-width: 768px) {
+  .JrEngContainer {
+    max-width: 100%;
+  }
+
+  .JrEngContainer > * {
+    margin-top: calc(var(--spacing-large) * 2);
+    max-width: 80%;
+  }
+
+  .CustomCardContainer {
+    padding: var(--spacing-large) 0;
+  }
+
+  .MapIconContainer {
+    padding: var(--spacing-large);
+  }
+
+  .MapIcon {
+    width: 95px;
+    height: 95px;
+  }
+
+  .CardIconContainer {
+    padding: var(--spacing-medium);
+  }
+
+  .CardIcon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .CardTextContainer {
+    padding: 0 var(--spacing-medium) var(--spacing-medium);
+  }
 }

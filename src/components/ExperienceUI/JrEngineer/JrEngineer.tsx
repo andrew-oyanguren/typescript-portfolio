@@ -7,32 +7,17 @@ import styles from './JrEngineer.module.css';
 
 export default function JrEngineer() {
   return (
-    <>
-      <Card style={{ backgroundColor: 'var(--color-gray)' }}>
-        <img className={styles.cardIcon} src={CodeIcon} alt='Code Icon' />
-
-        <p style={{ color: 'var(--color-dark)' }}>
-          Responsible for Pulse{' '}
-          <span style={{ color: 'var(--color-secondary)' }}>
-            releases and debugging
-          </span>
-          .
-        </p>
-      </Card>
-
+    <div className={styles.JrEngContainer}>
       <Card
         style={{
-          borderTopLeftRadius: 60,
-          borderTopRightRadius: 'var(--border-radius-common)',
-          borderBottomRightRadius: 60,
-          borderBottomLeftRadius: 'var(--border-radius-common)',
-
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          borderTopLeftRadius: 'var(--border-radius-medium)',
+          borderTopRightRadius: 60,
+          borderBottomRightRadius: 'var(--border-radius-medium)',
+          borderBottomLeftRadius: 60,
+          marginTop: 0,
         }}
       >
-        <div className={styles.cardContentContainer}>
+        <div className={styles.CustomCardContainer}>
           <p>
             Developed a{' '}
             <span
@@ -45,7 +30,9 @@ export default function JrEngineer() {
             and release process for Pulse to the Play Store.
           </p>
 
-          <img className={styles.mapIcon} src={MapIcon} alt='Map Icon' />
+          <div className={styles.MapIconContainer}>
+            <img className={styles.MapIcon} src={MapIcon} alt='Map Icon' />
+          </div>
 
           <p>
             I was Instrumental in FE decisions when building{' '}
@@ -54,7 +41,7 @@ export default function JrEngineer() {
         </div>
       </Card>
 
-      <div className={styles.textContainer}>
+      <div className={styles.TextContainer}>
         <p>
           Led refactor updating Pulse from its primitive state into an updated
           <span> React Native</span> application
@@ -69,16 +56,44 @@ export default function JrEngineer() {
           alignItems: 'flex-end',
         }}
       >
-        <img className={styles.cardIcon} src={BookIcon} alt='Book Icon' />
+        <div className={styles.CardIconContainer}>
+          <img className={styles.CardIcon} src={BookIcon} alt='Book Icon' />
+        </div>
 
-        <p className={styles.cardText}>
-          Researched and successfully integrated React libraries into Novo.
-          Developed data grids, and forms using{' '}
-          <span style={{ color: 'var(--color-primary)' }}>React-Hook-Form</span>{' '}
-          and{' '}
-          <span style={{ color: 'var(--color-primary)' }}>React-DataGrid</span>
-        </p>
+        <div className={styles.CardTextContainer}>
+          <p style={{ color: 'var(--color-light)' }}>
+            Researched and successfully integrated React libraries into Novo.
+            Developed data grids, and forms using{' '}
+            <span style={{ color: 'var(--color-primary)' }}>
+              React-Hook-Form
+            </span>{' '}
+            and{' '}
+            <span style={{ color: 'var(--color-primary)' }}>
+              React-DataGrid
+            </span>
+          </p>
+        </div>
       </Card>
-    </>
+
+      <Card
+        style={{
+          backgroundColor: 'var(--color-light-gray)',
+        }}
+      >
+        <div className={styles.CardIconContainer}>
+          <img className={styles.CardIcon} src={CodeIcon} alt='Code Icon' />
+        </div>
+
+        <div className={styles.CardTextContainer}>
+          <p style={{ color: 'var(--color-dark)' }}>
+            Responsible for handling{' '}
+            <span style={{ color: 'var(--color-secondary)' }}>
+              Sentry alerts and debugging
+            </span>
+            .
+          </p>
+        </div>
+      </Card>
+    </div>
   );
 }

@@ -7,7 +7,7 @@
   font-size: var(--font-size-small);
 
   --font-size-small: 18px;
-  --font-size-medium: 26px;
+  --font-size-medium: 24px;
   --font-size-large: 42px;
 
   --font-weight-regular: 400;
@@ -32,7 +32,8 @@
   /* common box properties */
   --mobile-width-percent: 95%;
 
-  --border-radius-common: 20px;
+  --border-radius-small: 10px;
+  --border-radius-medium: 20px;
   --border-radius-circle: 50%;
 
   --spacing-small: 10px;
@@ -67,7 +68,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  background-color: rgb(155, 247, 247);
+  /* background-color: rgb(155, 247, 247); */
 }
 
 h1 {
@@ -107,6 +108,6 @@ li {
   }
 
   p {
-    font-size: calc(var(--font-size-medium) * 1.25);
+    font-size: calc(var(--font-size-medium) * 1.15);
   }
 }

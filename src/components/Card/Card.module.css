@@ -2,7 +2,7 @@
   background-color: var(--color-primary);
 
   padding: var(--spacing-medium);
-  border-radius: var(--border-radius-common);
+  border-radius: var(--border-radius-medium);
   box-shadow: var(--box-shadow-image);
 }
 
