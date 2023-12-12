@@ -1,14 +1,15 @@
 .ImageCarousel {
   width: 100%;
   margin-top: var(--spacing-medium);
-  padding: var(--spacing-large) 0;
+  padding: calc(var(--spacing-large) * 2) 0;
+  border-radius: var(--border-radius-small);
   text-align: center;
 
   background-color: var(--color-gray);
 }
 
 .ImageCarouselContainer {
-  padding-top: var(--spacing-medium);
+  padding-top: var(--spacing-large);
 }
 
 .ImageWrapper {
@@ -33,6 +34,7 @@
 
 .Title p {
   margin: 0;
+  font-size: var(--font-size-medium);
   color: var(--color-primary);
 }
 
@@ -46,4 +48,15 @@
 
 .Controls button:last-of-type {
   margin-left: 80px;
+}
+
+@media (min-width: 768px) {
+  .ImageWrapper {
+    width: 510px;
+    height: 340px;
+  }
+
+  .Title p {
+    font-size: var(--font-size-large);
+  }
 }
