@@ -10,7 +10,15 @@ export default function HomePage() {
 
   return (
     <>
-      <PageTitle text="Hi, I'm Andy" />
+      <PageTitle
+        text="Hi, I'm Andy"
+        style={{
+          marginBottom: isDeviceSmall
+            ? 'var(--spacing-small)'
+            : 'var(--spacing-medium)',
+          backgroundColor: 'green',
+        }}
+      />
       {isDeviceSmall ? <ImageView /> : <ImageCarousel />}
     </>
   );
