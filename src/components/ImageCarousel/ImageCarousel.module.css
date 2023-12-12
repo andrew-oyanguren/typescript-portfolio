@@ -13,8 +13,8 @@
 }
 
 .ImageWrapper {
-  width: 465px;
-  height: 310px;
+  width: 540px;
+  height: 380px;
   overflow: hidden;
 
   margin: 0 auto;
@@ -34,7 +34,7 @@
 
 .Title p {
   margin: 0;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-large);
   color: var(--color-primary);
 }
 
@@ -48,15 +48,4 @@
 
 .Controls button:last-of-type {
   margin-left: 80px;
-}
-
-@media (min-width: 768px) {
-  .ImageWrapper {
-    width: 510px;
-    height: 340px;
-  }
-
-  .Title p {
-    font-size: var(--font-size-large);
-  }
 }

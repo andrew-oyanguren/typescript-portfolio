@@ -16,7 +16,6 @@ export default function HomePage() {
           marginBottom: isDeviceSmall
             ? 'var(--spacing-small)'
             : 'var(--spacing-medium)',
-          backgroundColor: 'green',
         }}
       />
       {isDeviceSmall ? <ImageView /> : <ImageCarousel />}
