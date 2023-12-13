@@ -34,7 +34,7 @@
 
 .Title p {
   margin: 0;
-  font-size: var(--font-size-large);
+  font-size: 36px;
   color: var(--color-primary);
 }
 
