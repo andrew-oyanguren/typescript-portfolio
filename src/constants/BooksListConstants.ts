@@ -1,18 +1,18 @@
-import AtomicHabits from 'src/assets/images/atomic_habits.webp';
-import EdgeDancer from 'src/assets/images/edgedancer.webp';
-import Fellowship from 'src/assets/images/fellowship.webp';
-import HungerGames from 'src/assets/images/hunger-games.webp';
-import Limitless from 'src/assets/images/limitless.webp';
-import Mindfulness from 'src/assets/images/mindfulness.jpeg';
-import NarrowRoad from 'src/assets/images/narrow_road.webp';
-import OathBringer from 'src/assets/images/oathbringer.webp';
-import ReturnOfTheKing from 'src/assets/images/return_of_the_king.jpeg';
-import NameOfTheWind from 'src/assets/images/name_of_the_wind.webp';
-import TwoTowers from 'src/assets/images/two_towers.jpeg';
-import WayOfKings from 'src/assets/images/way_of_kings.webp';
-import WinFriends from 'src/assets/images/win_friends.webp';
-import WiseMansFear from 'src/assets/images/wise_mans_fear.webp';
-import WordsOfRadiance from 'src/assets/images/words_of_radiance.webp';
+import AtomicHabits from 'src/assets/images/atomic_habits.png';
+import EdgeDancer from 'src/assets/images/edgedancer.png';
+import Fellowship from 'src/assets/images/fellowship.png';
+import HungerGames from 'src/assets/images/hunger-games.png';
+import Limitless from 'src/assets/images/limitless.png';
+import Mindfulness from 'src/assets/images/mindfulness.png';
+import NarrowRoad from 'src/assets/images/narrow_road.png';
+import OathBringer from 'src/assets/images/oathbringer.png';
+import ReturnOfTheKing from 'src/assets/images/return_of_the_king.png';
+import NameOfTheWind from 'src/assets/images/name_of_the_wind.png';
+import TwoTowers from 'src/assets/images/two_towers.png';
+import WayOfKings from 'src/assets/images/way_of_kings.png';
+import WinFriends from 'src/assets/images/win_friends.png';
+import WiseMansFear from 'src/assets/images/wise_mans_fear.png';
+import WordsOfRadiance from 'src/assets/images/words_of_radiance.png';
 
 export const BOOKS_LIST_CONFIG = [
   {
