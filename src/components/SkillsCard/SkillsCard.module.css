@@ -19,8 +19,8 @@
   text-align: center;
   font-weight: 500;
 
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
