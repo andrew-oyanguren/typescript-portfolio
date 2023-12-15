@@ -10,9 +10,9 @@
   transform: translateX(100%);
 
   animation: slideLeft;
-  animation-duration: 0.5s;
-  animation-delay: 0.5s;
-  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  animation-duration: 0.75s;
+
+  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   animation-fill-mode: forwards;
 
   background: linear-gradient(
