@@ -27,6 +27,14 @@
 .AboutCardHeader img {
   width: 65px;
   padding: 24px;
+
+  opacity: 0;
+
+  animation: opacityInit;
+  animation-duration: 0.3s;
+  animation-delay: 0.7s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 
 .AboutCard .Body {
@@ -37,5 +45,14 @@
 @media (min-width: 768px) {
   .AboutCardHeader img {
     padding: 36px;
+  }
+}
+
+@keyframes opacityInit {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
