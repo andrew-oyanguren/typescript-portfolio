@@ -10,51 +10,46 @@
 
 .itemWrapper + .itemWrapper {
   margin-top: 5px;
-
   display: flex;
 }
 
-.itemWrapper:nth-child(even) {
-  justify-content: flex-end;
-}
-
 .itemWrapper li {
+  width: 100%;
   padding: 10px;
   text-align: center;
+  font-weight: 500;
 
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 .itemWrapper:nth-of-type(odd) li {
-  border: 2px solid var(--color-dark-gray);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-weight: 500;
   transform: translateX(-150%);
 
-  animation-name: slideRight;
-
+  color: var(--color-light);
   background-color: var(--color-primary);
-  color: var(--color-dark);
 }
 
 .itemWrapper:nth-of-type(even) li {
-  border: 2px solid var(--color-light);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   transform: translateX(150%);
 
-  animation-name: slideLeft;
-
+  color: var(--color-dark);
   background-color: var(--color-dark-gray);
-  color: var(--color-light);
+}
+
+.itemWrapper:nth-of-type(odd).animate li {
+  animation-name: slideRight;
+}
+
+.itemWrapper:nth-of-type(even).animate li {
+  animation-name: slideLeft;
 }
 
 .itemWrapper:last-child li {
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: var(--border-radius-medium);
+  border-bottom-right-radius: var(--border-radius-medium);
 }
 
 @keyframes slideRight {
