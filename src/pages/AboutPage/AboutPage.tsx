@@ -4,21 +4,10 @@ import { ABOUT_CARDS_CONFIG } from 'src/constants';
 import { AboutCard, PageTitle } from 'src/components';
 import { useWindowDim } from 'src/hooks';
 
+import styles from './AboutPage.module.css';
+
 const BackgroundDesign = () => {
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        bottom: 0,
-        width: '50%',
-        background:
-          'linear-gradient(233deg, rgba(220,230,234,1) 50%, rgba(245,245,245,1) 100%)',
-        zIndex: -1,
-      }}
-    />
-  );
+  return <div className={styles.BackgroundDesign} />;
 };
 
 export default function AboutPage() {

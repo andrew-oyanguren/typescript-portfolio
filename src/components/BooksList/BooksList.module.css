@@ -1,0 +1,57 @@
+.BooksListContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.BooksListTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BooksListTitle h2 {
+  margin-left: var(--spacing-small);
+  font-size: 32px;
+  font-weight: 400;
+
+  color: var(--color-dark);
+}
+
+.BooksListTitle img {
+  width: 40px;
+  height: 40px;
+}
+
+.BooksList {
+  border-radius: var(--border-radius-small);
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-start;
+
+  background-color: var(--color-dark);
+}
+
+.ImageContainer {
+  min-width: 240px;
+  border-left: 1px solid var(--color-dark-gray);
+  border-right: 1px solid var(--color-dark-gray);
+  padding: var(--spacing-medium) 0;
+  transform: translateX(0);
+
+  animation: translateForwardBack;
+  animation-duration: 20s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes translateForwardBack {
+  from {
+    transform: translateX(-2640px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

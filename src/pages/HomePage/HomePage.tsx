@@ -1,7 +1,7 @@
 import { ImageView, ImageCarousel } from 'src/components';
 
 import useWindowDim from 'src/hooks/useWindowDim';
-import { PageTitle } from 'src/components';
+import { BooksList, PageTitle } from 'src/components';
 
 export default function HomePage() {
   const { windowDim } = useWindowDim();
@@ -10,8 +10,22 @@ export default function HomePage() {
 
   return (
     <>
-      <PageTitle text="Hi, I'm Andy" />
-      {isDeviceSmall ? <ImageView /> : <ImageCarousel />}
+      <PageTitle
+        text="Hi, I'm Andy"
+        style={{
+          marginBottom: isDeviceSmall
+            ? 'var(--spacing-small)'
+            : 'var(--spacing-medium)',
+        }}
+      />
+      {isDeviceSmall ? (
+        <ImageView />
+      ) : (
+        <>
+          <ImageCarousel />
+          <BooksList />
+        </>
+      )}
     </>
   );
 }

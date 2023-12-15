@@ -1,19 +1,20 @@
 .ImageCarousel {
   width: 100%;
   margin-top: var(--spacing-medium);
-  padding: var(--spacing-large) 0;
+  padding: calc(var(--spacing-large) * 2) 0;
+  border-radius: var(--border-radius-small);
   text-align: center;
 
   background-color: var(--color-gray);
 }
 
 .ImageCarouselContainer {
-  padding-top: var(--spacing-medium);
+  padding-top: var(--spacing-large);
 }
 
 .ImageWrapper {
-  width: 465px;
-  height: 310px;
+  width: 540px;
+  height: 400px;
   overflow: hidden;
 
   margin: 0 auto;
@@ -33,6 +34,7 @@
 
 .Title p {
   margin: 0;
+  font-size: 36px;
   color: var(--color-primary);
 }
 
