@@ -18,14 +18,8 @@ export default function HomePage() {
             : 'var(--spacing-medium)',
         }}
       />
-      {isDeviceSmall ? (
-        <ImageView />
-      ) : (
-        <>
-          <ImageCarousel />
-          <BooksList />
-        </>
-      )}
+      {isDeviceSmall ? <ImageView /> : <ImageCarousel />}
+      <BooksList />
     </>
   );
 }
