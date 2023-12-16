@@ -9,8 +9,13 @@ export default function BooksList() {
 
   return (
     <section className={styles.BooksListContainer}>
-      <div className={styles.BooksListTitle}>
-        <img src={BookOpenIcon} alt='Open Book Icon' />
+      <div
+        className={`${styles.BooksListTitle} ${inView ? styles.animate : ''}`}
+      >
+        <div className={styles.IconWrapper}>
+          <img src={BookOpenIcon} alt='Open Book Icon' />
+        </div>
+
         <h2>Here's what I'm reading</h2>
       </div>
 
