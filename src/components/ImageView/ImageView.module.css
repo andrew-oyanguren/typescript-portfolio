@@ -1,6 +1,5 @@
 .ImageView {
   width: 100%;
-  background-color: aquamarine;
   margin-top: var(--spacing-large);
 }
 
