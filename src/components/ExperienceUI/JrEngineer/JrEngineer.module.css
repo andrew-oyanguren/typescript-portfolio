@@ -31,6 +31,17 @@
   height: 65px;
 }
 
+.TextContainer {
+  transform: translateX(-100%);
+}
+
+.TextContainer.animate {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 .TextContainer p {
   color: var(--color-primary);
   padding: 0 var(--spacing-medium);
@@ -90,5 +101,14 @@
 
   .CardTextContainer {
     padding: 0 var(--spacing-medium) var(--spacing-medium);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

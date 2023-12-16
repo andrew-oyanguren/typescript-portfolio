@@ -1,4 +1,5 @@
 import styles from './SkillsCard.module.css';
+import { useInView } from 'react-intersection-observer';
 
 const SKILLS_CONFIG = [
   'JavaScript',
@@ -15,15 +16,18 @@ const SKILLS_CONFIG = [
 ];
 
 export default function SkillsCard() {
+  const { inView, ref } = useInView({ threshold: 0 });
+
+  console.log('inView: ', inView);
+
   return (
-    <ul className={styles.SkillsContainer}>
+    <ul ref={ref} className={styles.SkillsContainer}>
       {SKILLS_CONFIG.map((skill) => (
-        <div className={styles.itemWrapper} key={skill}>
-          <li
-            style={{ width: `${Math.floor(Math.random() * (90 - 60) + 60)}%` }}
-          >
-            {skill}
-          </li>
+        <div
+          className={`${styles.itemWrapper} ${inView ? styles.animate : ''}`}
+          key={skill}
+        >
+          <li>{skill}</li>
         </div>
       ))}
     </ul>

@@ -1,5 +1,6 @@
-import AwardIcon from 'src/assets/svgs/award.svg';
+import { useInView } from 'react-intersection-observer';
 
+import AwardIcon from 'src/assets/svgs/award.svg';
 import styles from './SoftwareEngineer.module.css';
 
 const ACHIEVEMENTS_LIST_ITEMS = [
@@ -20,16 +21,32 @@ const ACHIEVEMENTS_LIST_ITEMS = [
 ];
 
 const AchievementsList = () => {
+  const { inView: achievementsListInView, ref: achievementsListRef } =
+    useInView({ threshold: 0 });
+
+  console.log('achievementsListInView: ', achievementsListInView);
+
   return (
     <div className={styles.AchievementsContainer}>
       <header className={styles.AchievementsHeader}>
-        <img src={AwardIcon} alt='Award Icon' />
-        <h3>Achievements</h3>
+        <img
+          className={achievementsListInView ? styles.animate : ''}
+          src={AwardIcon}
+          alt='Award Icon'
+        />
+        <h3 className={achievementsListInView ? styles.animate : ''}>
+          Achievements
+        </h3>
       </header>
 
-      <ul className={styles.AchievementsList}>
+      <ul ref={achievementsListRef} className={styles.AchievementsList}>
         {ACHIEVEMENTS_LIST_ITEMS.map((st, idx) => (
-          <li key={idx}>{st}</li>
+          <li
+            className={achievementsListInView ? styles.animate : ''}
+            key={idx}
+          >
+            {st}
+          </li>
         ))}
       </ul>
     </div>
@@ -37,9 +54,16 @@ const AchievementsList = () => {
 };
 
 export default function SoftwareEngineer() {
+  const { inView: textCardInView, ref: textCardRef } = useInView({
+    threshold: 0,
+  });
+
   return (
     <div className={styles.EngContainer}>
-      <div className={styles.TextCard}>
+      <div
+        ref={textCardRef}
+        className={`${styles.TextCard} ${textCardInView ? styles.animate : ''}`}
+      >
         <p>
           Collaborated with Product, Design, and CS/CX to build data-driven
           features enabling our internal teams to better support our customers,
