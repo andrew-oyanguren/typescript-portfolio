@@ -32,7 +32,7 @@
 }
 
 .TextContainer {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .TextContainer.animate {
@@ -106,7 +106,7 @@
 
 @keyframes slideRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
   to {
     transform: translateX(0);
