@@ -3,7 +3,7 @@
 
   width: 100%;
   overflow: hidden;
-  margin-top: var(--spacing-medium);
+  margin-top: var(--spacing-large);
 }
 
 .BooksListTitle {
@@ -41,6 +41,7 @@
 .BooksList {
   border-radius: var(--border-radius-medium);
   padding: 0;
+  margin: 0;
 
   display: flex;
   justify-content: flex-start;
@@ -96,7 +97,6 @@
 
 @keyframes translateForwardBack {
   from {
-    /* transform: translateX(-2640px); */
     transform: translateX(var(--slide-length));
   }
   to {
