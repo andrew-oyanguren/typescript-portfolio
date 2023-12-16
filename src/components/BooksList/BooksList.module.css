@@ -50,8 +50,8 @@
 
 .ImageContainer {
   min-width: 135px;
-  border-left: 1px solid var(--color-dark-gray);
-  border-right: 1px solid var(--color-dark-gray);
+  border-left: 1px solid var(--color-light);
+  border-right: 1px solid var(--color-light);
   padding: var(--spacing-medium) 0;
   transform: translateX(0);
 }

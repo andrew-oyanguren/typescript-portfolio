@@ -5,6 +5,7 @@
 
 .ImageContainer {
   text-align: center;
+  border-radius: var(--border-radius-small);
 }
 
 .ImageWrapper {
