@@ -27,7 +27,9 @@ export default function SkillsCard() {
           className={`${styles.itemWrapper} ${inView ? styles.animate : ''}`}
           key={skill}
         >
-          <li>{skill}</li>
+          <li>
+            <p>{skill}</p>
+          </li>
         </div>
       ))}
     </ul>
