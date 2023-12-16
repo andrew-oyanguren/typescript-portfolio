@@ -143,6 +143,32 @@
   .TextCard {
     padding: var(--spacing-large) var(--spacing-medium);
   }
+
+  .AchievementsList {
+    padding: var(--spacing-medium) var(--spacing-small) var(--spacing-medium)
+      var(--spacing-large);
+  }
+
+  .AchievementsHeader img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .AchievementsHeader h3 {
+    font-size: 36px;
+  }
+
+  .AchievementsList li:before {
+    width: 18px;
+    height: 18px;
+    top: var(--font-size-medium);
+    left: -28px;
+    transform: translateY(-50%);
+  }
+
+  .AchievementsList li + li {
+    margin-top: var(--spacing-large);
+  }
 }
 
 @keyframes fadeIn {
