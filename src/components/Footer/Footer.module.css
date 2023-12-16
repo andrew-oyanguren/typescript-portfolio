@@ -31,3 +31,15 @@
   cursor: pointer;
   filter: var(--svg-filter-primary);
 }
+
+/* medium devices > 768 */
+@media (min-width: 768px) {
+  .Footer {
+    padding: var(--spacing-medium) 0;
+  }
+
+  .socialsList li img {
+    width: 55px;
+    height: 55px;
+  }
+}
