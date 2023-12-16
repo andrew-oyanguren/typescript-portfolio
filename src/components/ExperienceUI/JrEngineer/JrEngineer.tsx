@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer';
+
 import BookIcon from 'src/assets/svgs/book.svg';
 import CodeIcon from 'src/assets/svgs/code.svg';
 import MapIcon from 'src/assets/svgs/map.svg';
@@ -6,6 +8,10 @@ import { Card } from 'src/components';
 import styles from './JrEngineer.module.css';
 
 export default function JrEngineer() {
+  const { inView: textContainerInView, ref: textContainerRef } = useInView({
+    threshold: 0,
+  });
+
   return (
     <div className={styles.JrEngContainer}>
       <Card
@@ -41,7 +47,12 @@ export default function JrEngineer() {
         </div>
       </Card>
 
-      <div className={styles.TextContainer}>
+      <div
+        ref={textContainerRef}
+        className={`${styles.TextContainer} ${
+          textContainerInView ? styles.animate : ''
+        }`}
+      >
         <p>
           Led refactor updating Pulse from its primitive state into an updated
           <span> React Native</span> application
