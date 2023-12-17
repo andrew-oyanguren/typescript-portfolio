@@ -11,6 +11,7 @@ export default function ImageCarousel() {
   const [currentImage, setCurrentImage] = useState(
     IMAGE_CONFIG[currentImageIdx]
   );
+  const [imgAnimating, setImgAnimating] = useState(false);
 
   const { windowDim } = useWindow();
 
@@ -22,10 +23,12 @@ export default function ImageCarousel() {
   };
 
   const onBack = () => {
+    setImgAnimating(true);
     setCurrentImageIdx((prevIdx) => prevIdx - 1);
   };
 
   const onNext = () => {
+    setImgAnimating(true);
     setCurrentImageIdx((prevIdx) => prevIdx + 1);
   };
 
@@ -33,9 +36,15 @@ export default function ImageCarousel() {
     handleImageIdx(currentImageIdx);
   }, [currentImageIdx]);
 
+  useEffect(() => {
+    setImgAnimating(false);
+  }, [currentImage]);
+
+  const animateClass = !imgAnimating ? styles.animate : '';
+
   return (
     <div className={styles.ImageCarousel}>
-      <div className={styles.Title}>
+      <div className={`${styles.Title} ${animateClass}`}>
         {windowDim.width < 1200 ? (
           <p>{currentImage.title}</p>
         ) : (
@@ -49,7 +58,11 @@ export default function ImageCarousel() {
 
       <div className={styles.ImageCarouselContainer}>
         <div className={styles.ImageWrapper}>
-          <img src={currentImage.asset} alt={currentImage.altText} />
+          <img
+            className={animateClass}
+            src={currentImage.asset}
+            alt={currentImage.altText}
+          />
         </div>
 
         <div className={styles.Controls}>
