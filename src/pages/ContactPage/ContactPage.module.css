@@ -4,14 +4,17 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
-  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: rgba(77, 99, 61, 0.75);
 }
 
 .TitleContainer img {
   width: 75px;
-  margin-right: var(--spacing-large);
+  margin-right: calc(var(--spacing-large) * 1.5);
+  transform: translate(-20%, 20%);
+
+  animation-name: slideRightUp;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .EmailContainer {
@@ -20,17 +23,18 @@
 
   display: flex;
   align-items: flex-end;
-
-  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: pink;
 }
 
 .EmailContainer img {
-  width: 35px;
+  padding-bottom: 3px;
+  width: 32px;
+  filter: var(--svg-filter-dark-gray);
 }
 
 .EmailContainer p {
   padding-left: var(--spacing-small);
+  font-style: italic;
+  color: var(--color-primary);
 }
 
 /* Success Screen Component */
@@ -56,7 +60,7 @@
 @media (min-width: 768px) {
   .TitleContainer {
     /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-    background-color: rgba(106, 255, 0, 0.75);
+    /* background-color: rgba(106, 255, 0, 0.75); */
 
     justify-content: flex-start;
   }
@@ -73,5 +77,14 @@
   /* Success Screen Component */
   .SuccessIconWrapper {
     padding: 80px 0;
+  }
+}
+
+@keyframes slideRightUp {
+  0% {
+    transform: translate(-20%, 20%);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

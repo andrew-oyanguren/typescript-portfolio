@@ -14,15 +14,19 @@ select {
   padding: 1em;
 
   box-sizing: border-box;
-  box-shadow: var(--box-shadow-icon);
   border: none;
   border-radius: 8px;
 
   font-size: 18px;
   color: var(--color-dark);
 
-  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: pink;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: forwards;
+
+  background-color: var(--color-light);
 }
 
 .FormControl textarea {
@@ -119,5 +123,14 @@ select {
   .Actions button {
     height: 100%;
     font-size: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: var(--box-shadow-icon);
   }
 }
