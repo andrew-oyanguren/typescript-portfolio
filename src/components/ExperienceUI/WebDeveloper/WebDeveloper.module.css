@@ -29,8 +29,8 @@
 
 .WebDevImg.animate {
   animation-name: slideUp;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -52,6 +52,7 @@
   }
   35% {
     opacity: 0;
+    transform: translateY(25%);
   }
   100% {
     opacity: 1;
