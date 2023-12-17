@@ -16,7 +16,7 @@ export default function BooksList() {
           <img src={BookOpenIcon} alt='Open Book Icon' />
         </div>
 
-        <h2>Here's what I'm reading</h2>
+        <h2>Recently read books</h2>
       </div>
 
       <ul

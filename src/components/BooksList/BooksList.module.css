@@ -42,6 +42,7 @@
   border-radius: var(--border-radius-medium);
   padding: 0;
   margin: 0;
+  margin-top: var(--spacing-small);
 
   display: flex;
   justify-content: flex-start;
@@ -84,6 +85,10 @@
   .IconWrapper {
     width: 40px;
     width: 40px;
+  }
+
+  .BooksListTitle {
+    justify-content: start;
   }
 
   .BooksListTitle h2 {
