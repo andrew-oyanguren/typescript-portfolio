@@ -22,7 +22,7 @@ type AboutCardConfigTypes = {
 export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   {
     cardStyles: {
-      backgroundColor: 'var(--color-gray)',
+      backgroundColor: 'rgba(255, 138, 0, 0.75)',
       outline: '2px solid var(--color-dark)',
       boxShadow: commonBoxShadow,
     },
@@ -39,6 +39,7 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   {
     cardStyles: {
       outline: '2px solid var(--color-dark-gray)',
+      backgroundColor: 'rgba(189, 202, 206, 0.75)',
     },
     body: (
       <p style={paragraphStyles}>
@@ -52,7 +53,7 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   },
   {
     cardStyles: {
-      backgroundColor: 'var(--color-primary)',
+      backgroundColor: 'rgba(110, 173, 192, 0.75)',
       boxShadow: commonBoxShadow,
     },
     body: (
