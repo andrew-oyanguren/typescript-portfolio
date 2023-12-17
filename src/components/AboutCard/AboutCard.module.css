@@ -32,7 +32,7 @@
 
   animation: opacityInit;
   animation-duration: 0.3s;
-  animation-delay: 0.75s;
+  animation-delay: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }

@@ -10,7 +10,7 @@
   transform: translateX(100%);
 
   animation: slideLeft;
-  animation-duration: 0.75s;
+  animation-duration: 0.5s;
 
   animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   animation-fill-mode: forwards;

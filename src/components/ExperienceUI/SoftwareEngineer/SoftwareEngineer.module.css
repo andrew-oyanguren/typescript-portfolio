@@ -61,7 +61,7 @@
 
 .AchievementsHeader h3.animate {
   animation-name: slideRight;
-  animation-duration: 0.9s;
+  animation-duration: 1.1s;
   animation-delay: 1.1s;
   animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   animation-fill-mode: forwards;
@@ -193,8 +193,8 @@
   55% {
     transform: rotate(10deg);
   }
-  90% {
-    transform: rotate(-35deg);
+  95% {
+    transform: rotate(-25deg);
   }
   100% {
     transform: rotate(-15deg);
@@ -207,6 +207,9 @@
   }
   30% {
     transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0);
   }
   100% {
     transform: translateX(0);
