@@ -28,13 +28,13 @@
 .EmailContainer img {
   padding-bottom: 3px;
   width: 32px;
-  filter: var(--svg-filter-dark-gray);
+  filter: var(--svg-filter-primary);
 }
 
 .EmailContainer p {
   padding-left: var(--spacing-small);
   font-style: italic;
-  color: var(--color-primary);
+  color: var(--color-dark);
 }
 
 /* Success Screen Component */
