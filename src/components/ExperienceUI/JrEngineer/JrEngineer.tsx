@@ -47,18 +47,6 @@ export default function JrEngineer() {
         </div>
       </Card>
 
-      <div
-        ref={textContainerRef}
-        className={`${styles.TextContainer} ${
-          textContainerInView ? styles.animate : ''
-        }`}
-      >
-        <p>
-          Led refactor updating Pulse from its primitive state into an updated
-          <span> React Native</span> application
-        </p>
-      </div>
-
       <Card
         style={{
           backgroundColor: 'var(--color-dark)',
@@ -86,9 +74,22 @@ export default function JrEngineer() {
         </div>
       </Card>
 
+      <div
+        ref={textContainerRef}
+        className={`${styles.TextContainer} ${
+          textContainerInView ? styles.animate : ''
+        }`}
+      >
+        <p>
+          Led refactor updating Pulse from its primitive state into an updated
+          <span> React Native</span> application
+        </p>
+      </div>
+
       <Card
         style={{
-          backgroundColor: 'var(--color-light-gray)',
+          backgroundColor: 'var(--color-gray)',
+          boxShadow: 'none',
         }}
       >
         <div className={styles.CardIconContainer}>

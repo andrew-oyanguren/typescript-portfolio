@@ -1,5 +1,5 @@
 .WebDevContainer {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-gray);
 
   padding: calc(var(--spacing-large) * 2) 0;
   border-radius: 10px;
