@@ -69,7 +69,7 @@
 .BooksListTitle.animate .IconWrapper {
   box-shadow: var(--box-shadow-icon);
   border-color: var(--color-light);
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 .BooksListTitle.animate img {
