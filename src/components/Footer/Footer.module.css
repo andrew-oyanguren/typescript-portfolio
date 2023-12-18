@@ -36,6 +36,8 @@
 @media (min-width: 768px) {
   .Footer {
     padding: var(--spacing-medium) 0;
+    position: sticky;
+    bottom: 0;
   }
 
   .socialsList li img {
