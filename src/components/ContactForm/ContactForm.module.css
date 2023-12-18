@@ -22,7 +22,7 @@ select {
 
   animation-name: fadeIn;
   animation-duration: 1s;
-  animation-delay: 0.5;
+  animation-delay: 0.75;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
 
