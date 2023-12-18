@@ -47,27 +47,17 @@
   transform: translateY(-50%);
 }
 
-.SuccessTitle {
-  padding: var(--spacing-medium);
-}
-
-.SuccessTitle p {
-  font-size: var(--font-size-medium);
-  font-weight: bold;
-}
-
 .SuccessIconWrapper {
   width: 100%;
-  padding: var(--spacing-large) 0;
 
   display: flex;
   place-content: center;
 }
 
 .SuccessIconWrapper img {
-  width: 90px;
+  width: 100px;
   filter: var(--svg-filter-dark-gray);
-  transform: scale(1.5);
+  transform: scale(1.5) translateY(-15%);
 
   animation-name: opacityInit;
   animation-duration: 1.2s;
@@ -79,12 +69,17 @@
 .animateCard {
   opacity: 0;
   transform: translateY(100%);
+  margin-top: calc(var(--spacing-large) * 1.25);
 
   animation-name: slideUp;
   animation-duration: 0.5s;
   animation-delay: 1.5s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
+}
+
+.animateCard p {
+  font-size: var(--font-size-small);
 }
 
 /* MEDIUM_DEVICES: > 768 */
@@ -138,10 +133,10 @@
     filter: var(--svg-filter-primary);
   }
   75% {
-    transform: scale(1.5);
+    transform: scale(1.5) translateY(-15%);
   }
   100% {
     filter: var(--svg-filter-primary);
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
 }
