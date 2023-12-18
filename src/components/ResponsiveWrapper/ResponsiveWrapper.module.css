@@ -2,12 +2,13 @@
   width: var(--mobile-width-percent);
   max-width: var(--device-xl-maxWidth);
   margin: 0 auto;
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 210px);
 
   display: flex;
   flex-direction: column;
 
   align-items: center;
+  position: relative;
 
   /* TODO: REMOVE FOR DEVELOPMENT ONLY */
   /* background-color: rgb(223, 207, 158); */

@@ -14,15 +14,19 @@ select {
   padding: 1em;
 
   box-sizing: border-box;
-  box-shadow: var(--box-shadow-icon);
-  border: none;
+  border: 1px solid var(--color-light);
   border-radius: 8px;
 
   font-size: 18px;
   color: var(--color-dark);
 
-  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: pink;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  background-color: var(--color-light);
 }
 
 .FormControl textarea {
@@ -50,7 +54,7 @@ select {
   width: 100%;
   height: 120px;
 
-  border: none;
+  border: 1px solid var(--color-light);
   border-radius: 8px;
   box-shadow: var(--box-shadow-icon);
 
@@ -70,6 +74,10 @@ select {
   background-color: var(--color-gray);
 }
 
+.Actions button:disabled img {
+  filter: var(--svg-filter-light);
+}
+
 .Error {
   outline: 2px solid var(--color-error);
 }
@@ -85,9 +93,7 @@ select {
 @media (min-width: 768px) {
   .ContactForm {
     display: flex;
-
-    /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-    background-color: burlywood;
+    margin-top: var(--spacing-large);
   }
 
   .FormControlContainer {
@@ -107,17 +113,25 @@ select {
   .Actions {
     flex: 1;
     margin-top: 0;
-    padding-left: var(--spacing-small);
+    padding-left: var(--spacing-medium);
   }
 
   .Actions img {
     width: 55px;
     margin-right: 10px;
-    filter: var(--svg-filter-light);
   }
 
   .Actions button {
     height: 100%;
     font-size: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: var(--box-shadow-icon);
   }
 }

@@ -5,6 +5,7 @@
 
 .ImageContainer {
   text-align: center;
+  border-radius: var(--border-radius-small);
 }
 
 .ImageWrapper {
@@ -54,6 +55,8 @@
 }
 
 .ImageContainer:first-of-type .ImageWrapper {
+  box-shadow: var(--box-shadow-icon);
+  border: 1px solid var(--color-light);
   border-radius: var(--border-radius-circle);
   height: 345px;
 }

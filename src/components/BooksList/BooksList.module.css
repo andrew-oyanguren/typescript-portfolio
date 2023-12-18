@@ -1,6 +1,9 @@
 .BooksListContainer {
+  --slide-length: -1650px;
+
   width: 100%;
   overflow: hidden;
+  margin-top: var(--spacing-large);
 }
 
 .BooksListTitle {
@@ -11,20 +14,35 @@
 
 .BooksListTitle h2 {
   margin-left: var(--spacing-small);
-  font-size: 32px;
+  font-size: var(--font-size-medium);
   font-weight: 400;
 
   color: var(--color-dark);
 }
 
-.BooksListTitle img {
-  width: 40px;
-  height: 40px;
+.BooksListTitle .IconWrapper {
+  width: 30px;
+  height: 30px;
+  padding: 14px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-circle);
+
+  display: grid;
+  place-items: center;
+}
+
+.BooksListTitle .IconWrapper img {
+  width: 100%;
+  height: 100%;
+
+  filter: var(--svg-filter-dark-gray);
 }
 
 .BooksList {
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-medium);
   padding: 0;
+  margin: 0;
+  margin-top: var(--spacing-small);
 
   display: flex;
   justify-content: flex-start;
@@ -33,23 +51,58 @@
 }
 
 .ImageContainer {
-  min-width: 240px;
-  border-left: 1px solid var(--color-dark-gray);
-  border-right: 1px solid var(--color-dark-gray);
+  min-width: 135px;
+  border-left: 1px solid var(--color-light);
+  border-right: 1px solid var(--color-light);
   padding: var(--spacing-medium) 0;
   transform: translateX(0);
+}
 
+.BooksList.animate .ImageContainer {
   animation: translateForwardBack;
-  animation-duration: 20s;
-  animation-delay: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.BooksListTitle.animate .IconWrapper {
+  box-shadow: var(--box-shadow-icon);
+  border-color: var(--color-light);
+  background-color: var(--color-secondary);
+}
+
+.BooksListTitle.animate img {
+  filter: var(--svg-filter-light);
+}
+
+/* medium devices > 768 */
+@media (min-width: 768px) {
+  .BooksListContainer {
+    --slide-length: -2692px;
+  }
+
+  .IconWrapper {
+    width: 40px;
+    width: 40px;
+  }
+
+  .BooksListTitle {
+    justify-content: start;
+  }
+
+  .BooksListTitle h2 {
+    font-size: 32px;
+  }
+
+  .ImageContainer {
+    min-width: 242px;
+  }
 }
 
 @keyframes translateForwardBack {
   from {
-    transform: translateX(-2640px);
+    transform: translateX(var(--slide-length));
   }
   to {
     transform: translateX(0);
