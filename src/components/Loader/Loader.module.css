@@ -23,7 +23,7 @@
 }
 
 .ball + .ball {
-  margin-left: 2px;
+  margin-left: 6px;
 }
 
 .pulse {

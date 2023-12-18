@@ -14,16 +14,16 @@ select {
   padding: 1em;
 
   box-sizing: border-box;
-  border: none;
+  border: 1px solid var(--color-light);
   border-radius: 8px;
 
   font-size: 18px;
   color: var(--color-dark);
 
   animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 0.75;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
 
   background-color: var(--color-light);
