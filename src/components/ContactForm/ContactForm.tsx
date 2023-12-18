@@ -69,9 +69,7 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 
   const formIsValid = emailIsTouched && !emailHasError && !!email.length;
 
-  return isLoading ? (
-    <Loader />
-  ) : (
+  return (
     <form
       onSubmit={async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -118,8 +116,14 @@ export default function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 
       <div className={styles.Actions}>
         <button type='submit' disabled={!formIsValid}>
-          <img src={SendIcon} alt='Send message button' />
-          Send
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <>
+              <img src={SendIcon} alt='Send message button' />
+              Send
+            </>
+          )}
         </button>
       </div>
     </form>

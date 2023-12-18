@@ -41,7 +41,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   box-shadow: var(--box-shadow-icon);
 }
 
