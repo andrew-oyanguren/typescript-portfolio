@@ -9,20 +9,15 @@ import styles from './ContactPage.module.css';
 const SuccessScreen = () => {
   return (
     <div className={styles.SuccessScreenContainer}>
-      <PageTitle
-        text='Message was successfully sent!'
-        style={{ fontSize: 36, color: 'var(--color-primary)' }}
-      />
-
       <div className={styles.SuccessIconWrapper}>
         <img src={CheckCircle} />
       </div>
 
-      <Card>
-        <p>
-          I regularly check my email. You can expect a response within 48 hours.
-        </p>
-      </Card>
+      <div className={styles.animateCard}>
+        <Card>
+          <p>Your message was successfully sent!</p>
+        </Card>
+      </div>
     </div>
   );
 };
