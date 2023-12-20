@@ -1,0 +1,31 @@
+.Layout > header {
+  background-color: #fffcfae2;
+  padding-top: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.Layout.largeDevice {
+  /*TODO: REMOVE FOR DEVELOPMENT ONLY */
+  background-color: rgb(251, 151, 168);
+}
+
+/* large devices > 1500 */
+@media (min-width: 1500px) {
+  .Layout > header {
+    width: max-content;
+    height: 100vh;
+    padding-top: 0;
+    margin-left: 80px;
+    border-radius: 0;
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+
+    background-color: unset;
+  }
+}

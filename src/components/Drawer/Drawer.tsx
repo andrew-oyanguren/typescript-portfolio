@@ -20,7 +20,7 @@ export default function Drawer() {
       <img src={ToolIcon} className={styles.icon} />
 
       <div className={styles.HamburgerContainer}>
-        <p>Toolbox</p>
+        {!isOpen ? <p>Toolbox</p> : null}
         <Hamburger onToggleDrawer={onToggleDrawer} isActive={isOpen} />
       </div>
 
