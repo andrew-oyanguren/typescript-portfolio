@@ -10,7 +10,7 @@ export default function Navigation() {
       {NAV_CONFIG.map((obj) => (
         <NavLink key={obj.path} to={obj.path}>
           {({ isActive }) => (
-            <div className={styles.icon}>
+            <div className={styles.Icon}>
               {isActive ? <span className={styles.selected}></span> : null}
               <img
                 className={isActive ? styles.active : styles.inactive}
