@@ -2,7 +2,7 @@
   width: var(--mobile-width-percent);
   max-width: var(--device-xl-maxWidth);
   margin: 0 auto;
-  min-height: calc(100vh - 210px);
+  min-height: calc(100vh - 200px);
 
   display: flex;
   flex-direction: column;
@@ -25,6 +25,6 @@
 /* LARGE_DEVICES > 1201 */
 @media (min-width: 1500px) {
   .ResponsiveWrapper {
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 90px);
   }
 }
