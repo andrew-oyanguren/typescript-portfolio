@@ -2,7 +2,7 @@
   width: 66px;
   height: 66px;
 
-  border: 1px solid var(--color-gray);
+  border: 1px solid var(--color-dark-gray);
   border-radius: var(--border-radius-circle);
   box-shadow: var(--box-shadow-icon);
   cursor: pointer;
@@ -19,6 +19,7 @@
   transform: scale(0.99);
   box-shadow: 0px 2px 10px 6px rgb(68, 71, 83, 0.1),
     0px 0px 6px 2px rgb(110, 173, 192, 0.15);
+  border: 1px solid var(--color-light);
 }
 
 .ControlButton:disabled {

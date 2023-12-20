@@ -44,15 +44,24 @@ export default function ImageCarousel() {
 
   return (
     <div className={styles.ImageCarousel}>
-      <div className={`${styles.Title} ${animateClass}`}>
+      <div className={`${styles.TitleContainer} ${animateClass}`}>
         {windowDim.width < 1200 ? (
           <p>{currentImage.title}</p>
         ) : (
-          <div>
-            {IMAGE_CONFIG.map(({ title }) => (
-              <p key={title}>{title}</p>
-            ))}
-          </div>
+          <ul className={styles.TitleList}>
+            {IMAGE_CONFIG.map(({ title }, idx) => {
+              return (
+                <li
+                  className={
+                    idx === currentImageIdx ? styles.CurrentTitle : styles.Title
+                  }
+                  key={title}
+                >
+                  {title}
+                </li>
+              );
+            })}
+          </ul>
         )}
       </div>
 
