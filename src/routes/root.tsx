@@ -1,35 +1,24 @@
 import { Outlet } from 'react-router-dom';
 
 import { Footer, Navigation, ResponsiveWrapper } from '../components';
+import styles from './route.module.css';
 
 export default function Root() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <header
-        style={{
-          backgroundColor: '#fffcfae2',
-          paddingTop: 40,
-          position: 'sticky',
-          top: 0,
-          zIndex: 1000,
-          borderBottomRightRadius: 40,
-          borderBottomLeftRadius: 40,
-        }}
-      >
+    <div className={styles.Layout}>
+      <header>
         <Navigation />
       </header>
 
-      <main>
-        <ResponsiveWrapper>
-          <Outlet />
-        </ResponsiveWrapper>
-      </main>
-      <Footer />
+      <div className={styles.ContentContainer}>
+        <main>
+          <ResponsiveWrapper>
+            <Outlet />
+          </ResponsiveWrapper>
+        </main>
+
+        <Footer />
+      </div>
     </div>
   );
 }
