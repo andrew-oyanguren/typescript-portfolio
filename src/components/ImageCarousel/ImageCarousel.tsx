@@ -45,16 +45,14 @@ export default function ImageCarousel() {
   return (
     <div className={styles.ImageCarousel}>
       <div className={`${styles.TitleContainer} ${animateClass}`}>
-        {windowDim.width < 1200 ? (
+        {windowDim.width < 1340 ? (
           <p>{currentImage.title}</p>
         ) : (
           <ul className={styles.TitleList}>
             {IMAGE_CONFIG.map(({ title }, idx) => {
               return (
                 <li
-                  className={
-                    idx === currentImageIdx ? styles.CurrentTitle : styles.Title
-                  }
+                  className={idx === currentImageIdx ? styles.highlight : ''}
                   key={title}
                 >
                   {title}

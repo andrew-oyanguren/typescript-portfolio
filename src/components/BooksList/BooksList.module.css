@@ -67,7 +67,6 @@
 }
 
 .BooksListTitle.animate .IconWrapper {
-  box-shadow: var(--box-shadow-icon);
   border-color: var(--color-light);
   background-color: var(--color-secondary);
 }
@@ -97,6 +96,17 @@
 
   .ImageContainer {
     min-width: 242px;
+  }
+}
+
+/* LARGE_DEVICES > 1500 */
+@media (min-width: 1500px) {
+  .BooksListContainer {
+    --slide-length: -1440px;
+  }
+
+  .ImageContainer {
+    min-width: 180px;
   }
 }
 
