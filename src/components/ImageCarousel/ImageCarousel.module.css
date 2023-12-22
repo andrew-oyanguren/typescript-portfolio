@@ -82,8 +82,8 @@
   }
 }
 
-/* LARGE_DEVICES > 1201 */
-@media (min-width: 1500px) {
+/* LARGE_DEVICES > 1340 */
+@media (min-width: 1340px) {
   .ImageCarousel {
     width: 90%;
     margin-top: 0;
