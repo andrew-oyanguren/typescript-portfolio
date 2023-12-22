@@ -19,13 +19,13 @@
     width: max-content;
     height: 100vh;
     padding-top: 0;
-    margin-left: 80px;
+    padding-left: calc(var(--spacing-large) * 2);
     border-radius: 0;
 
     position: fixed;
     display: flex;
     align-items: center;
 
-    background-color: unset;
+    background-color: tan;
   }
 }
