@@ -1,6 +1,5 @@
 .PageTitle {
   text-align: center;
-  margin-top: calc(var(--spacing-large) * 2);
   color: var(--color-dark);
 }
 
@@ -12,33 +11,30 @@ h2 {
 
 .PageTitle h2 {
   padding: var(--spacing-large) 0;
+  border-radius: var(--border-radius-small);
   font-size: 28px;
   background-color: var(--color-light-gray);
-  border-radius: var(--border-radius-small);
 }
 
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
-  .PageTitle {
-    margin-top: calc(var(--spacing-large) * 3);
-  }
+  /* .PageTitle {
+    background-color: lime;
+  } */
 
   .PageTitle h2 {
-    font-size: var(--font-size-large);
-    padding: var(--spacing-large) 0;
     margin-bottom: var(--spacing-large);
+    font-size: var(--font-size-large);
   }
 }
 
 /* LARGE_DEVICES: > 1500 */
 @media (min-width: 1500px) {
-  .PageTitle {
-    margin-top: 0;
-  }
+  /* .PageTitle {
+    background-color: pink;
+  } */
 
-  .PageTitle h2 {
-    font-size: var(--font-size-large);
-    padding: var(--spacing-large) 0;
-    margin-bottom: var(--spacing-large);
-  }
+  /* .PageTitle h2 {
+    
+  } */
 }
