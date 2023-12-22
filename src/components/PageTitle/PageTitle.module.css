@@ -1,6 +1,7 @@
 .PageTitle {
   text-align: center;
   color: var(--color-dark);
+  background-color: teal;
 }
 
 /* Inherited styles allow to parent to pass styles. */
@@ -18,9 +19,9 @@ h2 {
 
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
-  /* .PageTitle {
-    background-color: lime;
-  } */
+  .PageTitle {
+    background-color: tan;
+  }
 
   .PageTitle h2 {
     margin-bottom: var(--spacing-large);
@@ -30,9 +31,9 @@ h2 {
 
 /* LARGE_DEVICES: > 1500 */
 @media (min-width: 1500px) {
-  /* .PageTitle {
-    background-color: pink;
-  } */
+  .PageTitle {
+    background-color: orange;
+  }
 
   /* .PageTitle h2 {
     
