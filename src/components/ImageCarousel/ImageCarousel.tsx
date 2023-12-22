@@ -52,9 +52,7 @@ export default function ImageCarousel() {
             {IMAGE_CONFIG.map(({ title }, idx) => {
               return (
                 <li
-                  className={
-                    idx === currentImageIdx ? styles.CurrentTitle : styles.Title
-                  }
+                  className={idx === currentImageIdx ? styles.highlight : ''}
                   key={title}
                 >
                   {title}

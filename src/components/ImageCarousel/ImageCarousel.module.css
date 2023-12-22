@@ -85,20 +85,18 @@
 /* LARGE_DEVICES > 1201 */
 @media (min-width: 1500px) {
   .ImageCarousel {
-    display: flex;
-    justify-content: center;
-    background-color: unset;
-  }
+    width: 90%;
+    margin-top: 0;
+    padding: var(--spacing-large) 0;
 
-  .TitleContainer {
-    /* background-color: beige; */
-    /* flex: 1; */
-    padding-right: var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+
+    background-color: unset;
   }
 
   .TitleList {
     height: 400px;
-    /* background-color: pink; */
     margin: 0;
     padding-left: 0;
 
@@ -109,16 +107,12 @@
   }
 
   .TitleList li {
-    font-size: 32px;
-
     transition: color 0.3s linear;
-  }
-
-  .TitleList .Title {
+    font-size: 32px;
     color: var(--color-dark);
   }
 
-  .TitleList .CurrentTitle {
+  .TitleList .highlight {
     color: var(--color-primary);
   }
 
