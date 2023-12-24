@@ -1,16 +1,20 @@
 .TitleContainer {
-  --slide-right-up-transform: translate(-20%, 20%);
+  --slide-right-up-start: translate(-20%, 0);
+  --slide-right-up-end: translate(0, -50%);
   width: 100%;
+  max-width: 1024px;
 
   display: flex;
-  align-items: center;
   justify-content: flex-start;
+
+  background-color: gainsboro;
 }
 
 .TitleContainer img {
-  width: 75px;
+  width: 70px;
+  height: 70px;
   margin-right: calc(var(--spacing-large) * 1.5);
-  transform: var(--slide-right-up-transform);
+  transform: var(--slide-right-up-start);
 
   animation-name: slideRightUp;
   animation-duration: 0.4s;
@@ -20,17 +24,18 @@
 
 .EmailContainer {
   width: 100%;
+  max-width: 1024px;
   margin-top: var(--spacing-medium);
 
   display: flex;
   align-items: flex-end;
+
+  background-color: azure;
 }
 
 .EmailContainer img {
   width: 32px;
   padding-bottom: 3px;
-
-  filter: var(--svg-filter-primary);
 }
 
 .EmailContainer p {
@@ -58,7 +63,7 @@
 
 .SuccessIconWrapper img {
   width: 100px;
-  filter: var(--svg-filter-dark-gray);
+  opacity: 0.25;
   transform: scale(1.5) translateY(-15%);
 
   animation-name: opacityInit;
@@ -87,13 +92,15 @@
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
   .TitleContainer {
-    --slide-right-up-transform: translate(-15%, 50%);
+    --slide-right-up-start: translate(-10%, -10%);
+    --slide-right-up-end: translate(10%, -50%);
     justify-content: flex-start;
     margin-top: calc(var(--spacing-large) * 1.25);
   }
 
   .TitleContainer img {
     width: 85px;
+    height: 85px;
     margin-right: 0;
   }
 
@@ -119,12 +126,19 @@
   }
 }
 
+/* LARGE_DEVICES: > 1500 */
+/* @media (min-width: 1500px) {
+  .TitleContainer {
+    
+  }
+} */
+
 @keyframes slideRightUp {
   0% {
-    transform: var(--slide-right-up-transform);
+    transform: var(--slide-right-up-start);
   }
   100% {
-    transform: translate(0, 0);
+    transform: var(--slide-right-up-end);
   }
 }
 
@@ -140,16 +154,16 @@
 
 @keyframes opacityInit {
   0% {
-    filter: var(--svg-filter-dark-gray);
+    opacity: 0.25;
   }
-  50% {
-    filter: var(--svg-filter-primary);
+  37.5% {
+    opacity: 1;
   }
   75% {
     transform: scale(1.5) translateY(-15%);
   }
   100% {
-    filter: var(--svg-filter-primary);
+    opacity: 1;
     transform: scale(1) translateY(0);
   }
 }
