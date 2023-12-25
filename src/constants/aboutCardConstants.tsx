@@ -6,8 +6,6 @@ import AboutCardIcon02 from 'src/assets/images/about-card-02.png';
 import AboutCardIcon03 from 'src/assets/images/about-card-03.png';
 import ToolIcon from 'src/assets/svgs/tool.svg';
 
-const commonBoxShadow = 'var(--box-shadow-image)';
-
 const paragraphStyles = {
   padding: 20,
   lineHeight: 2,
@@ -32,8 +30,6 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   {
     cardStyles: {
       backgroundColor: 'rgba(255, 138, 0, 0.75)',
-      outline: '2px solid var(--color-dark)',
-      boxShadow: commonBoxShadow,
     },
     body: (
       <p style={paragraphStyles}>
@@ -47,7 +43,6 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   },
   {
     cardStyles: {
-      outline: '2px solid var(--color-dark-gray)',
       backgroundColor: 'rgba(189, 202, 206, 0.75)',
     },
     body: (
@@ -63,7 +58,6 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   {
     cardStyles: {
       backgroundColor: 'rgba(110, 173, 192, 0.75)',
-      boxShadow: commonBoxShadow,
     },
     body: (
       <p style={paragraphStyles}>
@@ -78,7 +72,6 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   {
     cardStyles: {
       backgroundColor: 'var(--color-dark)',
-      boxShadow: commonBoxShadow,
     },
     body: <SkillsCard />,
     iconProps: { src: ToolIcon, alt: ICON_ALT_TEXT.CARD_SKILLS },
