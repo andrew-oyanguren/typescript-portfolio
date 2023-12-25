@@ -1,12 +1,14 @@
 .AboutCard {
   width: 100%;
-  max-width: 700px;
+
   margin-top: var(--spacing-large);
 
   display: flex;
   flex-direction: column;
 
+  box-shadow: var(--box-shadow-image);
   border-radius: var(--border-radius-medium);
+  outline: 2px solid var(--color-dark);
 }
 
 .AboutCard + .AboutCard {
@@ -45,6 +47,23 @@
 @media (min-width: 768px) {
   .AboutCardHeader img {
     padding: 36px;
+  }
+}
+
+/* LARGE_DEVICES: > 1500 */
+@media (min-width: 1500px) {
+  .AboutCard {
+    flex-direction: row-reverse;
+  }
+
+  .AboutCardHeader {
+    border-top-right-radius: var(--border-radius-medium);
+    border-top-left-radius: 0;
+    border-bottom-right-radius: var(--border-radius-medium);
+  }
+
+  .AboutCardHeader img {
+    padding: 60px calc(var(--spacing-large) * 2);
   }
 }
 

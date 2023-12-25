@@ -41,7 +41,6 @@ export default function AboutPage() {
 
       {isLargeDevice ? <Drawer /> : null}
       <div className={styles.AboutCardsContainer}>
-        {/* filter */}
         {renderCards(isLargeDevice)}
       </div>
     </>
