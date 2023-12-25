@@ -13,10 +13,19 @@ const paragraphStyles = {
   lineHeight: 2,
 };
 
+export const ICON_ALT_TEXT = Object.freeze({
+  CARD_ONE: 'About Card One Icon',
+  CARD_TWO: 'About Card Two Icon',
+  CARD_THREE: 'About Card Three Icon',
+  CARD_SKILLS: 'SKILLS Card Icon',
+});
+
+type IconAltTypes = (typeof ICON_ALT_TEXT)[keyof typeof ICON_ALT_TEXT];
+
 type AboutCardConfigTypes = {
   cardStyles: CSSProperties;
   body: ReactNode;
-  iconProps: { src: string; alt: string };
+  iconProps: { src: string; alt: IconAltTypes };
 }[];
 
 export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
@@ -34,7 +43,7 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
         is when I discovered JavaScript.
       </p>
     ),
-    iconProps: { src: AboutCardIcon01, alt: 'About Icon One' },
+    iconProps: { src: AboutCardIcon01, alt: ICON_ALT_TEXT.CARD_ONE },
   },
   {
     cardStyles: {
@@ -49,7 +58,7 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
         200 times, received 4 interviews and was so close...
       </p>
     ),
-    iconProps: { src: AboutCardIcon02, alt: 'About Icon Two' },
+    iconProps: { src: AboutCardIcon02, alt: ICON_ALT_TEXT.CARD_TWO },
   },
   {
     cardStyles: {
@@ -64,7 +73,7 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
         with a local startup.
       </p>
     ),
-    iconProps: { src: AboutCardIcon03, alt: 'About Icon Three' },
+    iconProps: { src: AboutCardIcon03, alt: ICON_ALT_TEXT.CARD_THREE },
   },
   {
     cardStyles: {
@@ -72,6 +81,6 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
       boxShadow: commonBoxShadow,
     },
     body: <SkillsCard />,
-    iconProps: { src: ToolIcon, alt: 'About Icon Three' },
+    iconProps: { src: ToolIcon, alt: ICON_ALT_TEXT.CARD_SKILLS },
   },
 ];
