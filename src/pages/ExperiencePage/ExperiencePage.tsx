@@ -1,4 +1,4 @@
-import { PageTitle } from 'src/components';
+import { PageTitle, ExperienceBar } from 'src/components';
 
 import { getExperienceUIVariant } from 'src/components/ExperienceUI/helpers';
 import { EXPERIENCE_UI_VARIANTS } from 'src/components/ExperienceUI/constants';
@@ -39,6 +39,7 @@ const PageSection = () => {
           </div>
 
           <div className={styles.Content}>{content}</div>
+          <ExperienceBar />
         </section>
       ))}
     </>
