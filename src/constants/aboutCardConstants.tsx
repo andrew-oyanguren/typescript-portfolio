@@ -6,25 +6,30 @@ import AboutCardIcon02 from 'src/assets/images/about-card-02.png';
 import AboutCardIcon03 from 'src/assets/images/about-card-03.png';
 import ToolIcon from 'src/assets/svgs/tool.svg';
 
-const commonBoxShadow = 'var(--box-shadow-image)';
-
 const paragraphStyles = {
   padding: 20,
   lineHeight: 2,
 };
 
+export const ICON_ALT_TEXT = Object.freeze({
+  CARD_ONE: 'About Card One Icon',
+  CARD_TWO: 'About Card Two Icon',
+  CARD_THREE: 'About Card Three Icon',
+  CARD_SKILLS: 'SKILLS Card Icon',
+});
+
+type IconAltTypes = (typeof ICON_ALT_TEXT)[keyof typeof ICON_ALT_TEXT];
+
 type AboutCardConfigTypes = {
   cardStyles: CSSProperties;
   body: ReactNode;
-  iconProps: { src: string; alt: string };
+  iconProps: { src: string; alt: IconAltTypes };
 }[];
 
 export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
   {
     cardStyles: {
       backgroundColor: 'rgba(255, 138, 0, 0.75)',
-      outline: '2px solid var(--color-dark)',
-      boxShadow: commonBoxShadow,
     },
     body: (
       <p style={paragraphStyles}>
@@ -34,11 +39,10 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
         is when I discovered JavaScript.
       </p>
     ),
-    iconProps: { src: AboutCardIcon01, alt: 'About Icon One' },
+    iconProps: { src: AboutCardIcon01, alt: ICON_ALT_TEXT.CARD_ONE },
   },
   {
     cardStyles: {
-      outline: '2px solid var(--color-dark-gray)',
       backgroundColor: 'rgba(189, 202, 206, 0.75)',
     },
     body: (
@@ -49,12 +53,11 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
         200 times, received 4 interviews and was so close...
       </p>
     ),
-    iconProps: { src: AboutCardIcon02, alt: 'About Icon Two' },
+    iconProps: { src: AboutCardIcon02, alt: ICON_ALT_TEXT.CARD_TWO },
   },
   {
     cardStyles: {
       backgroundColor: 'rgba(110, 173, 192, 0.75)',
-      boxShadow: commonBoxShadow,
     },
     body: (
       <p style={paragraphStyles}>
@@ -64,14 +67,13 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
         with a local startup.
       </p>
     ),
-    iconProps: { src: AboutCardIcon03, alt: 'About Icon Three' },
+    iconProps: { src: AboutCardIcon03, alt: ICON_ALT_TEXT.CARD_THREE },
   },
   {
     cardStyles: {
       backgroundColor: 'var(--color-dark)',
-      boxShadow: commonBoxShadow,
     },
     body: <SkillsCard />,
-    iconProps: { src: ToolIcon, alt: 'About Icon Three' },
+    iconProps: { src: ToolIcon, alt: ICON_ALT_TEXT.CARD_SKILLS },
   },
 ];

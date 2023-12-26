@@ -1,3 +1,15 @@
+.AboutCardsContainer {
+  margin-top: var(--spacing-large);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.AboutCardsContainer > * {
+  max-width: 768px;
+}
+
 .BackgroundDesign {
   width: 50%;
   z-index: -1;
@@ -11,7 +23,6 @@
 
   animation: slideLeft;
   animation-duration: 0.5s;
-
   animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
   animation-fill-mode: forwards;
 
@@ -20,6 +31,61 @@
     rgba(220, 230, 234, 1) 50%,
     rgba(245, 245, 245, 1) 100%
   );
+}
+
+/* LARGE_DEVICES: > 1500 */
+@media (min-width: 1500px) {
+  .AboutCardsContainer > * {
+    max-width: 1124px;
+  }
+
+  .AboutCardsContainer > div:first-of-type {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .AboutCardsContainer > div:first-of-type > header {
+    border-top-right-radius: 50px;
+  }
+
+  .AboutCardsContainer > div:nth-of-type(2) {
+    max-width: 1124px;
+    flex-direction: row;
+
+    border-top-left-radius: var(--border-radius-medium);
+    border-bottom-left-radius: var(--border-radius-medium);
+
+    animation: growLeft;
+    animation-duration: 0.2s;
+    animation-delay: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .AboutCardsContainer > div:nth-of-type(2) > header {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--border-radius-medium);
+    border-bottom-left-radius: var(--border-radius-medium);
+  }
+
+  .AboutCardsContainer > div:last-of-type {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .AboutCardsContainer > div:last-of-type > header {
+    border-bottom-right-radius: 50px;
+  }
+}
+
+@keyframes growLeft {
+  from {
+    max-width: 1124px;
+  }
+  to {
+    max-width: 1224px;
+  }
 }
 
 @keyframes slideLeft {

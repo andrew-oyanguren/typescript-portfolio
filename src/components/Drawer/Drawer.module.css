@@ -41,7 +41,7 @@
 .HamburgerContainer {
   display: flex;
   position: absolute;
-  top: 30%;
+  top: 25%;
   right: 100%;
   align-items: center;
 }
