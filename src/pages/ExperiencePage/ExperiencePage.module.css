@@ -3,7 +3,6 @@
 }
 
 .Subtitle {
-  /* background-color: pink; */
   padding: 0 var(--spacing-medium);
 }
 
@@ -11,27 +10,12 @@
   margin-top: var(--spacing-medium);
 }
 
-/* .Content > * + * {
-  margin-top: var(--spacing-large);
-} */
-
 span {
   font-weight: bold;
 }
 
 /* MEDIUM_DEVICES: > 768 */
-/* CONTINUE WORKING HERE!!!! */
 @media (min-width: 768px) {
-  /* .ExperiencePageSection {
-    display: grid;
-    place-items: center;
-  }
-
-  .Title {
-    width: 80%;
-    padding: var(--spacing-large) 0;
-  } */
-
   .Subtitle {
     width: 80%;
     margin: 0 auto;

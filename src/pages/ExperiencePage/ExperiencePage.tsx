@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import { PageTitle, ExperienceBar } from 'src/components';
+import useWindowDim from 'src/hooks/useWindowDim';
 
 import { getExperienceUIVariant } from 'src/components/ExperienceUI/helpers';
 import { EXPERIENCE_UI_VARIANTS } from 'src/components/ExperienceUI/constants';
@@ -37,6 +38,9 @@ const PageSection = () => {
   const { ref: webDevRef } = useInView({ threshold: 0 });
   const { ref: jrRef, inView: jrInView } = useInView({ threshold: 0 });
   const { ref: srRef, inView: srInView } = useInView({ threshold: 0 });
+  const { windowDim } = useWindowDim();
+
+  const isMediumDevice = windowDim.width >= 768;
 
   const getRef = (id: string) => {
     switch (id) {
@@ -89,7 +93,9 @@ const PageSection = () => {
         );
       })}
 
-      <ExperienceBar circlePosition={experienceCirclePosition} />
+      {isMediumDevice ? (
+        <ExperienceBar circlePosition={experienceCirclePosition} />
+      ) : null}
     </>
   );
 };
