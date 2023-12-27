@@ -3,7 +3,7 @@
 
   position: fixed;
   top: 50%;
-  right: 10%;
+  right: var(--spacing-medium);
   transform: translateY(-50%);
 
   display: grid;
@@ -26,5 +26,16 @@
   width: 10px;
   height: 200px;
   border-radius: 30px;
-  background-color: var(--color-gray);
+  background-color: var(--color-primary);
+}
+
+/* LARGE_DEVICES: > 768 */
+@media (min-width: 1500px) {
+  .ExperienceBar {
+    right: var(--spacing-large);
+  }
+
+  .ExperienceBar .Line {
+    background-color: var(--color-gray);
+  }
 }
