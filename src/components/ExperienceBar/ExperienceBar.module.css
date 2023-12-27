@@ -1,0 +1,30 @@
+.ExperienceBar {
+  height: 500px;
+
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+    'top'
+    'middle'
+    'bottom';
+}
+
+.ExperienceBar .Circle {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--border-radius-circle);
+  box-shadow: var(--box-shadow-icon);
+  background-color: var(--color-secondary);
+}
+
+.ExperienceBar .Line {
+  width: 10px;
+  height: 200px;
+  border-radius: 30px;
+  background-color: var(--color-gray);
+}
