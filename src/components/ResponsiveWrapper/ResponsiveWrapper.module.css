@@ -1,6 +1,5 @@
 .ResponsiveWrapper {
   width: var(--mobile-width-percent);
-  max-width: var(--device-xl-maxWidth);
   margin: 0 auto;
   padding-top: calc(var(--spacing-large) * 2);
 
@@ -10,21 +9,20 @@
   align-items: center;
 
   /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  /* background-color: rgb(223, 207, 158); */
+  background-color: rgb(223, 207, 158);
 }
 
 /* tablet > 768 */
 @media (min-width: 768px) {
   .ResponsiveWrapper {
     min-height: calc(100vh - 320px);
-    /* background-color: lime; */
   }
 }
 
 /* LARGE_DEVICES > 1201 */
 @media (min-width: 1500px) {
   .ResponsiveWrapper {
+    width: 100%;
     min-height: calc(100vh - 90px);
-    /* background-color: pink; */
   }
 }
