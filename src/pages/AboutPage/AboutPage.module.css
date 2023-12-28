@@ -36,7 +36,7 @@
 /* LARGE_DEVICES: > 1500 */
 @media (min-width: 1500px) {
   .AboutCardsContainer > * {
-    max-width: 1124px;
+    max-width: 1120px;
   }
 
   .AboutCardsContainer > div:first-of-type {
@@ -49,7 +49,6 @@
   }
 
   .AboutCardsContainer > div:nth-of-type(2) {
-    max-width: 1124px;
     flex-direction: row;
 
     border-top-left-radius: var(--border-radius-medium);
@@ -84,7 +83,7 @@
     max-width: 1124px;
   }
   to {
-    max-width: 1224px;
+    max-width: var(--desktop-width);
   }
 }
 
