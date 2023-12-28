@@ -31,6 +31,7 @@
 
   /* common box properties */
   --mobile-width-percent: 95%;
+  --desktop-width: 1240px;
 
   --border-radius-small: 10px;
   --border-radius-medium: 20px;
