@@ -70,7 +70,7 @@ const PageSection = () => {
   }, [getSectionInVIew]);
 
   return (
-    <>
+    <div className={styles.ExperiencePageContainer}>
       <PageTitle text='My Experience' />
 
       {EXP_SECTIONS_CONFIG.map(({ id, title, subTitle, content }) => {
@@ -96,7 +96,7 @@ const PageSection = () => {
       {isMediumDevice ? (
         <ExperienceBar circlePosition={experienceCirclePosition} />
       ) : null}
-    </>
+    </div>
   );
 };
 

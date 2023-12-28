@@ -1,5 +1,13 @@
-.ExperiencePageSection + .ExperiencePageSection {
-  margin-top: var(--spacing-medium);
+.ExperiencePageContainer {
+  background-color: yellow;
+}
+
+.ExperiencePageSection {
+  background-color: beige;
+}
+
+.ExperiencePageSection {
+  margin-top: var(--spacing-large);
 }
 
 .Subtitle {
@@ -16,6 +24,10 @@ span {
 
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
+  .ExperiencePageSection {
+    margin-top: calc(var(--spacing-large) * 2);
+  }
+
   .Subtitle {
     width: 80%;
     margin: 0 auto;
