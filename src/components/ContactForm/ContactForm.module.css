@@ -1,6 +1,6 @@
 .ContactForm {
   width: 100%;
-  max-width: 1024px;
+  max-width: var(--desktop-width);
   margin-top: var(--spacing-medium);
 }
 

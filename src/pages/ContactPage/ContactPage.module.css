@@ -2,7 +2,7 @@
   --slide-right-up-start: translate(-20%, 0);
   --slide-right-up-end: translate(0, -50%);
   width: 100%;
-  max-width: 1024px;
+  max-width: var(--desktop-width);
 
   display: flex;
   justify-content: flex-start;
@@ -24,7 +24,7 @@
 
 .EmailContainer {
   width: 100%;
-  max-width: 1024px;
+  max-width: var(--desktop-width);
   margin-top: var(--spacing-medium);
 
   display: flex;
