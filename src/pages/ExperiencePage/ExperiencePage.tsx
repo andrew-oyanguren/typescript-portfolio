@@ -56,10 +56,10 @@ const PageSection = () => {
   };
 
   const getSectionInVIew = useCallback(() => {
-    if (jrInView) {
-      return 'middle';
-    } else if (srInView) {
+    if (srInView) {
       return 'bottom';
+    } else if (jrInView) {
+      return 'middle';
     } else {
       return 'top';
     }
