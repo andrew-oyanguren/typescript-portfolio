@@ -1,15 +1,18 @@
 import { useInView } from 'react-intersection-observer';
 
-import PortfolioDesktop from 'src/assets/images/portfolio-desktop.png';
+import PortfolioHomePage from 'src/assets/images/portfolio_home_page.png';
+import PortfolioContactPage from 'src/assets/images/portfolio_contact_page.png';
 import styles from './WebDeveloper.module.css';
 
 export default function WebDevBody() {
   const { ref: imgOneRef, inView: imgOneInView } = useInView({
     threshold: 0,
+    triggerOnce: true,
   });
 
   const { ref: imgTwoRef, inView: imgTwoInView } = useInView({
     threshold: 0,
+    triggerOnce: true,
   });
 
   return (
@@ -17,11 +20,11 @@ export default function WebDevBody() {
       <div ref={imgOneRef} className={styles.WebDevImgWrapper}>
         <img
           style={{ opacity: 0 }}
-          className={`${styles.WebDevImg} ${
+          className={`${styles.WebDevImgOne} ${
             imgOneInView ? styles.animate : ''
           }`}
-          src={PortfolioDesktop}
-          alt='Portfolio Desktop View'
+          src={PortfolioHomePage}
+          alt='Portfolio home page'
         />
       </div>
 
@@ -35,11 +38,11 @@ export default function WebDevBody() {
       <div ref={imgTwoRef} className={styles.WebDevImgWrapper}>
         <img
           style={{ opacity: 0 }}
-          className={`${styles.WebDevImg} ${
+          className={`${styles.WebDevImgTwo} ${
             imgTwoInView ? styles.animate : ''
           }`}
-          src={PortfolioDesktop}
-          alt='Portfolio Mobile View'
+          src={PortfolioContactPage}
+          alt='Portfolio contact page'
         />
       </div>
     </div>
