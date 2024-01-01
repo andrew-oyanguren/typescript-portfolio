@@ -18,8 +18,6 @@ const SKILLS_CONFIG = [
 export default function SkillsCard() {
   const { inView, ref } = useInView({ threshold: 0 });
 
-  console.log('inView: ', inView);
-
   return (
     <ul ref={ref} className={styles.SkillsContainer}>
       {SKILLS_CONFIG.map((skill) => (
