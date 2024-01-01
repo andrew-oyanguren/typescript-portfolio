@@ -1,17 +1,20 @@
 .ExperiencePageContainer {
-  background-color: yellow;
-}
-
-.ExperiencePageSection {
-  background-color: beige;
+  width: 100%;
 }
 
 .ExperiencePageSection {
   margin-top: var(--spacing-large);
 }
 
+.ExperiencePageSection .Header {
+  border: 1px solid var(--color-light);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow-icon);
+}
+
 .Subtitle {
   padding: 0 var(--spacing-medium);
+  margin-top: var(--spacing-medium);
 }
 
 .Content {
@@ -28,12 +31,42 @@ span {
     margin-top: calc(var(--spacing-large) * 2);
   }
 
-  .Subtitle {
-    width: 80%;
+  .ExperiencePageSection .Header {
+    max-width: var(--desktop-width);
     margin: 0 auto;
+    padding: 0 var(--spacing-large);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ExperiencePageSection .Header span {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--color-light);
+  }
+
+  .Subtitle {
+    max-width: var(--desktop-width);
+    margin: 0 auto;
+    margin-top: var(--spacing-large);
   }
 
   .Content {
     margin-top: var(--spacing-large);
+  }
+}
+
+/* LARGE_DEVICES: > 1360 */
+@media (min-width: 1360px) {
+  .ExperiencePageSection {
+    margin: 0 auto;
+    background-color: var(--color-light-gray);
+    padding: calc(var(--spacing-large) * 2.5) 0;
+  }
+
+  .ExperiencePageSection + .ExperiencePageSection {
+    margin-top: calc(var(--spacing-large) * 4);
   }
 }
