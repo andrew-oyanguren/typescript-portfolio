@@ -1,7 +1,8 @@
-const BALL_POSITION = Object.freeze({
+export const BALL_POSITION = Object.freeze({
   TOP: 'top',
   MIDDLE: 'middle',
   BOTTOM: 'bottom',
 });
 
-export { BALL_POSITION };
+export type BallPositionType =
+  (typeof BALL_POSITION)[keyof typeof BALL_POSITION];
