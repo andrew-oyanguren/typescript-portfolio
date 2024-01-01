@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 
 import { Footer, Navigation, ResponsiveWrapper } from '../components';
 import styles from './route.module.css';
@@ -14,6 +14,7 @@ export default function Root() {
         <main>
           <ResponsiveWrapper>
             <Outlet />
+            <ScrollRestoration />
           </ResponsiveWrapper>
         </main>
 
