@@ -1,5 +1,8 @@
 import { useInView } from 'react-intersection-observer';
 
+import { useWindowDim } from 'src/hooks';
+import { DEVICE_WIDTHS } from 'src/constants';
+
 import PortfolioHomePage from 'src/assets/images/portfolio_home_page.png';
 import PortfolioContactPage from 'src/assets/images/portfolio_contact_page.png';
 import styles from './WebDeveloper.module.css';
@@ -15,14 +18,15 @@ export default function WebDevBody() {
     triggerOnce: true,
   });
 
+  const { windowDim } = useWindowDim();
+
+  const isLargeDevice = windowDim.width > DEVICE_WIDTHS.LARGE;
+
   return (
     <div className={styles.WebDevContainer}>
       <div ref={imgOneRef} className={styles.WebDevImgWrapper}>
         <img
-          style={{ opacity: 0 }}
-          className={`${styles.WebDevImgOne} ${
-            imgOneInView ? styles.animate : ''
-          }`}
+          className={`${imgOneInView ? styles.animate : ''}`}
           src={PortfolioHomePage}
           alt='Portfolio home page'
         />
@@ -37,10 +41,8 @@ export default function WebDevBody() {
 
       <div ref={imgTwoRef} className={styles.WebDevImgWrapper}>
         <img
-          style={{ opacity: 0 }}
-          className={`${styles.WebDevImgTwo} ${
-            imgTwoInView ? styles.animate : ''
-          }`}
+          style={{ animationDelay: isLargeDevice ? '0.5s' : 'unset' }}
+          className={`${imgTwoInView ? styles.animate : ''}`}
           src={PortfolioContactPage}
           alt='Portfolio contact page'
         />
