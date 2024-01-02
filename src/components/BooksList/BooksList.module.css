@@ -103,7 +103,7 @@
 /* LARGE_DEVICES > 1340 */
 @media (min-width: 1340px) {
   .BooksListContainer {
-    --slide-length: -1440px;
+    --slide-length: -1480px;
   }
 
   .ImageContainer {
