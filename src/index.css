@@ -86,11 +86,13 @@ h1 {
 
 h1,
 h2,
+h3,
 span {
   font-family: 'Mitr', sans-serif;
 }
 
-h2 {
+h2,
+h3 {
   font-weight: 400;
 }
 
