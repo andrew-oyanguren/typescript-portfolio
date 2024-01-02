@@ -41,7 +41,7 @@ export default function WebDevBody() {
 
       <div ref={imgTwoRef} className={styles.WebDevImgWrapper}>
         <img
-          style={{ animationDelay: isLargeDevice ? '0.5s' : 'unset' }}
+          style={{ animationDelay: isLargeDevice ? '0.5s' : '' }}
           className={`${imgTwoInView ? styles.animate : ''}`}
           src={PortfolioContactPage}
           alt='Portfolio contact page'
