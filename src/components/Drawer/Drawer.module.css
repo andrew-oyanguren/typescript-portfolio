@@ -22,7 +22,7 @@
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.icon {
+.Icon {
   width: 45px;
   height: 45px;
   position: absolute;
@@ -32,10 +32,10 @@
   opacity: 0;
 }
 
-.Drawer.open .icon {
+.Drawer.open .Icon {
   opacity: 1;
 
-  transition: opacity 0.5s ease-in 1s;
+  transition: opacity 0.5s ease-in 0.75s;
 }
 
 .HamburgerContainer {

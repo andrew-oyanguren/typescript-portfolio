@@ -17,7 +17,7 @@ export default function Drawer() {
 
   return (
     <div className={DrawerStyles}>
-      <img src={ToolIcon} className={styles.icon} />
+      <img src={ToolIcon} className={styles.Icon} />
 
       <div className={styles.HamburgerContainer}>
         {!isOpen ? <p>Toolbox</p> : null}
