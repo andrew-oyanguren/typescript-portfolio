@@ -84,9 +84,21 @@ h1 {
   font-size: var(--font-size-large);
 }
 
+h1,
+h2,
+span {
+  font-family: 'Mitr', sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+}
+
 p {
   margin: 0;
   font-size: var(--font-size-small);
+  font-family: 'Jura', sans-serif;
+  font-weight: 500;
   line-height: 1.75;
 
   color: var(--color-dark);

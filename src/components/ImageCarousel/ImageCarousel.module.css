@@ -108,13 +108,16 @@
   }
 
   .TitleList li {
-    transition: color 0.3s linear;
+    transition: color 0.5s ease-out;
     font-size: 32px;
+    font-weight: 400;
+
     color: var(--color-dark);
   }
 
   .TitleList .highlight {
     color: var(--color-primary);
+    font-weight: 700;
   }
 
   .ImageCarouselContainer {
