@@ -24,8 +24,6 @@ const AchievementsList = () => {
   const { inView: achievementsListInView, ref: achievementsListRef } =
     useInView({ threshold: 0 });
 
-  console.log('achievementsListInView: ', achievementsListInView);
-
   return (
     <div className={styles.AchievementsContainer}>
       <header className={styles.AchievementsHeader}>

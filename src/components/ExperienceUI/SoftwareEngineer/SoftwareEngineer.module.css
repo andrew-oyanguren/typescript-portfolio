@@ -185,7 +185,7 @@
     padding: var(--spacing-medium);
 
     text-align: center;
-    background-color: var(--color-light-gray);
+    background-color: var(--color-light);
   }
 
   /* AchievementsList Component */
