@@ -17,7 +17,7 @@ export default function JrEngineer() {
     triggerOnce: true,
   });
 
-  const { inView: imgContainerInView, ref: imgContainerRef } = useInView({
+  const { inView: gitContainerInView, ref: gitContainerRef } = useInView({
     threshold: 0,
     triggerOnce: true,
   });
@@ -127,27 +127,13 @@ export default function JrEngineer() {
 
       {isLargeDevice ? (
         <div
-          ref={imgContainerRef}
-          className={`${styles.ImgContainer} ${
-            imgContainerInView ? styles.animate : ''
+          ref={gitContainerRef}
+          className={`${styles.GitContainer} ${
+            gitContainerInView ? styles.animate : ''
           }`}
         >
-          <div
-            style={{
-              border: '4px solid var(--color-primary)',
-              borderRadius: 'var(--border-radius-circle)',
-              padding: 'var(--spacing-small)',
-              marginBottom: 'var(--spacing-small)',
-            }}
-          >
-            <img
-              style={{
-                width: 50,
-                height: 50,
-              }}
-              src={GitPullRequest}
-              alt='2022 Github git merge icon'
-            />
+          <div className={styles.ImgWrapper}>
+            <img src={GitPullRequest} alt='2022 Github git merge icon' />
           </div>
 
           <img src={GitActivity} alt='2022 Github activity chart' />
