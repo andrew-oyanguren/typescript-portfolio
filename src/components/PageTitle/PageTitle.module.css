@@ -12,7 +12,7 @@ h2 {
 .PageTitle h2 {
   padding: var(--spacing-medium) 0;
   border-radius: var(--border-radius-small);
-  font-size: 32px;
+  font-size: 28px;
   background: none;
 }
 

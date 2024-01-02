@@ -6,8 +6,6 @@
 
   display: flex;
   justify-content: flex-start;
-
-  background-color: gainsboro;
 }
 
 .TitleContainer img {
@@ -29,8 +27,6 @@
 
   display: flex;
   align-items: flex-end;
-
-  background-color: azure;
 }
 
 .EmailContainer img {
@@ -125,13 +121,6 @@
     font-size: var(--font-size-medium);
   }
 }
-
-/* LARGE_DEVICES: > 1500 */
-/* @media (min-width: 1500px) {
-  .TitleContainer {
-    
-  }
-} */
 
 @keyframes slideRightUp {
   0% {
