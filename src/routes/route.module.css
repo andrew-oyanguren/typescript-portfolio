@@ -8,24 +8,19 @@
   border-bottom-left-radius: 40px;
 }
 
-.Layout.largeDevice {
-  /*TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: rgb(251, 151, 168);
-}
-
 /* XL Devices > 1680 */
 @media (min-width: 1680px) {
   .Layout > header {
     width: max-content;
     height: 100vh;
     padding-top: 0;
-    padding-left: calc(var(--spacing-large) * 2);
+    padding-left: var(--spacing-large);
     border-radius: 0;
 
     position: fixed;
     display: flex;
     align-items: center;
 
-    background-color: rgba(194, 106, 39, 0.368);
+    background: none;
   }
 }

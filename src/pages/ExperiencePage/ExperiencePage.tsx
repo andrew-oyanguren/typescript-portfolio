@@ -94,7 +94,7 @@ const PageSection = () => {
                 color: 'var(--color-primary)',
                 maxWidth: 'var(--desktop-width)',
                 margin: '0 auto',
-                textAlign: 'right',
+                textAlign: isXlDevice ? 'right' : 'center',
               }
             : {
                 color: 'var(--color-primary)',

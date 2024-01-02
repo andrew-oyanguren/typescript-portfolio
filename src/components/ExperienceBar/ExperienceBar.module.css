@@ -3,7 +3,7 @@
 
   position: fixed;
   top: 50%;
-  right: var(--spacing-medium);
+  right: var(--spacing-large);
   transform: translateY(-50%);
 
   display: grid;
