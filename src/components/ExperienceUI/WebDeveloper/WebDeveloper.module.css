@@ -37,6 +37,10 @@
 
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
+  .WebDevImgWrapper {
+    max-width: 80%;
+  }
+
   .WebDevContainer > p {
     max-width: 75%;
   }
