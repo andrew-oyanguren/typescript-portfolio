@@ -2,14 +2,10 @@
   width: var(--mobile-width-percent);
   margin: 0 auto;
   padding-top: calc(var(--spacing-large) * 2);
+  align-items: center;
 
   display: flex;
   flex-direction: column;
-
-  align-items: center;
-
-  /* TODO: REMOVE FOR DEVELOPMENT ONLY */
-  background-color: rgb(223, 207, 158);
 }
 
 /* tablet > 768 */
