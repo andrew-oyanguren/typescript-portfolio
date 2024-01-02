@@ -18,7 +18,8 @@ export default function HomePage() {
             ? 'var(--spacing-small)'
             : 'var(--spacing-medium)',
           textAlign: isDeviceLarge ? 'start' : 'center',
-          width: isDeviceLarge ? '90%' : 'auto',
+          width: isDeviceLarge ? 'var(--mobile-width-percent)' : 'auto',
+          maxWidth: isDeviceLarge ? 'var(--desktop-width)' : 'none',
         }}
       />
       {isDeviceSmall ? <ImageView /> : <ImageCarousel />}

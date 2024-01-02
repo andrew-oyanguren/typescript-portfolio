@@ -85,14 +85,15 @@
 /* LARGE_DEVICES > 1340 */
 @media (min-width: 1340px) {
   .ImageCarousel {
-    width: 90%;
+    width: var(--mobile-width-percent);
+    max-width: var(--desktop-width);
     margin-top: 0;
     padding: var(--spacing-large) 0;
 
     display: flex;
     justify-content: space-between;
 
-    background-color: unset;
+    background: none;
   }
 
   .TitleList {

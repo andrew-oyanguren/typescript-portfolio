@@ -2,12 +2,10 @@
   --slide-right-up-start: translate(-20%, 0);
   --slide-right-up-end: translate(0, -50%);
   width: 100%;
-  max-width: 1024px;
+  max-width: var(--desktop-width);
 
   display: flex;
   justify-content: flex-start;
-
-  background-color: gainsboro;
 }
 
 .TitleContainer img {
@@ -24,13 +22,11 @@
 
 .EmailContainer {
   width: 100%;
-  max-width: 1024px;
+  max-width: var(--desktop-width);
   margin-top: var(--spacing-medium);
 
   display: flex;
   align-items: flex-end;
-
-  background-color: azure;
 }
 
 .EmailContainer img {
@@ -125,13 +121,6 @@
     font-size: var(--font-size-medium);
   }
 }
-
-/* LARGE_DEVICES: > 1500 */
-/* @media (min-width: 1500px) {
-  .TitleContainer {
-    
-  }
-} */
 
 @keyframes slideRightUp {
   0% {

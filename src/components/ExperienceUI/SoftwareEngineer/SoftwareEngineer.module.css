@@ -132,7 +132,7 @@
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
   .EngContainer {
-    max-width: 80%;
+    max-width: none;
     margin: 0 auto;
   }
 
@@ -143,6 +143,8 @@
   .TextCard {
     padding: var(--spacing-large) var(--spacing-medium);
   }
+
+  /* AchievementsList Component */
 
   .AchievementsList {
     padding: var(--spacing-medium) var(--spacing-small) var(--spacing-medium)
@@ -168,6 +170,38 @@
 
   .AchievementsList li + li {
     margin-top: var(--spacing-large);
+  }
+}
+
+/* MEDIUM_DEVICES: > 1340 */
+@media (min-width: 1340px) {
+  .TextCard {
+    max-width: var(--desktop-width);
+    border-radius: var(--border-radius-medium);
+  }
+
+  .EngContainer > p {
+    width: 100%;
+    padding: var(--spacing-medium);
+
+    text-align: center;
+    background-color: var(--color-light);
+  }
+
+  /* AchievementsList Component */
+
+  .AchievementsContainer {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .AchievementsList {
+    max-width: var(--desktop-width);
+    margin: 0 auto;
+  }
+
+  .AchievementsList li + li {
+    margin-top: var(--spacing-small);
   }
 }
 

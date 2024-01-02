@@ -1,16 +1,30 @@
 import { useInView } from 'react-intersection-observer';
+import { useWindowDim } from 'src/hooks';
+import { DEVICE_WIDTHS } from 'src/constants';
 
 import BookIcon from 'src/assets/svgs/book.svg';
 import CodeIcon from 'src/assets/svgs/code.svg';
 import MapIcon from 'src/assets/svgs/map.svg';
+import GitActivity from 'src/assets/images/git_activity.png';
+import GitPullRequest from 'src/assets/svgs/git-pull-request.svg';
 import { Card } from 'src/components';
 
 import styles from './JrEngineer.module.css';
 
 export default function JrEngineer() {
   const { inView: textContainerInView, ref: textContainerRef } = useInView({
-    threshold: 0,
+    threshold: 0.5,
+    triggerOnce: true,
   });
+
+  const { inView: gitContainerInView, ref: gitContainerRef } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const { windowDim } = useWindowDim();
+
+  const isLargeDevice = windowDim.width > DEVICE_WIDTHS.LARGE;
 
   return (
     <div className={styles.JrEngContainer}>
@@ -21,6 +35,8 @@ export default function JrEngineer() {
           borderBottomRightRadius: 'var(--border-radius-medium)',
           borderBottomLeftRadius: 60,
           marginTop: 0,
+          boxShadow: isLargeDevice ? 'none' : 'var(--box-shadow-icon)',
+          gridArea: isLargeDevice ? 'cardOne' : '',
         }}
       >
         <div className={styles.CustomCardContainer}>
@@ -53,6 +69,7 @@ export default function JrEngineer() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-end',
+          gridArea: isLargeDevice ? 'cardTwo' : '',
         }}
       >
         <div className={styles.CardIconContainer}>
@@ -89,7 +106,8 @@ export default function JrEngineer() {
       <Card
         style={{
           backgroundColor: 'var(--color-gray)',
-          boxShadow: 'none',
+          boxShadow: 'var(--box-shadow-icon)',
+          gridArea: isLargeDevice ? 'cardThree' : '',
         }}
       >
         <div className={styles.CardIconContainer}>
@@ -106,6 +124,21 @@ export default function JrEngineer() {
           </p>
         </div>
       </Card>
+
+      {isLargeDevice ? (
+        <div
+          ref={gitContainerRef}
+          className={`${styles.GitContainer} ${
+            gitContainerInView ? styles.animate : ''
+          }`}
+        >
+          <div className={styles.ImgWrapper}>
+            <img src={GitPullRequest} alt='2022 Github git merge icon' />
+          </div>
+
+          <img src={GitActivity} alt='2022 Github activity chart' />
+        </div>
+      ) : null}
     </div>
   );
 }

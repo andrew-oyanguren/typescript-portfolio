@@ -2,8 +2,9 @@
   --slide-length: -1650px;
 
   width: 100%;
-  overflow: hidden;
+  max-width: var(--desktop-width);
   margin-top: var(--spacing-large);
+  overflow: hidden;
 }
 
 .BooksListTitle {
@@ -99,10 +100,10 @@
   }
 }
 
-/* LARGE_DEVICES > 1500 */
-@media (min-width: 1500px) {
+/* LARGE_DEVICES > 1340 */
+@media (min-width: 1340px) {
   .BooksListContainer {
-    --slide-length: -1440px;
+    --slide-length: -1480px;
   }
 
   .ImageContainer {

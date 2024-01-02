@@ -3,7 +3,7 @@
 
   position: fixed;
   top: 50%;
-  right: 10%;
+  right: var(--spacing-large);
   transform: translateY(-50%);
 
   display: grid;
@@ -20,11 +20,23 @@
   border-radius: var(--border-radius-circle);
   box-shadow: var(--box-shadow-icon);
   background-color: var(--color-secondary);
+  outline: 1px solid var(--color-light);
 }
 
 .ExperienceBar .Line {
   width: 10px;
   height: 200px;
   border-radius: 30px;
-  background-color: var(--color-gray);
+  background-color: var(--color-primary);
+}
+
+/* XL_DEVICES: > 1500 */
+@media (min-width: 1500px) {
+  .ExperienceBar {
+    right: var(--spacing-large);
+  }
+
+  .ExperienceBar .Line {
+    background-color: var(--color-gray);
+  }
 }

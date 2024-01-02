@@ -1,7 +1,6 @@
 .PageTitle {
   text-align: center;
   color: var(--color-dark);
-  background-color: teal;
 }
 
 /* Inherited styles allow to parent to pass styles. */
@@ -11,31 +10,17 @@ h2 {
 }
 
 .PageTitle h2 {
-  padding: var(--spacing-large) 0;
+  padding: var(--spacing-medium) 0;
   border-radius: var(--border-radius-small);
   font-size: 28px;
-  background-color: var(--color-light-gray);
+  background: none;
 }
 
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
-  .PageTitle {
-    background-color: tan;
-  }
-
   .PageTitle h2 {
-    margin-bottom: var(--spacing-large);
+    padding: var(--spacing-large) 0;
+    margin: 0;
     font-size: var(--font-size-large);
   }
-}
-
-/* LARGE_DEVICES: > 1500 */
-@media (min-width: 1500px) {
-  .PageTitle {
-    background-color: orange;
-  }
-
-  /* .PageTitle h2 {
-    
-  } */
 }

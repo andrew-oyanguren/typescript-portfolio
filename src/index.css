@@ -31,6 +31,7 @@
 
   /* common box properties */
   --mobile-width-percent: 95%;
+  --desktop-width: 1240px;
 
   --border-radius-small: 10px;
   --border-radius-medium: 20px;
@@ -76,7 +77,6 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  /* background-color: rgb(155, 247, 247); */
 }
 
 h1 {

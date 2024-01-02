@@ -37,7 +37,10 @@ export default function AboutPage() {
   return (
     <>
       <BackgroundDesign />
-      <PageTitle text='My Journey,' />
+      <PageTitle
+        style={{ color: 'var(--color-secondary)' }}
+        text='My Journey,'
+      />
 
       {isLargeDevice ? <Drawer /> : null}
       <div className={styles.AboutCardsContainer}>
