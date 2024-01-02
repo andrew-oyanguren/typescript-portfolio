@@ -17,12 +17,15 @@
   width: 100%;
   padding: 10px;
   text-align: center;
-  font-weight: 500;
 
   animation-duration: 1.5s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.itemWrapper li p {
+  font-weight: 700;
 }
 
 .itemWrapper:nth-of-type(odd) li {

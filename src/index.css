@@ -1,6 +1,6 @@
 :root {
   /* typography */
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Jura', sans-serif;
   line-height: 1.5;
 
   font-weight: var(--font-weight-regular);
