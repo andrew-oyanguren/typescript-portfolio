@@ -39,7 +39,7 @@ export default function AboutPage() {
       <BackgroundDesign />
       <PageTitle
         style={{ color: 'var(--color-secondary)' }}
-        text='My Journey,'
+        text='My journey,'
       />
 
       {isLargeDevice ? <Drawer /> : null}

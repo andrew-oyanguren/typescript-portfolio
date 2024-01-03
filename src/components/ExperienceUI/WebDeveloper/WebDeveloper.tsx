@@ -33,10 +33,10 @@ export default function WebDevBody() {
       </div>
 
       <p>
-        During this period, I created three portfolio websites, a card game for
-        my toddler, a single page application for an English tutor, and a
-        website for a fire prevention company as well as multiple other personal
-        projects.
+        During this period, I created my Jr. portfolio website, and multiple
+        single page applications. One for an English tutor and the other a fire
+        prevention company. In addition I designed and developed several
+        personal projects.
       </p>
 
       <div ref={imgTwoRef} className={styles.WebDevImgWrapper}>
