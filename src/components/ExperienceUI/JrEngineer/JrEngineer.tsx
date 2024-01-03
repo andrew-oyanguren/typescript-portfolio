@@ -41,7 +41,7 @@ export default function JrEngineer() {
       >
         <div className={styles.CustomCardContainer}>
           <p>
-            Developed a{' '}
+            Created a{' '}
             <span
               style={{
                 color: 'var(--color-dark)',
@@ -49,7 +49,15 @@ export default function JrEngineer() {
             >
               Q&A
             </span>{' '}
-            and release process for Pulse to the Play Store.
+            and{' '}
+            <span
+              style={{
+                color: 'var(--color-dark)',
+              }}
+            >
+              release process
+            </span>{' '}
+            for our kit-provisition app.
           </p>
 
           <div className={styles.MapIconContainer}>
@@ -57,8 +65,8 @@ export default function JrEngineer() {
           </div>
 
           <p>
-            I was Instrumental in FE decisions when building{' '}
-            <span style={{ color: 'var(--color-dark)' }}>new features</span>.
+            Wrote <span style={{ color: 'var(--color-dark)' }}>unit-tests</span>{' '}
+            for both our React and React-Native apps.
           </p>
         </div>
       </Card>
@@ -78,15 +86,9 @@ export default function JrEngineer() {
 
         <div className={styles.CardTextContainer}>
           <p style={{ color: 'var(--color-light)' }}>
-            Researched and successfully integrated React libraries into Novo.
-            Developed data grids, and forms using{' '}
-            <span style={{ color: 'var(--color-primary)' }}>
-              React-Hook-Form
-            </span>{' '}
-            and{' '}
-            <span style={{ color: 'var(--color-primary)' }}>
-              React-DataGrid
-            </span>
+            Developed reusable data grids for our Admin site using the{' '}
+            <span style={{ color: 'var(--color-primary)' }}>ReactDataGrid</span>{' '}
+            library.
           </p>
         </div>
       </Card>
@@ -98,8 +100,9 @@ export default function JrEngineer() {
         }`}
       >
         <p>
-          Led refactor updating Pulse from its primitive state into an updated
-          <span> React Native</span> application
+          Completed a refactor of our kit provisioning app, updating it from a
+          primitive JavaScript state into a modern <span>React-Native</span>{' '}
+          application.
         </p>
       </div>
 
@@ -116,11 +119,13 @@ export default function JrEngineer() {
 
         <div className={styles.CardTextContainer}>
           <p style={{ color: 'var(--color-dark)' }}>
-            Responsible for handling{' '}
+            Developed a{' '}
+            <span style={{ color: 'var(--color-secondary)' }}>quality</span> and{' '}
             <span style={{ color: 'var(--color-secondary)' }}>
-              Sentry alerts and debugging
-            </span>
-            .
+              sanitization
+            </span>{' '}
+            workflow enabling our warehouse team to inspect and flag returned
+            health kits.
           </p>
         </div>
       </Card>
