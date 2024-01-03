@@ -45,6 +45,10 @@
 
 /* MEDIUM_DEVICES: > 768 */
 @media (min-width: 768px) {
+  .AboutCard + .AboutCard {
+    margin-top: calc(var(--spacing-large) * 3);
+  }
+
   .AboutCardHeader img {
     padding: 36px;
   }
