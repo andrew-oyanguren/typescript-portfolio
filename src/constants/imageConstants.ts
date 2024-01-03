@@ -9,32 +9,32 @@ const IMAGE_CONFIG = [
   {
     asset: HeadShot,
     altText: 'Headshot image',
-    title: 'Software Engineer',
+    title: 'Super Software Engineer',
   },
   {
     asset: NameOfTheWind,
     altText: 'Name of The Wind image',
-    title: 'Reads fantasy books',
+    title: 'Active fantasy book kick',
   },
   {
     asset: SpotifySearch,
     altText: 'Spotify search screenshot',
-    title: 'Listens to indie/pop/folk while coding',
+    title: 'Coding music: Indie/Pop/Folk',
   },
   {
     asset: DiabloGameplay,
     altText: 'Diablo gameplay image',
-    title: 'Plays two video games',
+    title: 'Super duper gamer',
   },
   {
     asset: JimCarreyMontage,
     altText: 'Jim Carrey montage image',
-    title: "Relates everything to 90's movies",
+    title: "Kid of the 90's",
   },
   {
     asset: MessiWorldcup,
     altText: 'Lionel Messi World Cup image',
-    title: 'Calls soccer football',
+    title: 'Total Messi fanboy',
   },
 ];
 
