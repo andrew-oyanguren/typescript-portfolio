@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <PageTitle
-        text="Hi, I'm Andy"
+        text="Hi, I'm Andy."
         style={{
           marginBottom: isDeviceSmall
             ? 'var(--spacing-small)'
