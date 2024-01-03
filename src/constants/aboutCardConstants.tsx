@@ -33,10 +33,10 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
     },
     body: (
       <p style={paragraphStyles}>
-        begins during the pandemic circa 2020. Think rock bottom, reevaluating
-        career choices, wife and newborn, pressure of the world on your
-        shoulders. I found web design, and started looking at HTML & CSS. That
-        is when I discovered JavaScript.
+        begins early pandemic circa 2020. Think rock bottom; reevaluating career
+        choices, wife and newborn, pressure of the world on my shoulders. After
+        discovering web design, I started learning HTML & CSS. Shortly after I
+        discovered JavaScript.
       </p>
     ),
     iconProps: { src: AboutCardIcon01, alt: ICON_ALT_TEXT.CARD_ONE },
@@ -47,10 +47,11 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
     },
     body: (
       <p style={paragraphStyles}>
-        While house sitting, I dedicated 10 hour days over 10 months learning
-        how to code and building projects, and started applying for jobs
-        immediately thereafter. It's accurate to state that I was denied over
-        200 times, received 4 interviews and was so close...
+        Over the next 12 months I taught myself how to code. I constantly kept
+        improving and expanded my knowledge until I felt ready to start
+        applying. I was denied over 200 times, and after 4 interviews I was not
+        selected. As a result, I accepted that landing my first job in tech
+        would take extraordinary perseverance.
       </p>
     ),
     iconProps: { src: AboutCardIcon02, alt: ICON_ALT_TEXT.CARD_TWO },
@@ -61,10 +62,10 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
     },
     body: (
       <p style={paragraphStyles}>
-        Fast forward 2021, I'm driving a delivery truck discouraged, exhausted,
-        and ready to put a pause on my dream when I received the phone call that
-        changed my life. I was offered a position for a Jr Software Engineer
-        with a local startup.
+        Fast forward late 2021, I'm driving a delivery truck feeling
+        discouraged, exhausted and ready to put a pause on my dream when I
+        received a phone call that changed my life. I was offered a Jr Software
+        Engineer position with a local startup.
       </p>
     ),
     iconProps: { src: AboutCardIcon03, alt: ICON_ALT_TEXT.CARD_THREE },

@@ -5,18 +5,23 @@ import styles from './SoftwareEngineer.module.css';
 
 const ACHIEVEMENTS_LIST_ITEMS = [
   <p>
-    I surfaced critical <span>business metrics</span> through custom stats cards
+    Built a robust and reusable form component implementing the third-party
+    library <span>React-Hook-Form</span>.
   </p>,
   <p>
-    I helped improve overall <span>testing</span> and stability
+    Using Redux's (fetching tool) <span>RTK Query</span>, I introduced{' '}
+    <span>auto-generated</span> API hooks helping to standardize fetching across
+    Reperio's 3 applications.
   </p>,
   <p>
-    Developed <span>reusable-scalable components</span> in accordance with{' '}
-    <span>design system</span>
+    Designed and developed a Stats page that included filterable custom cards
+    that surfaced real time <span>business metrics</span> and <span>KPI's</span>
+    .
   </p>,
   <p>
-    Introduced <span>auto-generated API</span> hooks helping to standardize
-    fetching across Reperio's three applications
+    Through implementation with Amazon Web Services <span>AWS</span>, I
+    developed permissions and content accesibility constraints for our internal
+    users.
   </p>,
 ];
 
@@ -63,16 +68,18 @@ export default function SoftwareEngineer() {
         className={`${styles.TextCard} ${textCardInView ? styles.animate : ''}`}
       >
         <p>
-          Collaborated with Product, Design, and CS/CX to build data-driven
-          features enabling our internal teams to better support our customers,
-          create and track shipments, debug and handle error events, view
-          metrics, and onboard organizations/clients.
+          Some of my responsibilities included handling strategic deployments,
+          responding to Sentry alerts to assist and track engineering related
+          issues, research for future implementations, as well as presenting
+          feature demos following new releases.
         </p>
       </div>
 
       <p>
-        Handled <span>strategic-deployments</span>, and <span>research</span>{' '}
-        for upcoming implementations.
+        <span>Realignment:</span> What problem are we solving
+        <span style={{ color: 'var(--color-primary)' }}>?</span> What value are
+        we providing
+        <span style={{ color: 'var(--color-primary)' }}>?</span>
       </p>
 
       <AchievementsList />

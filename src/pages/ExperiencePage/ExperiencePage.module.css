@@ -43,7 +43,7 @@ span {
 
   .ExperiencePageSection .Header span {
     font-size: 18px;
-    font-style: italic;
+    font-family: 'Jura', sans-serif;
     color: var(--color-light);
   }
 
