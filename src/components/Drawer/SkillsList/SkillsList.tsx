@@ -5,7 +5,7 @@ import styles from './SkillsList.module.css';
 const SKILLS_LIST = [
   ['JavaScript', 'HTML', 'CSS'],
   ['React', 'React-Native', 'TypeScript'],
-  ['Redux', 'Unit Tests', 'REST API', 'Git/GitHub', 'Figma'],
+  ['Redux', 'Testing', 'REST API', 'Git/GitHub', 'Figma'],
 ];
 
 const renderListItems: (listConfig: string[][]) => ReactNode = (listConfig) => {
