@@ -110,17 +110,52 @@
   .TitleList li {
     transition: color 0.5s ease-out;
     font-size: 32px;
-    font-weight: 400;
+    position: relative;
+    opacity: 0.75;
 
     color: var(--color-dark);
   }
 
   .TitleList .highlight {
-    color: var(--color-primary);
     font-weight: 700;
+    opacity: 1;
+  }
+
+  .TitleList .highlight::before {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    box-shadow: var(--box-shadow-icon);
+
+    animation-name: expandRight;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
 
   .ImageCarouselContainer {
     padding-top: 0;
+  }
+}
+
+@keyframes expandRight {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  80% {
+    opacity: 0.5;
+    width: 10%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
   }
 }
