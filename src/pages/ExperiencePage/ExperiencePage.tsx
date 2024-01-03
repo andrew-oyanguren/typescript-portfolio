@@ -20,7 +20,7 @@ const EXP_SECTIONS_CONFIG = [
     title: 'Web Developer',
     time_period: '2020 - 2021',
     subTitle:
-      'While I was studying, and improving my skills, I started offering my services to family and friends designing and building websites',
+      'While studying and improving my skills, I started offering my services to family and friends designing and building websites',
     content: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.WEB_DEVELOPER),
     headerBgColor: 'var(--color-primary)',
   },
@@ -28,7 +28,8 @@ const EXP_SECTIONS_CONFIG = [
     id: 'jr',
     title: 'Jr. Software Engineer',
     time_period: '2021 - 2022',
-    subTitle: "Worked on Reperio's two internal apps: Novo and Pulse.",
+    subTitle:
+      'As a part of a small team I collaborated with product, design and supply-chain to build new features, and create processes to accomplish our goals in alignment with company growth expectations.',
     content: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.JR_ENGINEER),
     headerBgColor: 'var(--color-secondary)',
   },
@@ -36,7 +37,8 @@ const EXP_SECTIONS_CONFIG = [
     id: 'se',
     title: 'Software Engineer',
     time_period: '2022 - Present',
-    subTitle: "Held ownership of Reperio's admin site.",
+    subTitle:
+      "I held ownership of Reperio's (React) Admin site, and worked on a health kit provisioning mobile app (React-Native).",
     content: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.SOFTWARE_ENGINEER),
     headerBgColor: 'var(--color-dark)',
   },
@@ -100,7 +102,7 @@ const PageSection = () => {
                 color: 'var(--color-primary)',
               }
         }
-        text='My experience.'
+        text="Here's my experience."
       />
 
       {EXP_SECTIONS_CONFIG.map(
