@@ -35,8 +35,8 @@ const INPUTS_CONFIG = [
     children: {
       options: [
         { value: 'hello', title: 'Just saying hello 👋', selected: true },
-        { value: 'work', title: "Let's work together!" },
-        { value: 'other', title: 'Other' },
+        { value: 'work', title: "Let's work together! 🤝" },
+        { value: 'other', title: 'Other 🖊️' },
       ],
     },
   },
