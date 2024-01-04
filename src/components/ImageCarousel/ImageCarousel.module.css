@@ -21,7 +21,7 @@
   border: 1px solid var(--color-light);
   border-radius: var(--border-radius-medium);
   box-shadow: var(--box-shadow-image);
-  background-color: #4447534f;
+  background-color: #444753c2;
 
   position: relative;
   display: flex;
@@ -32,15 +32,14 @@
   width: 540px;
   height: 400px;
   object-fit: cover;
-  transform: translateY(-100%);
+  transform: translateY(-90%);
   opacity: 0;
 }
 
 .ImageWrapper img.animate {
   animation-name: flashSlide;
-  animation-duration: 0.3s;
-  animation-delay: 0.2s;
-  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -54,32 +53,29 @@
 
 .TitleContainer.animate > p {
   animation-name: flashSlide;
-  animation-duration: 0.3s;
-  animation-delay: 0.2s;
-  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
 .Controls {
   padding: 0;
   margin-top: var(--spacing-medium);
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease;
 
   display: flex;
   justify-content: center;
 }
 
-.Controls button:last-of-type {
-  margin-left: 80px;
+.Controls.initial {
+  opacity: 0;
+  transform: scale(0.5);
 }
 
-@keyframes flashSlide {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.Controls button:last-of-type {
+  margin-left: 80px;
 }
 
 /* LARGE_DEVICES > 1340 */
@@ -141,6 +137,16 @@
 
   .ImageCarouselContainer {
     padding-top: 0;
+  }
+}
+
+@keyframes flashSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

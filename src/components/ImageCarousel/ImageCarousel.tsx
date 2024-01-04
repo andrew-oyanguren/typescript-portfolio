@@ -7,6 +7,7 @@ import { ControlButton } from 'src/components';
 import styles from './ImageCarousel.module.css';
 
 export default function ImageCarousel() {
+  const [initCycle, setInitCycle] = useState(true);
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [currentImage, setCurrentImage] = useState(
     IMAGE_CONFIG[currentImageIdx]
@@ -40,6 +41,23 @@ export default function ImageCarousel() {
     setImgAnimating(false);
   }, [currentImage]);
 
+  useEffect(() => {
+    const delay = isFirstImage ? 5000 : 3000;
+
+    if (initCycle) {
+      const interval = setInterval(() => {
+        if (isLastImage) {
+          setCurrentImageIdx(0);
+          setInitCycle(false);
+          return;
+        }
+        onNext();
+      }, delay);
+
+      return () => clearInterval(interval);
+    }
+  }, [initCycle, isFirstImage, isLastImage, currentImageIdx]);
+
   const animateClass = !imgAnimating ? styles.animate : '';
 
   return (
@@ -72,7 +90,9 @@ export default function ImageCarousel() {
           />
         </div>
 
-        <div className={styles.Controls}>
+        <div
+          className={`${styles.Controls} ${initCycle ? styles.initial : ''}`}
+        >
           <ControlButton
             onClick={onBack}
             controlType={'Back'}
