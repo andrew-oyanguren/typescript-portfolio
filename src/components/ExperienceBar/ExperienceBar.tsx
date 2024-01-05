@@ -14,9 +14,13 @@ export default function ExperienceBar({
 }: ExperienceBarPropTypes) {
   const { windowDim } = useWindowDim();
   const isLargeDevice = windowDim.width >= DEVICE_WIDTHS.LARGE;
+  const isXxlDevice = windowDim.width > 1987;
 
   return (
-    <div className={styles.ExperienceBar}>
+    <div
+      className={styles.ExperienceBar}
+      style={{ right: isXxlDevice ? `${windowDim.width * 0.005}%` : '' }}
+    >
       <div
         style={{
           gridArea: circlePosition,
