@@ -22,8 +22,8 @@
   transform: translateX(100%);
 
   animation: slideLeft;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 
   background: linear-gradient(
@@ -55,8 +55,8 @@
     border-bottom-left-radius: var(--border-radius-medium);
 
     animation: growLeft;
-    animation-duration: 0.2s;
-    animation-delay: 0.3s;
+    animation-duration: 0.25s;
+    animation-delay: 0.75s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
   }
@@ -80,7 +80,7 @@
 
 @keyframes growLeft {
   from {
-    max-width: 1124px;
+    max-width: 1120px;
   }
   to {
     max-width: var(--desktop-width);
