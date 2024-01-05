@@ -47,7 +47,7 @@ export const ABOUT_CARDS_CONFIG: AboutCardConfigTypes = [
     },
     body: (
       <p style={paragraphStyles}>
-        Over the next 12 months I taught myself how to code. I constantly kept
+        Over the next 12 months I taught myself how to code. I was constantly
         improving and expanded my knowledge until I felt ready to start
         applying. I was denied over 200 times, and after 4 interviews I was not
         selected. As a result, I accepted that landing my first job in tech
