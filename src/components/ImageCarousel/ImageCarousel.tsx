@@ -42,7 +42,7 @@ export default function ImageCarousel() {
   }, [currentImage]);
 
   useEffect(() => {
-    const delay = isFirstImage ? 4000 : 3000;
+    const delay = isFirstImage ? 4000 : 2500;
 
     if (initCycle) {
       const interval = setInterval(() => {

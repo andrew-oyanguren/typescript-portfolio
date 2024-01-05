@@ -34,7 +34,7 @@ const INPUTS_CONFIG = [
     props: { name: 'inquiry', id: 'inquiry' },
     children: {
       options: [
-        { value: 'hello', title: 'Just saying hello 👋', selected: true },
+        { value: 'hello', title: 'Saying hi 👋', selected: true },
         { value: 'work', title: "Let's work together! 🤝" },
         { value: 'other', title: 'Other 🖊️' },
       ],
