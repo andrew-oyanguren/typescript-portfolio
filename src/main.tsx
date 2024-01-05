@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { PATH_NAMES } from './constants';
+import { Loader } from 'src/components';
 
 import Root from './routes/root';
 import {
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       path={PATH_NAMES.ROOT}
       element={<Root />}
       errorElement={<ErrorPage />}
+      loader={() => <Loader />}
     >
       <Route index element={<HomePage />} />
       <Route path={PATH_NAMES.ABOUT} element={<AboutPage />} />

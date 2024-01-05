@@ -24,7 +24,7 @@ const INPUTS_CONFIG = [
   {
     inputName: INPUT_NAMES.EMAIL,
     element: INPUT_ELEMENTS.TEXT,
-    props: { type: 'text', placeholder: 'your email' },
+    props: { type: 'text', placeholder: 'email' },
     validation: (value: string) => EMAIL_VALID_REGEX.test(value),
     errorMessage: 'Please provide a contact email',
   },
@@ -34,7 +34,7 @@ const INPUTS_CONFIG = [
     props: { name: 'inquiry', id: 'inquiry' },
     children: {
       options: [
-        { value: 'hello', title: 'Just saying hello 👋', selected: true },
+        { value: 'hello', title: 'Saying hi 👋', selected: true },
         { value: 'work', title: "Let's work together! 🤝" },
         { value: 'other', title: 'Other 🖊️' },
       ],
