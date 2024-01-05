@@ -58,7 +58,7 @@ export default function ImageCarousel() {
     }
   }, [initCycle, isFirstImage, isLastImage, currentImageIdx]);
 
-  const animateClass = !imgAnimating ? styles.animate : '';
+  const animateClass = !imgAnimating && !initCycle ? styles.animate : '';
 
   return (
     <div className={styles.ImageCarousel}>
