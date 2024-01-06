@@ -1,26 +1,28 @@
+import { useEffect } from 'react';
+
+import { useUserContext } from 'src/hooks';
+import useWindowDim from 'src/hooks/useWindowDim';
 import { ImageView, ImageCarousel } from 'src/components';
 
-import useWindowDim from 'src/hooks/useWindowDim';
-import { useEffect, useState } from 'react';
 import { BooksList, PageTitle, LoadingScreen } from 'src/components';
 
 export default function HomePage() {
-  const [isLoading, setIsLoading] = useState(false);
+  const { userSession, initUserSession } = useUserContext();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(true);
+      initUserSession();
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [initUserSession]);
 
   const { windowDim } = useWindowDim();
 
   const isDeviceSmall = windowDim.width < 768;
   const isDeviceLarge = windowDim.width > 1340;
 
-  return !isLoading ? (
+  return !userSession ? (
     <LoadingScreen />
   ) : (
     <>
