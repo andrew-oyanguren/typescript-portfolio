@@ -1,15 +1,28 @@
 import { ImageView, ImageCarousel } from 'src/components';
 
 import useWindowDim from 'src/hooks/useWindowDim';
-import { BooksList, PageTitle } from 'src/components';
+import { useEffect, useState } from 'react';
+import { BooksList, PageTitle, LoadingScreen } from 'src/components';
 
 export default function HomePage() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const { windowDim } = useWindowDim();
 
   const isDeviceSmall = windowDim.width < 768;
   const isDeviceLarge = windowDim.width > 1340;
 
-  return (
+  return !isLoading ? (
+    <LoadingScreen />
+  ) : (
     <>
       <PageTitle
         text="Hi, I'm Andy."

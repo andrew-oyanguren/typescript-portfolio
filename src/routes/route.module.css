@@ -16,11 +16,30 @@
     padding-top: 0;
     padding-left: var(--spacing-large);
     border-radius: 0;
+    opacity: 0;
 
     position: fixed;
     display: flex;
     align-items: center;
 
     background: none;
+
+    animation-name: fadeIn;
+    animation-timing-function: linear;
+    animation-duration: 2;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
