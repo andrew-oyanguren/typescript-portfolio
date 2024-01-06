@@ -1,5 +1,5 @@
 .LoadingScreen {
-  --raise-up-height: 250px;
+  --raise-up-height: 200px;
   height: 100vh;
   width: 100%;
   z-index: 5000;
@@ -97,14 +97,14 @@
   content: '';
   display: bottom;
   width: 0;
-  height: 8px;
+  height: 6px;
   box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.5);
   border-radius: 40px;
   opacity: 0;
   background-color: rgb(81, 207, 43);
 
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
 
   animation-name: lightGround;
   animation-duration: 0.25s;
@@ -114,7 +114,7 @@
 }
 
 .AnimationContainer > .LazersContainer > .Lazer {
-  width: 8px;
+  width: 6px;
   height: 0;
 
   border-radius: 40px;
@@ -133,7 +133,7 @@
 }
 
 .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
-  margin-left: 80px;
+  margin-left: 90px;
   transform: rotateZ(-12deg);
   animation-delay: 1.95s;
 }
