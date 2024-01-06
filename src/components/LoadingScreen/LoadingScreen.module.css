@@ -1,4 +1,5 @@
 .LoadingScreen {
+  --raise-up-height: 250px;
   height: 100vh;
   width: 100%;
   z-index: 5000;
@@ -19,8 +20,6 @@
 }
 
 .AnimationContainer {
-  width: 300px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,8 +33,9 @@
 }
 
 .AnimationContainer > .Top {
-  width: 150px;
-  height: 80px;
+  width: 60px;
+  height: 30px;
+
   border-top-right-radius: 200px;
   border-top-left-radius: 200px;
 
@@ -44,12 +44,12 @@
   background-color: var(--color-primary);
 
   position: relative;
-  top: 50px;
+  top: 20px;
 }
 
 .AnimationContainer > .Middle {
-  width: 300px;
-  height: 120px;
+  width: 130px;
+  height: 55px;
   border-radius: 50%;
 
   background-color: var(--color-primary);
@@ -61,8 +61,8 @@
 }
 
 .AnimationContainer > .Middle > .Lights {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   margin-top: 10px;
   border-radius: 50%;
 
@@ -76,7 +76,7 @@
 }
 
 .AnimationContainer > .Middle > .Lights:nth-child(2) {
-  margin: 20px 30px 0 30px;
+  margin: 12.5px 15px 0 15px;
 }
 
 .AnimationContainer > .LazersContainer {
@@ -97,14 +97,14 @@
   content: '';
   display: bottom;
   width: 0;
-  height: 10px;
-  box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.551);
+  height: 8px;
+  box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.5);
   border-radius: 40px;
   opacity: 0;
   background-color: rgb(81, 207, 43);
 
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
 
   animation-name: lightGround;
   animation-duration: 0.25s;
@@ -114,11 +114,11 @@
 }
 
 .AnimationContainer > .LazersContainer > .Lazer {
-  width: 10px;
+  width: 8px;
   height: 0;
 
   border-radius: 40px;
-  box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.551);
+  box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.5);
   background-color: rgb(81, 207, 43);
 
   animation-name: shootLazer;
@@ -129,13 +129,79 @@
 }
 
 .AnimationContainer > .LazersContainer > .Lazer:first-of-type {
-  transform: rotateZ(15deg);
+  transform: rotateZ(12deg);
 }
 
 .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
-  margin-left: 200px;
-  transform: rotateZ(-15deg);
+  margin-left: 80px;
+  transform: rotateZ(-12deg);
   animation-delay: 1.95s;
+}
+
+/* MEDIUM_DEVICES > 768 */
+@media (min-width: 768px) {
+  .LoadingScreen {
+    --raise-up-height: 300px;
+  }
+
+  .AnimationContainer > .Top {
+    width: 80px;
+    height: 50px;
+    top: 30px;
+  }
+
+  .AnimationContainer > .Middle {
+    width: 200px;
+    height: 90px;
+  }
+
+  .AnimationContainer > .Middle > .Lights {
+    width: 15px;
+    height: 15px;
+  }
+
+  .AnimationContainer > .Middle > .Lights:nth-child(2) {
+    margin: 15px 20px 0 20px;
+  }
+
+  .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
+    margin-left: 120px;
+  }
+}
+
+/* LARGE_DEVICES: > 1360 */
+@media (min-width: 1360px) {
+  .LoadingScreen {
+    --raise-up-height: 400px;
+  }
+
+  .AnimationContainer > .Top {
+    width: 150px;
+    height: 80px;
+    top: 50px;
+  }
+
+  .AnimationContainer > .Middle {
+    width: 300px;
+    height: 120px;
+  }
+
+  .AnimationContainer > .Middle > .Lights {
+    width: 20px;
+    height: 20px;
+  }
+
+  .AnimationContainer > .Middle > .Lights:nth-child(2) {
+    margin: 20px 30px 0 30px;
+  }
+
+  .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
+    margin-left: 200px;
+  }
+
+  .AnimationContainer > .LazersContainer::before {
+    bottom: 5px;
+  }
 }
 
 @keyframes throttleShip {
@@ -161,7 +227,7 @@
     height: 0;
   }
   to {
-    height: 400px;
+    height: var(--raise-up-height);
   }
 }
 
@@ -211,7 +277,7 @@
     opacity: 0;
   }
   100% {
-    width: 105%;
+    width: 100%;
     opacity: 1;
   }
 }

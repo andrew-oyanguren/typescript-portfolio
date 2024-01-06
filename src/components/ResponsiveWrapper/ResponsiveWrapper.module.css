@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-/* tablet > 768 */
+/* MEDIUM_DEVICES > 768 */
 @media (min-width: 768px) {
   .ResponsiveWrapper {
     min-height: calc(100vh - 320px);
