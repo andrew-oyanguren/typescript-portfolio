@@ -12,7 +12,7 @@ export default function HomePage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       initUserSession();
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [initUserSession]);

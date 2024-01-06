@@ -16,7 +16,8 @@
     padding-top: 0;
     padding-left: var(--spacing-large);
     border-radius: 0;
-    opacity: 0;
+
+    transform: translateX(-150%);
 
     position: fixed;
     display: flex;
@@ -24,22 +25,19 @@
 
     background: none;
 
-    animation-name: fadeIn;
-    animation-timing-function: linear;
-    animation-duration: 2;
-    animation-delay: 5s;
+    animation-name: slideRight;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
   }
 }
 
-@keyframes fadeIn {
+@keyframes slideRight {
   0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
+    transform: translateX(-150%);
   }
   100% {
-    opacity: 1;
+    transform: translateX(0);
   }
 }

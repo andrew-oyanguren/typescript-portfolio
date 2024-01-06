@@ -13,7 +13,6 @@ export default function LoadingScreen() {
         <div className={styles.LazersContainer}>
           <div className={styles.Lazer}></div>
           <div className={styles.Lazer}></div>
-          <div className={styles.Lazer}></div>
         </div>
       </div>
     </div>

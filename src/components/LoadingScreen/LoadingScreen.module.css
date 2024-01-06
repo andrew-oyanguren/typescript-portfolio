@@ -1,18 +1,19 @@
 .LoadingScreen {
-  background-color: var(--color-dark);
+  height: 100vh;
+  width: 100%;
   z-index: 5000;
+
   position: absolute;
   top: 0;
 
-  height: 100vh;
-  width: 100%;
+  background-color: var(--color-dark);
 
   display: grid;
   place-content: center;
 
   animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-delay: 4s;
+  animation-duration: 0.75s;
+  animation-delay: 2.25s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
@@ -26,16 +27,15 @@
   align-items: center;
 
   animation-name: throttleShip;
-  animation-duration: 0.5s;
-  animation-iteration-count: 2;
-  animation-delay: 1s;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
 .AnimationContainer > .Top {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
   border-top-right-radius: 200px;
   border-top-left-radius: 200px;
 
@@ -48,10 +48,11 @@
 }
 
 .AnimationContainer > .Middle {
-  background-color: var(--color-primary);
-  width: 400px;
-  height: 160px;
+  width: 300px;
+  height: 120px;
   border-radius: 50%;
+
+  background-color: var(--color-primary);
 
   display: flex;
   justify-content: center;
@@ -60,18 +61,17 @@
 }
 
 .AnimationContainer > .Middle > .Lights {
-  background-color: var(--color-dark-gray);
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
   border-radius: 50%;
 
-  margin-top: 10px;
+  background-color: var(--color-dark);
 
   animation-name: flashLights;
   animation-duration: 0.5s;
-
   animation-iteration-count: 4;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -83,36 +83,60 @@
   width: 100%;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  position: relative;
 
   animation-name: raiseUp;
-  animation-duration: 1.65s;
-  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
 }
 
-.AnimationContainer > .LazersContainer > .Lazer {
+.AnimationContainer > .LazersContainer::before {
+  content: '';
+  display: bottom;
+  width: 105%;
+  height: 10px;
+  box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.551);
+  border-radius: 40px;
+  opacity: 0;
+  transform: translateX(-10%);
   background-color: rgb(81, 207, 43);
+
+  position: absolute;
+  bottom: 0;
+
+  animation-name: lightGround;
+  animation-duration: 0.25s;
+  animation-delay: 1.75s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.AnimationContainer > .LazersContainer > .Lazer {
+  width: 10px;
   height: 0;
-  width: 20px;
 
   border-radius: 40px;
+  box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.551);
+  background-color: rgb(81, 207, 43);
 
   animation-name: shootLazer;
-  animation-duration: 1.5s;
-  animation-delay: 4s;
-
-  animation-timing-function: ease;
+  animation-duration: 0.25s;
+  animation-delay: 1.5s;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
 .AnimationContainer > .LazersContainer > .Lazer:first-of-type {
-  transform: rotateZ(10deg);
+  transform: rotateZ(15deg);
 }
 
 .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
-  transform: rotateZ(-10deg);
+  margin-left: 200px;
+  transform: rotateZ(-15deg);
+  animation-delay: 1.95s;
 }
 
 @keyframes throttleShip {
@@ -143,10 +167,13 @@
 }
 
 @keyframes shootLazer {
-  from {
+  0% {
     height: 0;
   }
-  to {
+  50% {
+    height: 0;
+  }
+  100% {
     height: 100%;
   }
 }
@@ -169,5 +196,23 @@
   }
   100% {
     background-color: rgb(81, 207, 43);
+  }
+}
+
+@keyframes lightGround {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
