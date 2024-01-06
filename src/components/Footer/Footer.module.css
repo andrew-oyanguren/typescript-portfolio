@@ -2,12 +2,19 @@
   width: 100%;
   padding: var(--spacing-small) 0;
   margin-top: var(--spacing-large);
+  opacity: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: var(--color-light-gray);
+
+  animation-name: fadeIn;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 .socialsList {
@@ -60,5 +67,14 @@
   .socialsList li img {
     width: 55px;
     height: 55px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
