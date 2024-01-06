@@ -167,6 +167,23 @@
   .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
     margin-left: 120px;
   }
+
+  .AnimationContainer > .LazersContainer::before {
+    height: 10px;
+    bottom: 2.5px;
+  }
+
+  .AnimationContainer > .LazersContainer > .Lazer {
+    width: 10px;
+  }
+
+  .AnimationContainer > .LazersContainer > .Lazer:first-of-type {
+    transform: rotateZ(15deg);
+  }
+
+  .AnimationContainer > .LazersContainer > .Lazer:last-of-type {
+    transform: rotateZ(-15deg);
+  }
 }
 
 /* LARGE_DEVICES: > 1360 */

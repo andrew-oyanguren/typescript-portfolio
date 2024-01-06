@@ -6,6 +6,14 @@
   z-index: 1000;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
+
+  transform: translateY(-150%);
+
+  animation-name: slideDown;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 /* XL Devices > 1680 */
@@ -36,6 +44,15 @@
 @keyframes slideRight {
   0% {
     transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-150%);
   }
   100% {
     transform: translateX(0);
