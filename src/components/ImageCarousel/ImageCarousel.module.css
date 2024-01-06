@@ -47,12 +47,14 @@
 .TitleContainer > p {
   margin: 0;
   font-size: 36px;
-  opacity: 0;
-  transform: translateY(120%);
+
   color: var(--color-dark);
 }
 
 .TitleContainer.animate > p {
+  opacity: 0;
+  transform: translateY(120%);
+
   animation-name: flashSlide;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
