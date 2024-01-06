@@ -17,10 +17,27 @@
     padding-left: var(--spacing-large);
     border-radius: 0;
 
+    transform: translateX(-150%);
+
     position: fixed;
     display: flex;
     align-items: center;
 
     background: none;
+
+    animation-name: slideRight;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

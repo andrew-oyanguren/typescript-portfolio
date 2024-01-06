@@ -9,6 +9,7 @@ import {
 
 import { PATH_NAMES } from './constants';
 import { Loader } from 'src/components';
+import UserContextProvider from './context/UserContextProvider';
 
 import Root from './routes/root';
 import {
@@ -39,6 +40,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
   </React.StrictMode>
 );

@@ -32,11 +32,12 @@
   width: 540px;
   height: 400px;
   object-fit: cover;
-  transform: translateY(-90%);
-  opacity: 0;
 }
 
 .ImageWrapper img.animate {
+  transform: translateY(-90%);
+  opacity: 0;
+
   animation-name: flashSlide;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
