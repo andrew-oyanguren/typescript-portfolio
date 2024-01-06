@@ -96,12 +96,11 @@
 .AnimationContainer > .LazersContainer::before {
   content: '';
   display: bottom;
-  width: 105%;
+  width: 0;
   height: 10px;
   box-shadow: 0px 2px 3px rgba(245, 245, 245, 0.551);
   border-radius: 40px;
   opacity: 0;
-  transform: translateX(-10%);
   background-color: rgb(81, 207, 43);
 
   position: absolute;
@@ -109,7 +108,7 @@
 
   animation-name: lightGround;
   animation-duration: 0.25s;
-  animation-delay: 1.75s;
+  animation-delay: 1.65s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -201,18 +200,18 @@
 
 @keyframes lightGround {
   0% {
+    width: 0;
     opacity: 0;
-    transform: translateX(-10%);
   }
   50% {
+    width: 0;
     opacity: 0;
-    transform: translateX(-30%);
   }
   75% {
     opacity: 0;
   }
   100% {
+    width: 105%;
     opacity: 1;
-    transform: translateX(0);
   }
 }
