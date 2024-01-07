@@ -1,5 +1,6 @@
 .ResponsiveWrapper {
   width: var(--mobile-width-percent);
+  min-height: calc(100vh - 290px);
   margin: 0 auto;
   padding-top: calc(var(--spacing-large) * 2);
   align-items: center;
