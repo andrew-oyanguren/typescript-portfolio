@@ -31,6 +31,13 @@ select {
   background-color: var(--color-light);
 }
 
+.FormControl > select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .FormControl textarea {
   display: block;
   height: 200px;
