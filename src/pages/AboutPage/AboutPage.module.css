@@ -33,7 +33,7 @@
   );
 }
 
-/* LARGE_DEVICES: > 1500 */
+/* XLARGE_DEVICES: > 1500 */
 @media (min-width: 1500px) {
   .AboutCardsContainer > * {
     max-width: 1120px;

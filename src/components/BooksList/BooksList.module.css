@@ -76,7 +76,7 @@
   filter: var(--svg-filter-light);
 }
 
-/* medium devices > 768 */
+/* MEDIUM_DEVICES > 768 */
 @media (min-width: 768px) {
   .BooksListContainer {
     --slide-length: -2692px;

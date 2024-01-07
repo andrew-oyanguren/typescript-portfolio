@@ -16,7 +16,7 @@
   animation-fill-mode: forwards;
 }
 
-/* XL Devices > 1680 */
+/* XLARGE_Devices > 1680 */
 @media (min-width: 1680px) {
   .Layout > header {
     width: max-content;

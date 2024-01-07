@@ -173,7 +173,7 @@
   }
 }
 
-/* MEDIUM_DEVICES: > 1340 */
+/* LARGE_DEVICES: > 1340 */
 @media (min-width: 1340px) {
   .TextCard {
     max-width: var(--desktop-width);
