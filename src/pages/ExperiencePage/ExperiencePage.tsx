@@ -20,7 +20,7 @@ const EXP_SECTIONS_CONFIG = [
     title: 'Web Developer',
     time_period: '2020 - 2021',
     subTitle:
-      'While studying and improving my skills, I started offering my services to family and friends designing and building websites',
+      'While studying and improving my skills, I started offering my services to family and friends designing and building websites.',
     content: getExperienceUIVariant(EXPERIENCE_UI_VARIANTS.WEB_DEVELOPER),
     headerBgColor: 'var(--color-primary)',
   },
